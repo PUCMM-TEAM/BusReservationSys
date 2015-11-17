@@ -13,5 +13,10 @@ namespace BRS.DesktopUI {
     public FormFrontView() {
       InitializeComponent();
     }
-  }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
