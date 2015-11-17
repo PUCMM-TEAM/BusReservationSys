@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BRS.DesktopUI {
-  public partial class Form1 : Form {
-    public Form1() {
+  public partial class FormFrontView : System.Windows.Forms.Form {
+    public FormFrontView() {
       InitializeComponent();
     }
   }
