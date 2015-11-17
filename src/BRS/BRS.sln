@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Core", "BRS.Core\BRS.Core.csproj", "{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.WebUI", "BRS.WebUI\BRS.WebUI.csproj", "{AB16139F-C52B-4083-A38A-C0C35A401DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB16139F-C52B-4083-A38A-C0C35A401DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB16139F-C52B-4083-A38A-C0C35A401DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB16139F-C52B-4083-A38A-C0C35A401DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB16139F-C52B-4083-A38A-C0C35A401DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
