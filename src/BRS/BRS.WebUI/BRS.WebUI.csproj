@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DestinationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,6 +237,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Destination\Create.cshtml" />
+    <Content Include="Views\Destination\Delete.cshtml" />
+    <Content Include="Views\Destination\Details.cshtml" />
+    <Content Include="Views\Destination\Edit.cshtml" />
+    <Content Include="Views\Destination\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,7 +260,7 @@
       <Name>BRS.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
-      <Project>{01c7e239-b0e5-4b5f-8bbe-643a00266077}</Project>
+      <Project>{e3ee6558-b03f-4e3f-8232-9e50a9822513}</Project>
       <Name>BRS.Data</Name>
     </ProjectReference>
   </ItemGroup>

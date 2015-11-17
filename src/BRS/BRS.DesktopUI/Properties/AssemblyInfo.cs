@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BRS.Data")]
+[assembly: AssemblyTitle("BRS.DesktopUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BRS.Data")]
+[assembly: AssemblyProduct("BRS.DesktopUI")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2f4e4b75-4d2c-4125-a3e1-04bfc7ddc0d2")]
+[assembly: Guid("a199b68a-6ba3-4162-ae07-b55612a35f0c")]
 
 // Version information for an assembly consists of the following four values:
 //

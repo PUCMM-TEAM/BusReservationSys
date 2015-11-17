@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class Route : Entity{
+    public class Route : Entity{
 
         public Destination Pickup { get; set; }
 

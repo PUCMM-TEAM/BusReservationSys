@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BRS.Core.Models
+namespace BRS.Data
 {
-    public class Destination : Entity{
-
-        public string Name { get; set; }
+    public class Class1
+    {
     }
 }
