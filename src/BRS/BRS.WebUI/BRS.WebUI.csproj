@@ -251,10 +251,6 @@
       <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
       <Name>BRS.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
-      <Project>{01c7e239-b0e5-4b5f-8bbe-643a00266077}</Project>
-      <Name>BRS.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
