@@ -44,16 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="EditRouteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EditRouteView.Designer.cs">
+      <DependentUpon>EditRouteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontView.Designer.cs">
+      <DependentUpon>FrontView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="EditRouteView.resx">
+      <DependentUpon>EditRouteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontView.resx">
+      <DependentUpon>FrontView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

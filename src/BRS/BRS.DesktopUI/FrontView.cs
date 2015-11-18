@@ -18,5 +18,11 @@ namespace BRS.DesktopUI {
         {
 
         }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            LoginView loginview = new LoginView();
+            loginview.Show();
+        }
     }
 }
