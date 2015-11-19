@@ -16,5 +16,15 @@ namespace BRS.DesktopUI
         {
             InitializeComponent();
         }
+
+        private void TxtPassengerCapa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtArrivalTime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
