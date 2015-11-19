@@ -48,11 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="EF_Context\DBContext.cs" />
+    <Compile Include="Migrations\201511171948277_InitialCreate.cs" />
+    <Compile Include="Migrations\201511171948277_InitialCreate.Designer.cs">
+      <DependentUpon>201511171948277_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511171948277_InitialCreate.resx">
+      <DependentUpon>201511171948277_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
       <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
