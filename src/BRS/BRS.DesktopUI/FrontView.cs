@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BRS.ReportApp;
 
 namespace BRS.DesktopUI {
   public partial class FormFrontView : System.Windows.Forms.Form {
@@ -23,6 +24,16 @@ namespace BRS.DesktopUI {
         {
             LoginView loginview = new LoginView();
             loginview.Show();
+        }
+
+        private void userReportsToolStripMenuItem_Click(object sender, EventArgs e) {
+          ReportApp.UserReportForm form = new UserReportForm();
+          form.Show();
+        }
+
+        private void destinationReportsToolStripMenuItem_Click(object sender, EventArgs e) {
+          ReportApp.Form1 form = new Form1();
+          form.Show();
         }
     }
 }

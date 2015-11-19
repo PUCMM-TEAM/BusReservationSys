@@ -188,6 +188,20 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
+      <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
+      <Name>BRS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
+      <Project>{e3ee6558-b03f-4e3f-8232-9e50a9822513}</Project>
+      <Name>BRS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.ReportApp\BRS.ReportApp.csproj">
+      <Project>{c2f0fe2b-2b9d-4695-82c6-8a83c3b7ae72}</Project>
+      <Name>BRS.ReportApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
