@@ -17,5 +17,10 @@ namespace BRS.DesktopUI {
     private void label10_Click(object sender, EventArgs e) {
 
     }
-  }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
