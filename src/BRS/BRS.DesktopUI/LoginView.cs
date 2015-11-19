@@ -31,5 +31,11 @@ namespace BRS.DesktopUI
         {
             this.Close();
         }
+
+        private void BtnLogin2_Click(object sender, EventArgs e)
+        {
+            SearchView searchview = new SearchView();
+            searchview.Show();
+        }
     }
 }

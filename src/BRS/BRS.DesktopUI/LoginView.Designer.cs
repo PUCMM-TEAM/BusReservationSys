@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.GbLogin = new System.Windows.Forms.GroupBox();
+            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.TbUsername = new System.Windows.Forms.TextBox();
             this.BtnLogin2 = new System.Windows.Forms.Button();
             this.BtnSignup = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.CBRememberme = new System.Windows.Forms.CheckBox();
             this.TxtPassword = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.Label();
-            this.TbUsername = new System.Windows.Forms.TextBox();
-            this.TbPassword = new System.Windows.Forms.TextBox();
             this.GbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,20 @@
             this.GbLogin.TabStop = false;
             this.GbLogin.Text = "Login";
             // 
+            // TbPassword
+            // 
+            this.TbPassword.Location = new System.Drawing.Point(92, 65);
+            this.TbPassword.Name = "TbPassword";
+            this.TbPassword.Size = new System.Drawing.Size(152, 22);
+            this.TbPassword.TabIndex = 13;
+            // 
+            // TbUsername
+            // 
+            this.TbUsername.Location = new System.Drawing.Point(92, 28);
+            this.TbUsername.Name = "TbUsername";
+            this.TbUsername.Size = new System.Drawing.Size(152, 22);
+            this.TbUsername.TabIndex = 12;
+            // 
             // BtnLogin2
             // 
             this.BtnLogin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,6 +83,7 @@
             this.BtnLogin2.TabIndex = 11;
             this.BtnLogin2.Text = "Login";
             this.BtnLogin2.UseVisualStyleBackColor = true;
+            this.BtnLogin2.Click += new System.EventHandler(this.BtnLogin2_Click);
             // 
             // BtnSignup
             // 
@@ -122,20 +137,6 @@
             this.TxtUsername.TabIndex = 6;
             this.TxtUsername.Text = "Username:";
             this.TxtUsername.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // TbUsername
-            // 
-            this.TbUsername.Location = new System.Drawing.Point(92, 28);
-            this.TbUsername.Name = "TbUsername";
-            this.TbUsername.Size = new System.Drawing.Size(152, 22);
-            this.TbUsername.TabIndex = 12;
-            // 
-            // TbPassword
-            // 
-            this.TbPassword.Location = new System.Drawing.Point(92, 65);
-            this.TbPassword.Name = "TbPassword";
-            this.TbPassword.Size = new System.Drawing.Size(152, 22);
-            this.TbPassword.TabIndex = 13;
             // 
             // LoginView
             // 
