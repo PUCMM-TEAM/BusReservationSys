@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.DesktopUI", "BRS.Deskto
 		{E3EE6558-B03F-4E3F-8232-9E50A9822513} = {E3EE6558-B03F-4E3F-8232-9E50A9822513}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.ReportApp", "BRS.ReportApp\BRS.ReportApp.csproj", "{C2F0FE2B-2B9D-4695-82C6-8A83C3B7AE72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{5172705B-FC97-4A73-B12F-ECDA5F6FC515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5172705B-FC97-4A73-B12F-ECDA5F6FC515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5172705B-FC97-4A73-B12F-ECDA5F6FC515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F0FE2B-2B9D-4695-82C6-8A83C3B7AE72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F0FE2B-2B9D-4695-82C6-8A83C3B7AE72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F0FE2B-2B9D-4695-82C6-8A83C3B7AE72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F0FE2B-2B9D-4695-82C6-8A83C3B7AE72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BRS.DesktopUI.Properties {
+namespace BRS.ReportApp.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -30,6 +30,18 @@ namespace BRS.DesktopUI.Properties {
         public string BRSDBConnectionString {
             get {
                 return ((string)(this["BRSDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Max\\Documents\\GIT-RE" +
+            "POS\\PUCMM\\BusReservationSys\\src\\BRS\\BRS.DesktopUI\\aspnet-BRS.WebUI-2015111606062" +
+            "6.mdf;Initial Catalog=aspnet-BRS.WebUI-20151116060626;Integrated Security=True")]
+        public string aspnet_BRS_WebUI_20151116060626ConnectionString {
+            get {
+                return ((string)(this["aspnet_BRS_WebUI_20151116060626ConnectionString"]));
             }
         }
     }
