@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class Schedule :Entity{
-        public DateTime Date { get; set; }
-
+    public class Schedule :Entity{
         public int DepartureTime { get; set; }
 
         public int ArrivalTime { get; set; }
-
-       
     }
 }

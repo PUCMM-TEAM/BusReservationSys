@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class Vehicle : Entity{
-
+    public class Vehicle : Entity{
+      public string Name { get; set; }
         public int PassengerCapacity { get; set; }
-
         public string VehicleType { get; set; }
-
         public string Image { get; set; }
-
         public string Description { get; set; }
-
-
     }
 }

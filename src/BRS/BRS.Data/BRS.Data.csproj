@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3EE6558-B03F-4E3F-8232-9E50A9822513}</ProjectGuid>
+    <ProjectGuid>{F4E9C87C-9C7B-41E3-AEB2-4B626043D379}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BRS.Data</RootNamespace>
@@ -48,18 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF_Context\DBContext.cs" />
-    <Compile Include="Migrations\201511171948277_InitialCreate.cs" />
-    <Compile Include="Migrations\201511171948277_InitialCreate.Designer.cs">
-      <DependentUpon>201511171948277_InitialCreate.cs</DependentUpon>
+    <Compile Include="Context.cs" />
+    <Compile Include="Migrations\201511240331357_InitialCreate.cs" />
+    <Compile Include="Migrations\201511240331357_InitialCreate.Designer.cs">
+      <DependentUpon>201511240331357_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511171948277_InitialCreate.resx">
-      <DependentUpon>201511171948277_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
@@ -70,6 +65,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511240331357_InitialCreate.resx">
+      <DependentUpon>201511240331357_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
