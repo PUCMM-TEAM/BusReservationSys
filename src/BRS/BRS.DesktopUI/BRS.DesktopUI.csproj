@@ -11,7 +11,6 @@
     <AssemblyName>BRS.DesktopUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,6 +23,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,8 +47,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,23 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BRSDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BRSDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DestinationListView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DestinationListView.Designer.cs">
-      <DependentUpon>DestinationListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditDestinationView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditDestinationView.Designer.cs">
-      <DependentUpon>EditDestinationView.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditRouteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +110,6 @@
     <Compile Include="SearchView.Designer.cs">
       <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DestinationListView.resx">
-      <DependentUpon>DestinationListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditDestinationView.resx">
-      <DependentUpon>EditDestinationView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,17 +140,7 @@
     <EmbeddedResource Include="SearchView.resx">
       <DependentUpon>SearchView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BRSDBDataSet.xsc">
-      <DependentUpon>BRSDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BRSDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BRSDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BRSDBDataSet.xss">
-      <DependentUpon>BRSDBDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,22 +177,9 @@
       <Name>BRS.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
-      <Project>{e3ee6558-b03f-4e3f-8232-9e50a9822513}</Project>
+      <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
       <Name>BRS.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BRS.ReportApp\BRS.ReportApp.csproj">
-      <Project>{c2f0fe2b-2b9d-4695-82c6-8a83c3b7ae72}</Project>
-      <Name>BRS.ReportApp</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BRSDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BRSDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BRSDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

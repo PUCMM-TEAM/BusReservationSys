@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BRS.Core.Models;
-using BRS.Data.EF_Context;
+using BRS.Data;
+using BRS.WebUI.Models;
 
 namespace BRS.WebUI.Controllers {
   public class RouteController : Controller {
-    private DBContext db = new DBContext();
+    private Context db = new Context();
 
     // GET: Route
     public ActionResult Index() {
-
       return View(db.Routes.ToList());
     }
 
@@ -34,25 +33,10 @@ namespace BRS.WebUI.Controllers {
 
     // GET: Route/Create
     public ActionResult Create() {
-      PopulatePickupDropDownList();
-      PopulateDropOffDropDownList();
-      return View();
-    }
+      RouteViewModel vmRoute = new RouteViewModel();
+      vmRoute.Destinations = GetDestinations();
 
-    private void PopulatePickupDropDownList(Object selectedDestination = null) {
-      var destinationQuery = from d in db.Destinations
-                             orderby d.Name
-                             select d;
-
-      ViewBag.PickupID = new SelectList(destinationQuery, "PickupID", "Name", selectedDestination);
-    }
-
-    private void PopulateDropOffDropDownList(Object selectedDestination = null) {
-      var destinationQuery = from d in db.Destinations
-                             orderby d.Name
-                             select d;
-
-      ViewBag.DropOffID = new SelectList(destinationQuery, "DropOffID", "Name", selectedDestination);
+      return View(vmRoute);
     }
 
     // POST: Route/Create
@@ -60,20 +44,27 @@ namespace BRS.WebUI.Controllers {
     // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Create([Bind(Include = "ID,PickupID,DropOffID")] Route route) {
-      try {
-        if (ModelState.IsValid) {
-          db.Routes.Add(route);
-          db.SaveChanges();
-          return RedirectToAction("Index");
-        }
-      } catch (RetryLimitExceededException) {
-        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problems persists, see your system administrator.");
+    public ActionResult Create([Bind(Include = "ID,PickUpId,DropOffId")] RouteViewModel model) {
+      if (ModelState.IsValid) {
+        Route route = new Route();
+        route.ID = 0;
+        route.Pickup = GetDestination(model.PickUpId);
+        route.DropOff = GetDestination(model.DropOffId);
+        route.CreatedDate = DateTime.Now;
+        route.ModifiedDate = DateTime.Now;
+        route.Deleted = false;
+
+        db.Routes.Add(route);
+        db.SaveChanges();
+        return RedirectToAction("Index");
       }
 
-      PopulatePickupDropDownList(route.Pickup.ID);
-      PopulatePickupDropDownList(route.DropOff.ID);
-      return View(route);
+      model.Destinations = GetDestinations();
+      return View(model);
+    }
+
+    private Destination GetDestination(int pickUpId) {
+      return db.Destinations.First(x => x.ID == pickUpId);
     }
 
     // GET: Route/Edit/5
@@ -85,26 +76,20 @@ namespace BRS.WebUI.Controllers {
       if (route == null) {
         return HttpNotFound();
       }
-
-      PopulatePickupDropDownList(route.Pickup.ID);
-      PopulatePickupDropDownList(route.DropOff.ID);
       return View(route);
     }
 
     // POST: Route/Edit/5
     // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
     // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-    [HttpPost, ActionName("Edit")]
+    [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Edit([Bind(Include = "ID,PickupID,DropOffID")] Route route) {
+    public ActionResult Edit([Bind(Include = "ID,CreatedDate,ModifiedDate,Deleted")] Route route) {
       if (ModelState.IsValid) {
         db.Entry(route).State = EntityState.Modified;
         db.SaveChanges();
         return RedirectToAction("Index");
       }
-
-      PopulatePickupDropDownList(route.Pickup.ID);
-      PopulatePickupDropDownList(route.DropOff.ID);
       return View(route);
     }
 
@@ -137,6 +122,8 @@ namespace BRS.WebUI.Controllers {
       base.Dispose(disposing);
     }
 
-
+    private IEnumerable<Destination> GetDestinations() {
+      return db.Destinations.Select(x => x);
+    }
   }
 }

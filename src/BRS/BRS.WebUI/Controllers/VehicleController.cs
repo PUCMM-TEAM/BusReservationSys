@@ -11,107 +11,110 @@ using BRS.Data;
 
 namespace BRS.WebUI.Controllers
 {
-    public class DestinationController : Controller
+    public class VehicleController : Controller
     {
         private Context db = new Context();
 
-        // GET: Destination
+        // GET: Vehicle
         public ActionResult Index()
         {
-            return View(db.Destinations.ToList());
+            return View(db.Vehicles.ToList());
         }
 
-        // GET: Destination/Details/5
+        // GET: Vehicle/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Destination destination = db.Destinations.Find(id);
-            if (destination == null)
+            Vehicle vehicle = db.Vehicles.Find(id);
+            if (vehicle == null)
             {
                 return HttpNotFound();
             }
-            return View(destination);
+            return View(vehicle);
         }
 
-        // GET: Destination/Create
+        // GET: Vehicle/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Destination/Create
+        // POST: Vehicle/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,CreatedDate,ModifiedDate,Deleted")] Destination destination)
+        public ActionResult Create([Bind(Include = "ID,Name,PassengerCapacity,VehicleType,Image,Description,Deleted")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
-                db.Destinations.Add(destination);
+                vehicle.CreatedDate = DateTime.Now;
+                vehicle.ModifiedDate = DateTime.Now;
+              
+                db.Vehicles.Add(vehicle);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(destination);
+            return View(vehicle);
         }
 
-        // GET: Destination/Edit/5
+        // GET: Vehicle/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Destination destination = db.Destinations.Find(id);
-            if (destination == null)
+            Vehicle vehicle = db.Vehicles.Find(id);
+            if (vehicle == null)
             {
                 return HttpNotFound();
             }
-            return View(destination);
+            return View(vehicle);
         }
 
-        // POST: Destination/Edit/5
+        // POST: Vehicle/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,CreatedDate,ModifiedDate,Deleted")] Destination destination)
+        public ActionResult Edit([Bind(Include = "ID,PassengerCapacity,VehicleType,Image,Description,CreatedDate,ModifiedDate,Deleted")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(destination).State = EntityState.Modified;
+                db.Entry(vehicle).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(destination);
+            return View(vehicle);
         }
 
-        // GET: Destination/Delete/5
+        // GET: Vehicle/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Destination destination = db.Destinations.Find(id);
-            if (destination == null)
+            Vehicle vehicle = db.Vehicles.Find(id);
+            if (vehicle == null)
             {
                 return HttpNotFound();
             }
-            return View(destination);
+            return View(vehicle);
         }
 
-        // POST: Destination/Delete/5
+        // POST: Vehicle/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Destination destination = db.Destinations.Find(id);
-            db.Destinations.Remove(destination);
+            Vehicle vehicle = db.Vehicles.Find(id);
+            db.Vehicles.Remove(vehicle);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
