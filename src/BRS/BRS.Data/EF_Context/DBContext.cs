@@ -28,5 +28,8 @@ namespace BRS.Data.EF_Context {
       modelBuilder.Entity<Route>().HasRequired(d => d.Pickup).WithMany().WillCascadeOnDelete(false);
       modelBuilder.Entity<Route>().HasRequired(d => d.DropOff).WithMany().WillCascadeOnDelete(false);
     }
+
+    
+
   }
 }

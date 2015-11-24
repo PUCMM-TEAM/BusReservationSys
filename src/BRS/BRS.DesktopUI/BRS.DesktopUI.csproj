@@ -11,6 +11,7 @@
     <AssemblyName>BRS.DesktopUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,6 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +64,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BRSDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DestinationListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationListView.Designer.cs">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDestinationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDestinationView.Designer.cs">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
     </Compile>
     <Compile Include="EditRouteView.cs">
       <SubType>Form</SubType>
@@ -108,6 +121,12 @@
     <Compile Include="SearchView.Designer.cs">
       <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DestinationListView.resx">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDestinationView.resx">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +211,15 @@
       <Project>{c2f0fe2b-2b9d-4695-82c6-8a83c3b7ae72}</Project>
       <Name>BRS.ReportApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BRSDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BRSDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BRSDB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
