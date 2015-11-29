@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class User : Entity {
-
-        public string UserName { get; set; }
-
+  public class User : Entity {
+        public string Username { get; set; }
         public string Password { get; set; }
-
-        public string EMail { get; set; }
-
-
+        public string Email { get; set; }
+      public Role Role { get; set; }
     }
 }

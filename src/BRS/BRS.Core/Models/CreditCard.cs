@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class CreditCard: Entity{
+  public class CreditCard: Entity{
 
         public string CardHolder { get; set; }
 

@@ -39,23 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallBacks\IListResponse.cs" />
     <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\PaymentMethod.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Route.cs" />
-    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CallBacks\IResponse.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

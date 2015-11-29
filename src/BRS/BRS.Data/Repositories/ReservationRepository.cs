@@ -4,12 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BRS.Core.Models
-{
-    class PaymentMethod: Entity{
-
-        public string Name { get; set; }
-
-
-    }
+namespace BRS.Data.Repositories {
+  class ReservationRepository {
+  }
 }

@@ -1,3 +1,4 @@
+using System.Web.Security;
 using BRS.Core.Models;
 
 namespace BRS.Data {
@@ -22,12 +23,12 @@ namespace BRS.Data {
     public virtual DbSet<Destination> Destinations { get; set; }
     public virtual DbSet<Route> Routes { get; set; }
     public virtual DbSet<Vehicle> Vehicles { get; set; }
-    public virtual DbSet<Schedule> Schedules { get; set; }
+    public virtual DbSet<Trip> Trips { get; set; }
+    public virtual DbSet<Customer> Customers { get; set; }
+    public virtual DbSet<CreditCard> CreditCards { get; set; }
+    public virtual DbSet<Reservation> Reservations { get; set; }
+    public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<User> Users { get; set; }
   }
 
-  //public class MyEntity
-  //{
-  //    public int Id { get; set; }
-  //    public string Name { get; set; }
-  //}
 }

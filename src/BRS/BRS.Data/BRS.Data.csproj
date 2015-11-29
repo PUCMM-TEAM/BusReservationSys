@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +56,15 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CreditCardRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\DestinationRepository.cs" />
+    <Compile Include="Repositories\LocalGenericRepository.cs" />
+    <Compile Include="Repositories\ReservationRepository.cs" />
+    <Compile Include="Repositories\RouteRepository.cs" />
+    <Compile Include="Repositories\TripRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\VehicleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
@@ -71,6 +81,7 @@
       <DependentUpon>201511240331357_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
