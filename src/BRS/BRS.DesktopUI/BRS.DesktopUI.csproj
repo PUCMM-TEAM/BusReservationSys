@@ -66,11 +66,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DestinationListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationListView.Designer.cs">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDestinationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDestinationView.Designer.cs">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditRouteView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditRouteView.Designer.cs">
       <DependentUpon>EditRouteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTripView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTripView.Designer.cs">
+      <DependentUpon>EditTripView.cs</DependentUpon>
     </Compile>
     <Compile Include="EditUserView.cs">
       <SubType>Form</SubType>
@@ -110,8 +128,17 @@
     <Compile Include="SearchView.Designer.cs">
       <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DestinationListView.resx">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDestinationView.resx">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTripView.resx">
+      <DependentUpon>EditTripView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditUserView.resx">
       <DependentUpon>EditUserView.cs</DependentUpon>

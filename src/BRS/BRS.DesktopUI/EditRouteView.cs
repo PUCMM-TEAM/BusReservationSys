@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BRS.Core.Models;
+using BRS.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,25 @@ namespace BRS.DesktopUI
 {
     public partial class EditRouteView : Form
     {
+        private Context db = new Context();
+
         public EditRouteView()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void BtnRouteCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void GbDescription_Enter(object sender, EventArgs e)
+        private void BtnRouteCreate_Click(object sender, EventArgs e)
         {
-
+            Route route = new Route();
+            //route.Pickup = TbRoutePickup.Text;
+            //route.DropOff = TbRouteDropOff.Text;
+            db.Routes.Add(route);
+            db.SaveChanges();
         }
     }
 }
