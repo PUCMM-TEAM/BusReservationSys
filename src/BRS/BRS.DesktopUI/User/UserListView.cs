@@ -1,5 +1,6 @@
 ﻿using BRS.Core.Models;
 using BRS.Data;
+using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +18,13 @@ namespace BRS.DesktopUI
         public UserListView()
         {
             InitializeComponent();
+            UserRepository repo = new UserRepository();
             //Context context = new Context();//Manages the data.Can get or set data
-            //var list = context.Users.ToList();//Gets info from database
-            //var bindingList = new BindingList<User>(list);//Create a new list to show data from database
-            //var source = new BindingSource(bindingList, null);//fill with data
-            //DGVUsers.DataSource = source;
+            //var list = context.Destinations.ToList();//Gets info from database
+            List<User> users = repo.ReadAll().ToList();
+            var bindingList = new BindingList<User>(users);//Create a new list to show data from database
+            var source = new BindingSource(bindingList, null);//fill with data
+            DGVUsers.DataSource = source;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
