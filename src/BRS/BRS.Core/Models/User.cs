@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class User : Entity {
+    public class User : Entity {
 
         public string UserName { get; set; }
 
@@ -14,6 +14,7 @@ namespace BRS.Core.Models
 
         public string EMail { get; set; }
 
+        public virtual Role Role { get; set; }
 
     }
 }

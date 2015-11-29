@@ -23,6 +23,7 @@ namespace BRS.Data {
     public virtual DbSet<Route> Routes { get; set; }
     public virtual DbSet<Vehicle> Vehicles { get; set; }
     public virtual DbSet<Schedule> Schedules { get; set; }
+    //public virtual DbSet<User> Users { get; set; }
   }
 
   //public class MyEntity

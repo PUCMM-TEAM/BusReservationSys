@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.GbRoute = new System.Windows.Forms.GroupBox();
-            this.TbRouteDropOff = new System.Windows.Forms.TextBox();
-            this.TbRoutePickup = new System.Windows.Forms.TextBox();
             this.TxtRouteDropoff = new System.Windows.Forms.Label();
             this.TxtRoutePickup = new System.Windows.Forms.Label();
             this.BtnRouteCreate = new System.Windows.Forms.Button();
             this.BtnRouteDelete = new System.Windows.Forms.Button();
             this.BtnRouteCancel = new System.Windows.Forms.Button();
+            this.CbRoutePickup = new System.Windows.Forms.ComboBox();
+            this.CbRouteDropoff = new System.Windows.Forms.ComboBox();
             this.GbRoute.SuspendLayout();
             this.SuspendLayout();
             // 
             // GbRoute
             // 
-            this.GbRoute.Controls.Add(this.TbRouteDropOff);
-            this.GbRoute.Controls.Add(this.TbRoutePickup);
+            this.GbRoute.Controls.Add(this.CbRouteDropoff);
+            this.GbRoute.Controls.Add(this.CbRoutePickup);
             this.GbRoute.Controls.Add(this.TxtRouteDropoff);
             this.GbRoute.Controls.Add(this.TxtRoutePickup);
             this.GbRoute.Location = new System.Drawing.Point(12, 12);
@@ -51,20 +51,6 @@
             this.GbRoute.TabIndex = 0;
             this.GbRoute.TabStop = false;
             this.GbRoute.Text = "Routes ";
-            // 
-            // TbRouteDropOff
-            // 
-            this.TbRouteDropOff.Location = new System.Drawing.Point(61, 63);
-            this.TbRouteDropOff.Name = "TbRouteDropOff";
-            this.TbRouteDropOff.Size = new System.Drawing.Size(100, 20);
-            this.TbRouteDropOff.TabIndex = 3;
-            // 
-            // TbRoutePickup
-            // 
-            this.TbRoutePickup.Location = new System.Drawing.Point(49, 32);
-            this.TbRoutePickup.Name = "TbRoutePickup";
-            this.TbRoutePickup.Size = new System.Drawing.Size(100, 20);
-            this.TbRoutePickup.TabIndex = 2;
             // 
             // TxtRouteDropoff
             // 
@@ -113,6 +99,24 @@
             this.BtnRouteCancel.UseVisualStyleBackColor = true;
             this.BtnRouteCancel.Click += new System.EventHandler(this.BtnRouteCancel_Click);
             // 
+            // CbRoutePickup
+            // 
+            this.CbRoutePickup.FormattingEnabled = true;
+            this.CbRoutePickup.Location = new System.Drawing.Point(56, 32);
+            this.CbRoutePickup.Name = "CbRoutePickup";
+            this.CbRoutePickup.Size = new System.Drawing.Size(121, 21);
+            this.CbRoutePickup.TabIndex = 4;
+            this.CbRoutePickup.SelectedIndexChanged += new System.EventHandler(this.CbRoutePickup_SelectedIndexChanged);
+            // 
+            // CbRouteDropoff
+            // 
+            this.CbRouteDropoff.FormattingEnabled = true;
+            this.CbRouteDropoff.Location = new System.Drawing.Point(61, 63);
+            this.CbRouteDropoff.Name = "CbRouteDropoff";
+            this.CbRouteDropoff.Size = new System.Drawing.Size(121, 21);
+            this.CbRouteDropoff.TabIndex = 5;
+            this.CbRouteDropoff.SelectedIndexChanged += new System.EventHandler(this.CbRouteDropoff_SelectedIndexChanged);
+            // 
             // EditRouteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,12 +137,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GbRoute;
-        private System.Windows.Forms.TextBox TbRouteDropOff;
-        private System.Windows.Forms.TextBox TbRoutePickup;
         private System.Windows.Forms.Label TxtRouteDropoff;
         private System.Windows.Forms.Label TxtRoutePickup;
         private System.Windows.Forms.Button BtnRouteCreate;
         private System.Windows.Forms.Button BtnRouteDelete;
         private System.Windows.Forms.Button BtnRouteCancel;
+        private System.Windows.Forms.ComboBox CbRouteDropoff;
+        private System.Windows.Forms.ComboBox CbRoutePickup;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BRS.Core.Models
 {
-    class Role : Entity{
+     public class Role : Entity{
         public string Name { get; set; }
 
 

@@ -72,6 +72,7 @@
     <Compile Include="DestinationListView.Designer.cs">
       <DependentUpon>DestinationListView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Destino.cs" />
     <Compile Include="EditDestinationView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +129,12 @@
     <Compile Include="SearchView.Designer.cs">
       <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserListView.Designer.cs">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DestinationListView.resx">
       <DependentUpon>DestinationListView.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchView.resx">
       <DependentUpon>SearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListView.resx">
+      <DependentUpon>UserListView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
