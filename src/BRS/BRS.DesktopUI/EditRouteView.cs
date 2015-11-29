@@ -19,23 +19,23 @@ namespace BRS.DesktopUI
         public EditRouteView()
         {
             InitializeComponent();
-            BindingSource bs = new BindingSource();
-            BindingSource bs2 = new BindingSource();
-            bs.DataSource = new List<Destino>();// From where the data comes from
-            bs.Add(new Destino() { Name = "Santo Domingo" });
-            bs.Add(new Destino() { Name = "Santiago" });
+            //BindingSource bs = new BindingSource();
+            //BindingSource bs2 = new BindingSource();
+            //bs.DataSource = new List<Destino>();// From where the data comes from
+            //bs.Add(new Destino() { Name = "Santo Domingo" });
+            //bs.Add(new Destino() { Name = "Santiago" });
 
-            bs2.DataSource = new List<Destino>();
-            bs2.Add(new Destino() { Name = "Santo Domingo" });
-            bs2.Add(new Destino() { Name = "Santiago" });
+            //bs2.DataSource = new List<Destino>();
+            //bs2.Add(new Destino() { Name = "Santo Domingo" });
+            //bs2.Add(new Destino() { Name = "Santiago" });
 
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Routes.ToList();//Gets info from database
             //var bindingList = new BindingList<Route>(list);//Create a new list to show data from database
             //var source = new BindingSource(bindingList, null);//fill with data
 
-            CbRoutePickup.DataSource = bs;
-            CbRouteDropoff.DataSource = bs2;
+            //CbRoutePickup.DataSource = bs;
+            //CbRouteDropoff.DataSource = bs2;
 
             CbRoutePickup.DisplayMember = "Name";
             CbRoutePickup.ValueMember = "Name";

@@ -42,7 +42,7 @@
             this.DGVRoutes.RowTemplate.Height = 24;
             this.DGVRoutes.Size = new System.Drawing.Size(448, 284);
             this.DGVRoutes.TabIndex = 0;
-            this.DGVRoutes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //this.DGVRoutes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // menuStrip1
             // 
