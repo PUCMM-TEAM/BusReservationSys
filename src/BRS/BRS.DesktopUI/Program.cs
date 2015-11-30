@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BRS.DesktopUI.VehicleFeatures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace BRS.DesktopUI {
     static void Main() {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RouteListView());
+            Application.Run(new VehicleListView());
     }
   }
 }
