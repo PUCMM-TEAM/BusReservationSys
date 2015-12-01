@@ -1,0 +1,92 @@
+﻿@model BRS.WebUI.Models.ReservationViewModel
+
+@{
+  ViewBag.Title = "Book";
+}
+
+<div style="padding-top: 70px;">
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="http://placehold.it/140x100" alt="placeholder" />
+      </a>
+    </div>
+    <div class="media-body">
+      <dl class="dl-horizontal">
+        <dt>Origin: </dt>
+        <dd>@Model.Trip.Route.Pickup.Name</dd>
+        <dt>Destination: </dt>
+        <dd>@Model.Trip.Route.DropOff.Name</dd>
+        <dt>Date: </dt>
+        <dd>@Model.DepartureDate</dd>
+        <dt>Departure Time: </dt>
+        <dd>@Model.Trip.DepartureTime</dd>
+        <dt>Arrival Time: </dt>
+        <dd>@Model.Trip.ArrivalTime</dd>
+        <dt>Number of Passengers: </dt>
+        <dd>@Model.NoPassengers</dd>
+      </dl>
+    </div>
+  </div>
+
+  <form method="POST" action="Book">
+    <fieldset>
+      <input name="tripId" type="hidden" value="@Model.Trip.ID" />
+      <input name="DepartureDate" type="hidden" value="@Model.DepartureDate" />
+      <input name="NoPassengers" type="hidden" value="@Model.NoPassengers" />
+      <input name="Price" type="hidden" value="@Model.Trip.Price"/>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" class="form-control" placeholder="Juan Perez"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" class="form-control" placeholder="juan.perez@example.com"/>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="cardHolder">Card Holder</label>
+          <input id="cardHolder" name="cardHolder" type="text" class="form-control" placeholder="Juan Perez"/>
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input id="cardNumber" name="cardNumber" type="text" class="form-control" placeholder="12345678900001111"/>
+        </div>
+        <div class="form-group">
+          <label for="CVC">CVC</label>
+          <input id="CVC" name="CVC" type="text" class="form-control" placeholder="123"/>
+        </div>
+        <div class="form-group">
+          <label for="ExpirationDate">Expiration Date</label>
+          <input id="ExpirationDate" name="ExpirationDate" type="date" class="form-control" placeholder="123"/>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </fieldset>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> I Agree
+      </label>
+    </div>
+
+    <div class="pull-right">
+      <button class="btn btn-danger">Cancel</button>
+      <button class="btn btn-warning">Pay Now</button>
+    </div>
+  </form>
+</div>

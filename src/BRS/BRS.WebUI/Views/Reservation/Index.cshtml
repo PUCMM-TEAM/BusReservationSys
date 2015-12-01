@@ -1,0 +1,108 @@
+﻿@using BRS.Core.Models
+@model BRS.WebUI.Models.SearchResultViewModel
+
+@{
+  ViewBag.Title = "title";
+}
+
+<h2>title</h2>
+
+<div id="sidebar" class="col-sm-4">
+  <form name="searchForm" method="POST" action="Index">
+    <fieldset>
+      <div class="form-group">
+        <label for="origin">*Origin</label>
+        <input type="hidden" id="originId" name="originId">
+        <input id="origin" name="origin" type="text" class="form-control" placeholder="Santo Domingo" />
+      </div>
+      <div class="form-group">
+        <label for="destination">*Destination</label>
+        <input type="hidden" id="destinationId" name="destinationId">
+        <input id="destination" name="destination" type="text" class="form-control" placeholder="Santiago" />
+      </div>
+
+      <div class="form-group">
+        <label for="date">*Date</label>
+        <input id="date" name="date" type="date" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="noPassengers">*No. Passengers</label>
+        <input id="noPassengers" name="noPassengers" type="number" class="form-control" />
+      </div>
+
+    </fieldset>
+    <button class="btn btn-danger">Clear</button>
+    <button class="btn btn-warning">Search</button>
+  </form>
+</div>
+
+<div id="result-view" class="col-sm-8">
+  @foreach (Trip trip in Model.Trips) {
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://placehold.it/140x100" alt="placeholder" />
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">@Html.ActionLink(trip.Route.RouteName, "Book", new { tripId = trip.ID, departureDate = Model.DepartureDate, noPassengers = Model.NoPassengers}) </h4>
+        <p>Price: @trip.Price</p>
+        <p>Departure Time: @trip.DepartureTime</p>
+        <p>Arrival Time: @trip.ArrivalTime</p>
+        <p>Vehicle: @trip.Vehicle.Name</p>
+        <p>Capacity: @trip.Vehicle.PassengerCapacity</p>
+      </div>
+    </div>
+  }
+</div>
+
+
+@section Scripts {
+  <script>
+    $(document).ready(function () {
+
+      var action = '@Url.Action("DestinationsAutocomplete")';
+
+      var getData = function(request, response) {
+        $.getJSON(action, { term: request.term }, function(data) {
+          response(
+            $.map(data, function(el) {
+              return {
+                label: el.Name,
+                value: el.ID
+              }
+            }));
+        });
+      };
+
+      $('#origin').autocomplete({
+        minLength: 0,
+        source: getData,
+        focus: function (event, ui) {
+          $("#origin").val(ui.item.label);
+          return false;
+        },
+        select: function (event, ui) {
+          $("#origin").val(ui.item.label);
+          $("#originId").val(ui.item.value);
+          return false;
+        }
+      });
+
+      $('#destination').autocomplete({
+        minLength: 0,
+        source: getData,
+        focus: function (event, ui) {
+          $("#destination").val(ui.item.label);
+          return false;
+        },
+        select: function (event, ui) {
+          $("#destination").val(ui.item.label);
+          $("#destinationId").val(ui.item.value);
+          return false;
+        }
+      });
+    });
+  </script>
+}

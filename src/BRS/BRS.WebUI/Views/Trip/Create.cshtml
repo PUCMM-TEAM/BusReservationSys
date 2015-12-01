@@ -1,0 +1,120 @@
+﻿@model BRS.WebUI.Models.TripViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+  <div class="form-horizontal">
+    <h4>Trip</h4>
+    <hr/>
+    @Html.ValidationSummary(true, "", new{@class = "text-danger"})
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.RouteId, "Route", htmlAttributes: new{@class = "control-label col-md-2"})
+      <div class="col-md-10">
+        @Html.DropDownListFor(model => model.RouteId,
+          new SelectList(
+            Model.Routes,
+            "ID", "RouteName"),
+          new{@class = "form-control"})
+        @Html.ValidationMessageFor(model => model.RouteId, "", new{@class = "text-danger"})
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.DateAvailable, htmlAttributes: new{@class = "control-label col-md-2"})
+      <div class="col-md-10">
+
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="1"> Lunes
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="2"> Martes
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="4"> Miercoles
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="8"> Jueves
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="16"> Viernes
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="32"> Sabado
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="64"> Domingo
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="DateAvailable" name="DateAvailable" value="128"> Todos los Dias
+        </label>
+
+        @*@Html.EditorFor(model => model.DateAvailable, new{htmlAttributes = new{@class = "form-control"}})*@
+        @Html.ValidationMessageFor(model => model.DateAvailable, "", new{@class = "text-danger"})
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.DepartureTime, htmlAttributes: new{@class = "control-label col-md-2"})
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.DepartureTime, new{htmlAttributes = new{@class = "form-control"}})
+        @Html.ValidationMessageFor(model => model.DepartureTime, "", new{@class = "text-danger"})
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.ArrivalTime, htmlAttributes: new{@class = "control-label col-md-2"})
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.ArrivalTime, new{htmlAttributes = new{@class = "form-control"}})
+        @Html.ValidationMessageFor(model => model.ArrivalTime, "", new{@class = "text-danger"})
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.VehicleId, "Vehicle", htmlAttributes: new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @Html.DropDownListFor(model => model.VehicleId,
+            new SelectList(
+            Model.Vehicles,
+              "ID", "Name"),
+            new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.VehicleId, "", new { @class = "text-danger" })
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @*@Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })*@
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input name="Price" id="Price" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+
+        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Create" class="btn btn-default"/>
+      </div>
+    </div>
+  </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

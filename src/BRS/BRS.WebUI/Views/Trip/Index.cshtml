@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BRS.Core.Models.Trip>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Route)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.DateAvailable)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.DepartureTime)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.ArrivalTime)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Price)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.CreatedDate)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.ModifiedDate)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Deleted)
+    </th>
+    <th></th>
+  </tr>
+
+@foreach (var item in Model) {
+  <tr>
+    <td>
+      @Html.DisplayFor(modelItem => item.Route.RouteName)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.DateAvailable)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.DepartureTime)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.ArrivalTime)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.Price)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.CreatedDate)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.ModifiedDate)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.Deleted)
+    </td>
+    <td>
+      @Html.ActionLink("Edit", "Edit", new{id = item.ID}) |
+      @Html.ActionLink("Details", "Details", new{id = item.ID}) |
+      @Html.ActionLink("Delete", "Delete", new{id = item.ID})
+    </td>
+  </tr>
+}
+
+</table>
