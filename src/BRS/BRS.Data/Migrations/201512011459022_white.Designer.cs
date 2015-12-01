@@ -7,13 +7,13 @@ namespace BRS.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class white : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(white));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511240331357_InitialCreate"; }
+            get { return "201512011459022_white"; }
         }
         
         string IMigrationMetadata.Source
