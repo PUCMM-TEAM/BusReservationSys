@@ -22,6 +22,9 @@ namespace BRS.Data.SqlRepositories
 
         public void Create(User entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
+
             _context.Users.Add(entity);
             _context.SaveChanges();
         }
@@ -59,9 +62,35 @@ namespace BRS.Data.SqlRepositories
             user.Username = entity.Username;
             user.Email = entity.Email;
             user.Password = entity.Password;
+            entity.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
             _context.SaveChanges();
         }
+
+        public Role GetRoleInstance(Erole erole) {
+            var roles = _context.Roles;
+            switch (erole)
+            {
+                case Erole.Administrator:
+                    return roles.Where(x => x.Name.Contains("Admin")).First();
+                case Erole.Operator:
+                    return roles.Where(x => x.Name.Contains("Opera")).First();
+                case Erole.Customer:
+                    return roles.Where(x => x.Name.Contains("Cust")).First();
+                default:
+                    return roles.Where(x => x.Name.Contains("Gues")).First();
+            }
+        }
+    }
+
+
+
+    public enum Erole
+    {
+        Administrator,
+        Operator,
+        Customer,
+        Guest
     }
 }

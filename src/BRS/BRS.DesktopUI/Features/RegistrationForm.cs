@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
+using BRS.Data;
+using BRS.Data.SqlRepositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +34,38 @@ namespace BRS.DesktopUI
         private void BtnRegistrationCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnRegistrationCreate_Click(object sender, EventArgs e)
+        {
+            UserSqlRepository userRepo = new UserSqlRepository();
+
+            User user = new User();
+
+            user.Username = TbRegistrationUsername.Text;
+            user.Email = TbRegistrationEmail.Text;
+            user.Password = TbRegistrationPassword.Text;
+            user.Role = userRepo.GetRoleInstance(Erole.Customer);
+            
+            Customer customer = new Customer();
+
+            customer.FirstName = TbRegistrationFirstName.Text;
+            customer.LastName = TbRegistrationLastName.Text;
+            customer.Birthday = DTPRegistrationBirthday.Text;
+
+            CreditCard creditcard = new CreditCard();
+
+            creditcard.CardHolder = TbRegistrationCardHolder.Text;
+            creditcard.CardNumber = TbRegistrationCardNumber.Text;
+            creditcard.CVC = TbRegistrationCVC.Text;
+            creditcard.ExpirationDate =   DTPRegistrationExpirationDate.Value.Millisecond;
+
+            RepositoryFactory.Instance().UserRepository().Create(user);
+            RepositoryFactory.Instance().CustomerRepository().Create(customer);
+            RepositoryFactory.Instance().CreditCardRepository().Create(creditcard);
+
+            MessageBox.Show("Succesfully Added!");
+
         }
     }
 }

@@ -37,7 +37,7 @@ namespace BRS.Data.Migrations
                 new Role { Name = "Guest", CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, Deleted = false }
 
                 );
-
+            context.SaveChanges();
             Role admin = context.Roles.Where(x => x.Name.Contains("Admin")).First();
             Role op = context.Roles.Where(x => x.Name.Contains("Operator")).First();
             Role customer = context.Roles.Where(x => x.Name.Contains("Customer")).First();
@@ -50,6 +50,8 @@ namespace BRS.Data.Migrations
 
 
                );
+
+            context.SaveChanges();
         }
     }
 }

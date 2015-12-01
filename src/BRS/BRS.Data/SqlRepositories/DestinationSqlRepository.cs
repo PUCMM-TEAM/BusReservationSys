@@ -22,6 +22,8 @@ namespace BRS.Data.SqlRepositories
 
         public void Create(Destination entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Destinations.Add(entity);
             _context.SaveChanges();
         }
@@ -59,7 +61,7 @@ namespace BRS.Data.SqlRepositories
             destination.Name = entity.Name;
             destination.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(destination).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }
