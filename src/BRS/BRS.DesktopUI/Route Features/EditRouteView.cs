@@ -16,7 +16,7 @@ namespace BRS.DesktopUI
     public partial class EditRouteView : Form
     {
         RouteRepository repo = new RouteRepository();
-        //private Context db = new Context();
+       // private Context db = new Context();
 
         public EditRouteView()
         {
@@ -36,8 +36,8 @@ namespace BRS.DesktopUI
             //var bindingList = new BindingList<Route>(list);//Create a new list to show data from database
             //var source = new BindingSource(bindingList, null);//fill with data
 
-            //CbRoutePickup.DataSource = bs;
-            //CbRouteDropoff.DataSource = bs2;
+            //CbRoutePickup.DataSource = source;
+            //CbRouteDropoff.DataSource = source;
 
             CbRoutePickup.DisplayMember = "Name";
             CbRoutePickup.ValueMember = "Name";

@@ -91,10 +91,10 @@
     <Compile Include="Trip Features\EditTripView.Designer.cs">
       <DependentUpon>EditTripView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TripListView.cs">
+    <Compile Include="Trip Features\TripListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TripListView.Designer.cs">
+    <Compile Include="Trip Features\TripListView.Designer.cs">
       <DependentUpon>TripListView.cs</DependentUpon>
     </Compile>
     <Compile Include="User Features\EditUserView.cs">
@@ -165,7 +165,7 @@
     <EmbeddedResource Include="Trip Features\EditTripView.resx">
       <DependentUpon>EditTripView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TripListView.resx">
+    <EmbeddedResource Include="Trip Features\TripListView.resx">
       <DependentUpon>TripListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Features\EditUserView.resx">
