@@ -32,3 +32,37 @@ C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\bin\N
 C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.dll
 C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.pdb
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.WebUI.dll.config
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.WebUI.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.WebUI.pdb
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Core.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Data.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\EntityFramework.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Helpers.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Mvc.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Optimization.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Razor.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\WebGrease.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Core.pdb
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Data.pdb
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\EntityFramework.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Helpers.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Mvc.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Optimization.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.Razor.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\Antlr3.Runtime.pdb
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.dll
+C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.pdb

@@ -10,7 +10,7 @@ namespace BRS.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "BRS.Data.Context";
+            //ContextKey = "BRS.Data.Context";
         }
 
         protected override void Seed(BRS.Data.Context context)

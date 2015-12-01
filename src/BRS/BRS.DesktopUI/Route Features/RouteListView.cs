@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using BRS.Core.Models;
 using BRS.Data;
 using BRS.Data.Repositories;
+using BRS.Core.Repositories;
+using BRS.Data.SqlRepositories;
 
 namespace BRS.DesktopUI {
   public partial class RouteListView : Form {
@@ -21,7 +23,7 @@ namespace BRS.DesktopUI {
 
             // destinations.Select(x => x);
 
-            RouteRepository repo =  new RouteRepository();
+            IRepository<Route> repo = new RouteSqlRepository();
             List<Route> routes = repo.ReadAll().ToList();
             var bindingList = new BindingList<Route>(routes);//Create a new list to show data from database
             var source = new BindingSource(bindingList, null);//fill with data
