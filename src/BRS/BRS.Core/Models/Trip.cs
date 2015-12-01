@@ -12,6 +12,5 @@ namespace BRS.Core.Models {
     public float Price { get; set; }
     public virtual Route Route { get; set; }
     public virtual Vehicle Vehicle{ get; set; }
-
   }
 }

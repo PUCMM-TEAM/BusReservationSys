@@ -1,3 +1,4 @@
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Web.Security;
 using BRS.Core.Models;
 
@@ -29,6 +30,11 @@ namespace BRS.Data {
     public virtual DbSet<Reservation> Reservations { get; set; }
     public virtual DbSet<Role> Roles { get; set; }
     public virtual DbSet<User> Users { get; set; }
-  }
 
+    protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+      modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+      modelBuilder.Entity<Route>().Ignore(t => t.RouteName);
+      base.OnModelCreating(modelBuilder);
+    }
+  }
 }
