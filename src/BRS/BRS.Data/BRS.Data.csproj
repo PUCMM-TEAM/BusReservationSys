@@ -55,7 +55,6 @@
     <Compile Include="Repositories\CreditCardRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\DestinationRepository.cs" />
-    <Compile Include="Repositories\LocalGenericRepository.cs" />
     <Compile Include="Repositories\ReservationRepository.cs" />
     <Compile Include="Repositories\RouteRepository.cs" />
     <Compile Include="Repositories\TripRepository.cs" />
@@ -66,6 +65,7 @@
     <Compile Include="SqlRepositories\CustomerSqlRepository.cs" />
     <Compile Include="SqlRepositories\DestinationSqlRepository.cs" />
     <Compile Include="SqlRepositories\ReservationSqlRepository.cs" />
+    <Compile Include="SqlRepositories\RoleSqlRepository.cs" />
     <Compile Include="SqlRepositories\RouteSqlRepository.cs" />
     <Compile Include="SqlRepositories\TripSqlRepository.cs" />
     <Compile Include="SqlRepositories\UserSqlRepository.cs" />

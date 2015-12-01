@@ -22,6 +22,8 @@ namespace BRS.Data.SqlRepositories
 
         public void Create(Customer entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Customers.Add(entity);
             _context.SaveChanges();
         }
@@ -59,8 +61,9 @@ namespace BRS.Data.SqlRepositories
             customer.FirstName = entity.FirstName;
             customer.LastName = entity.LastName;
             customer.Birthday = entity.Birthday;
+            customer.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(customer).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

@@ -22,6 +22,8 @@ namespace BRS.Data.SqlRepositories
 
         public void Create(CreditCard entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.CreditCards.Add(entity);
             _context.SaveChanges();
         }
@@ -60,9 +62,9 @@ namespace BRS.Data.SqlRepositories
             creditcard.CardNumber = entity.CardNumber;
             creditcard.CVC = entity.CVC;
             creditcard.ExpirationDate = entity.ExpirationDate;
-            
+            entity.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(creditcard).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BRS.Core;
 using BRS.Core.CallBacks;
+using System.Data.Entity;
 
 namespace BRS.Data.SqlRepositories
 {
@@ -22,6 +23,8 @@ namespace BRS.Data.SqlRepositories
 
         public void Create(Vehicle entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Vehicles.Add(entity);
             _context.SaveChanges();
         }
@@ -59,10 +62,10 @@ namespace BRS.Data.SqlRepositories
             vehicle.PassengerCapacity = entity.PassengerCapacity;
             vehicle.VehicleType = entity.VehicleType;
             vehicle.Description = entity.Description;
+            entity.ModifiedDate = DateTime.Now;
 
-
-            // _context.Routes.Up
-            // _context.SaveChanges();
+            _context.Entry(vehicle).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
