@@ -1,6 +1,8 @@
 ﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
 using BRS.Data;
 using BRS.Data.Repositories;
+using BRS.Data.SqlRepositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +20,7 @@ namespace BRS.DesktopUI
         public DestinationListView()
         {
             InitializeComponent();
-            DestinationRepository repo = new DestinationRepository();
+            IRepository<Destination> repo = new DestinationSqlRepository();
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Destinations.ToList();//Gets info from database
             List<Destination> destinations = repo.ReadAll().ToList();
@@ -26,7 +28,6 @@ namespace BRS.DesktopUI
             var source = new BindingSource(bindingList, null);//fill with data
             DGVDestination.DataSource = source;
 
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

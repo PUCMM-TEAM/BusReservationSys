@@ -1,0 +1,70 @@
+﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BRS.Core;
+using BRS.Core.CallBacks;
+using System.Data.Entity;
+
+namespace BRS.Data.SqlRepositories
+{
+    public class TripSqlRepository : IRepository<Trip>
+    {
+        private Context _context;
+
+        public TripSqlRepository()
+        {
+            _context = new Context();
+        }
+
+        public void Create(Trip entity)
+        {
+            _context.Trips.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            Trip trip = Read(id);
+            trip.Deleted = true;
+            Update(trip);
+        }
+
+        public Trip Read(int id)
+        {
+            return _context.Trips.Where(x => x.Deleted == false && x.ID == id).First();
+        }
+
+        public void Read(int id, IResponse<Trip> reponse)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Trip> ReadAll()
+        {
+            return _context.Trips.Where(x => x.Deleted == false);
+        }
+
+        public void ReadAll(IListResponse<Trip> callback)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Trip entity)
+        {
+            Trip trip = Read(entity.ID);
+            trip.Route = entity.Route;
+            trip.DateAvailable = entity.DateAvailable;
+            trip.DepartureTime = entity.DepartureTime;
+            trip.ArrivalTime = entity.ArrivalTime;
+            trip.Vehicle = entity.Vehicle;
+            trip.Price = entity.Price;
+
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+    }
+}

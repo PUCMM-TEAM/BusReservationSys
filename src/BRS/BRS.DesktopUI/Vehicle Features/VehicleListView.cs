@@ -1,4 +1,5 @@
 ﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
 using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BRS.Data.SqlRepositories;
 
 namespace BRS.DesktopUI
 {
@@ -17,7 +19,7 @@ namespace BRS.DesktopUI
         public VehicleListView()
         {
             InitializeComponent();
-            VehicleRepository repo = new VehicleRepository();
+            IRepository<Vehicle> repo = new VehicleSqlRepository();
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Destinations.ToList();//Gets info from database
             List<Vehicle> vehicle = repo.ReadAll().ToList();
