@@ -2,6 +2,7 @@
 using BRS.Core.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +28,14 @@ namespace BRS.Data.SqlRepositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Route route = Read(id);
+            route.Deleted = true;
+            Update(route);
         }
 
         public Route Read(int id)
         {
-            return _context.Routes.Find(id);
+            return _context.Routes.Where(x => x.Deleted == false && x.ID == id).First();
         }
 
         public void Read(int id, Core.IResponse<Route> reponse)
@@ -42,7 +45,7 @@ namespace BRS.Data.SqlRepositories
 
         public IEnumerable<Route> ReadAll()
         {
-            return _context.Routes;
+            return _context.Routes.Where(x => x.Deleted == false);
         }
 
         public void ReadAll(Core.CallBacks.IListResponse<Route> callback)
@@ -56,8 +59,8 @@ namespace BRS.Data.SqlRepositories
             route.Pickup = entity.Pickup;
             route.DropOff = entity.DropOff;
 
-           // _context.Routes.Up
-           // _context.SaveChanges();
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 

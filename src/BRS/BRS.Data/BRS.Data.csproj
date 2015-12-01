@@ -62,8 +62,13 @@
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="RepositoryFactory.cs" />
+    <Compile Include="SqlRepositories\CreditCardSqlRepository.cs" />
+    <Compile Include="SqlRepositories\CustomerSqlRepository.cs" />
     <Compile Include="SqlRepositories\DestinationSqlRepository.cs" />
+    <Compile Include="SqlRepositories\ReservationSqlRepository.cs" />
     <Compile Include="SqlRepositories\RouteSqlRepository.cs" />
+    <Compile Include="SqlRepositories\TripSqlRepository.cs" />
+    <Compile Include="SqlRepositories\UserSqlRepository.cs" />
     <Compile Include="SqlRepositories\VehicleSqlRepository.cs" />
   </ItemGroup>
   <ItemGroup>
