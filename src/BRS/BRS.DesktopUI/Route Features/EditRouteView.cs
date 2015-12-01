@@ -1,5 +1,6 @@
 ﻿using BRS.Core.Models;
 using BRS.Data;
+using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace BRS.DesktopUI
 {
     public partial class EditRouteView : Form
     {
-        private Context db = new Context();
+        RouteRepository repo = new RouteRepository();
+       // private Context db = new Context();
 
         public EditRouteView()
         {
@@ -34,8 +36,8 @@ namespace BRS.DesktopUI
             //var bindingList = new BindingList<Route>(list);//Create a new list to show data from database
             //var source = new BindingSource(bindingList, null);//fill with data
 
-            //CbRoutePickup.DataSource = bs;
-            //CbRouteDropoff.DataSource = bs2;
+            //CbRoutePickup.DataSource = source;
+            //CbRouteDropoff.DataSource = source;
 
             CbRoutePickup.DisplayMember = "Name";
             CbRoutePickup.ValueMember = "Name";
@@ -53,11 +55,12 @@ namespace BRS.DesktopUI
 
         private void BtnRouteCreate_Click(object sender, EventArgs e)
         {
-            //Route route = new Route();
-           // route.Pickup = 
-           // route.DropOff = 
-            //db.Routes.Add(route);
+            Route route= new Route();
+            //route.Pickup = CbRoutePickup.
+            //route.DropOff = CbRouteDropoff;
+            //db.Destinations.Add(destination);
             //db.SaveChanges();
+            repo.Create(route);
         }
 
         private void CbRoutePickup_SelectedIndexChanged(object sender, EventArgs e)

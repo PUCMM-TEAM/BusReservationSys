@@ -1,5 +1,6 @@
 ﻿using BRS.Core.Models;
 using BRS.Data;
+using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,8 @@ namespace BRS.DesktopUI
 {
     public partial class EditDestinationView : Form 
     {
-        private Context db = new Context();
-
+        //private Context db = new Context();
+        DestinationRepository repo = new DestinationRepository();
         public EditDestinationView()
         {
             InitializeComponent();
@@ -32,9 +33,9 @@ namespace BRS.DesktopUI
             destination.Name = TbDestinationName.Text.ToString();
             destination.CreatedDate = DateTime.Now;
             destination.ModifiedDate = DateTime.Now;
-            db.Destinations.Add(destination);
-            db.SaveChanges();
-
+            //db.Destinations.Add(destination);
+            //db.SaveChanges();
+            repo.Create(destination);
         }
     }
 }

@@ -34,5 +34,11 @@ namespace BRS.DesktopUI {
           //ReportApp.Form1 form = new Form1();
           //form.Show();
         }
+
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationform = new RegistrationForm();
+            registrationform.Show();
+        }
     }
 }

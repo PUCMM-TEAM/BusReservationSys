@@ -66,63 +66,127 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditRouteView.cs">
+    <Compile Include="Destination Features\DestinationListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditRouteView.Designer.cs">
+    <Compile Include="Destination Features\DestinationListView.Designer.cs">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destino.cs" />
+    <Compile Include="Destination Features\EditDestinationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destination Features\EditDestinationView.Designer.cs">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Route Features\EditRouteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Route Features\EditRouteView.Designer.cs">
       <DependentUpon>EditRouteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditUserView.cs">
+    <Compile Include="Trip Features\EditTripView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUserView.Designer.cs">
+    <Compile Include="Trip Features\EditTripView.Designer.cs">
+      <DependentUpon>EditTripView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip Features\TripListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip Features\TripListView.Designer.cs">
+      <DependentUpon>TripListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Features\EditUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Features\EditUserView.Designer.cs">
       <DependentUpon>EditUserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontView.cs">
+    <Compile Include="Features\FrontView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontView.Designer.cs">
+    <Compile Include="Features\FrontView.Designer.cs">
       <DependentUpon>FrontView.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginView.cs">
+    <Compile Include="Features\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginView.Designer.cs">
+    <Compile Include="Features\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentView.cs">
+    <Compile Include="Features\PaymentView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentView.Designer.cs">
+    <Compile Include="Features\PaymentView.Designer.cs">
       <DependentUpon>PaymentView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RouteListView.cs">
+    <Compile Include="Route Features\RouteListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RouteListView.Designer.cs">
+    <Compile Include="Route Features\RouteListView.Designer.cs">
       <DependentUpon>RouteListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchView.cs">
+    <Compile Include="Features\SearchView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchView.Designer.cs">
+    <Compile Include="Features\SearchView.Designer.cs">
       <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditRouteView.resx">
+    <Compile Include="User Features\UserListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Features\UserListView.Designer.cs">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle Features\EditVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle Features\EditVehicleView.Designer.cs">
+      <DependentUpon>EditVehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle Features\VehicleListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle Features\VehicleListView.Designer.cs">
+      <DependentUpon>VehicleListView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Destination Features\DestinationListView.resx">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destination Features\EditDestinationView.resx">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Route Features\EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditUserView.resx">
+    <EmbeddedResource Include="Trip Features\EditTripView.resx">
+      <DependentUpon>EditTripView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip Features\TripListView.resx">
+      <DependentUpon>TripListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Features\EditUserView.resx">
       <DependentUpon>EditUserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontView.resx">
+    <EmbeddedResource Include="Features\FrontView.resx">
       <DependentUpon>FrontView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginView.resx">
+    <EmbeddedResource Include="Features\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaymentView.resx">
+    <EmbeddedResource Include="Features\PaymentView.resx">
       <DependentUpon>PaymentView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -134,11 +198,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RouteListView.resx">
+    <EmbeddedResource Include="Route Features\RouteListView.resx">
       <DependentUpon>RouteListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchView.resx">
+    <EmbeddedResource Include="Features\SearchView.resx">
       <DependentUpon>SearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Features\UserListView.resx">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle Features\EditVehicleView.resx">
+      <DependentUpon>EditVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle Features\VehicleListView.resx">
+      <DependentUpon>VehicleListView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
