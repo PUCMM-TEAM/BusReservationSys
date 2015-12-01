@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
-    public partial class EditTripView : Form
+    public partial class RegistrationForm : Form
     {
-        public EditTripView()
+        public RegistrationForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void GbDescription_Enter(object sender, EventArgs e)
+        private void TbRegistrationLastName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnRegistrationCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
