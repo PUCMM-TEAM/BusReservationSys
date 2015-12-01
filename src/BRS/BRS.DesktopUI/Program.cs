@@ -14,7 +14,7 @@ namespace BRS.DesktopUI {
     static void Main() {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DestinationListView());
+            Application.Run(new FormFrontView());
     }
   }
 }

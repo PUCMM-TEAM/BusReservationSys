@@ -61,6 +61,7 @@
             this.BtnRegister.TabIndex = 2;
             this.BtnRegister.Text = "Register";
             this.BtnRegister.UseVisualStyleBackColor = true;
+            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // fileToolStripMenuItem
             // 

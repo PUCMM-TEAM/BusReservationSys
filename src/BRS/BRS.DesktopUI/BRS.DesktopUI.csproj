@@ -79,6 +79,12 @@
     <Compile Include="Destination Features\EditDestinationView.Designer.cs">
       <DependentUpon>EditDestinationView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route Features\EditRouteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Destination Features\EditDestinationView.resx">
       <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route Features\EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
