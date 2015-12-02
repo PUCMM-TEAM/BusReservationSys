@@ -19,6 +19,7 @@ namespace BRS.DesktopUI
         public SearchView()
         {
             InitializeComponent();
+            MtbSearchNumPass.Text = "01";
             IRepository<Trip> repo = RepositoryFactory.Instance().TripRepository();
             List<Trip> trip = repo.ReadAll().ToList();
             var bindingList = new BindingList<Trip>(trip);//Create a new list to show data from database
@@ -52,28 +53,28 @@ namespace BRS.DesktopUI
             CbSearchDestination.DisplayMember = "Name";
             CbSearchDestination.ValueMember = "ID";
 
-            //Departure time and Arrival Time
-            CbSearchDepartueTime.DisplayMember = "DepartureTime";
-            CbSearchDepartueTime.ValueMember = "ID";
+            ////Departure time and Arrival Time
+            //CbSearchDepartueTime.DisplayMember = "DepartureTime";
+            //CbSearchDepartueTime.ValueMember = "ID";
 
-            CbSearchArrivalTime.DisplayMember = "ArrivalTime";
-            CbSearchArrivalTime.ValueMember = "ID";
+            //CbSearchArrivalTime.DisplayMember = "ArrivalTime";
+            //CbSearchArrivalTime.ValueMember = "ID";
 
 
-            //Vehicle
-            CbSearchVehicle.DisplayMember = "Name";
-            CbSearchVehicle.ValueMember = "ID";
+            ////Vehicle
+            //CbSearchVehicle.DisplayMember = "Name";
+            //CbSearchVehicle.ValueMember = "ID";
 
 
             //Origin and Destination
             CbSearchOrigin.DataSource = sourceori;
             CbSearchDestination.DataSource = sourceori;
-            //Departure time and Arrival Time
-            CbSearchDepartueTime.DataSource = source_departure;
-            CbSearchArrivalTime.DataSource = source_arrival;
+            ////Departure time and Arrival Time
+            //CbSearchDepartueTime.DataSource = source_departure;
+            //CbSearchArrivalTime.DataSource = source_arrival;
 
-            //Vehicle
-            CbSearchVehicle.DataSource = sourcevehicle;
+            ////Vehicle
+            //CbSearchVehicle.DataSource = sourcevehicle;
 
         }
 
@@ -89,8 +90,8 @@ namespace BRS.DesktopUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PaymentView paymentview = new PaymentView();
-            paymentview.Show();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -108,6 +109,16 @@ namespace BRS.DesktopUI
 
         private void DGVSearchTrip_DoubleClick(object sender, EventArgs e)
         {
+            int idx = DGVSearchTrip.CurrentCell.RowIndex;
+            
+            Trip trip = (Trip)DGVSearchTrip.Rows[idx].DataBoundItem;
+            PaymentView paymentview = new PaymentView();
+
+            int noPassengers = int.Parse(MtbSearchNumPass.Text);
+
+            paymentview.setModel(trip, noPassengers, dateTimePicker1.Value);
+
+            paymentview.Show();
 
         }
     }
