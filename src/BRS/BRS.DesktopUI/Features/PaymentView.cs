@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BRS.Core.Models;
+using BRS.Data;
+using BRS.Core.Repositories;
 
 namespace BRS.DesktopUI {
   public partial class PaymentView : Form {
@@ -15,11 +17,14 @@ namespace BRS.DesktopUI {
         Trip trip;
         int noPassengers;
         DateTime value;
+        Customer customer;
+        CreditCard credit;
 
         public PaymentView()
         {
       InitializeComponent();
-            
+
+          
     }
 
       
@@ -53,5 +58,36 @@ namespace BRS.DesktopUI {
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(ChPaymentAgree.Checked)
+            {
+                customer = new Customer();
+                customer.FirstName = "Rafael";
+                customer.LastName = "White";
+                customer.Birthday = value.ToString();
+                credit = new CreditCard();
+                credit.CardHolder = "Rafael";
+                credit.CardNumber = "588282";
+                credit.ExpirationDate = 0;
+
+                Reservation reservation = new Reservation();
+                reservation.Trip = trip;
+                reservation.Customer = RepositoryFactory.Instance().CustomerRepository().Read(2);
+                reservation.CreditCard = RepositoryFactory.Instance().CreditCardRepository().Read(1);
+                reservation.ReservationDate = value;
+                reservation.NumPassenger = noPassengers;
+                RepositoryFactory.Instance().ReservationRepository().Create(reservation);
+
+                MessageBox.Show("The reservation was made");
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("You must agree to the terms and conditions");
+            }
+        }
     }
 }

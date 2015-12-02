@@ -47,14 +47,14 @@
             this.GbRegistrationPaymentOption = new System.Windows.Forms.GroupBox();
             this.DTPRegistrationExpirationDate = new System.Windows.Forms.DateTimePicker();
             this.TxtRegistrationExpirationDate = new System.Windows.Forms.Label();
-            this.TbRegistrationCVC = new System.Windows.Forms.TextBox();
             this.TxtRegistrationCVC = new System.Windows.Forms.Label();
-            this.TbRegistrationCardNumber = new System.Windows.Forms.TextBox();
             this.TxtRegistrationCardNumber = new System.Windows.Forms.Label();
             this.TbRegistrationCardHolder = new System.Windows.Forms.TextBox();
             this.TxtRegistrationCardHolder = new System.Windows.Forms.Label();
             this.BtnRegistrationCreate = new System.Windows.Forms.Button();
             this.BtnRegistrationCancel = new System.Windows.Forms.Button();
+            this.MtbRegistrationCVC = new System.Windows.Forms.MaskedTextBox();
+            this.MtbRegistrationCardNumber = new System.Windows.Forms.MaskedTextBox();
             this.GbRegistrationUserInfo.SuspendLayout();
             this.GbRegistrationpPersonalInfo.SuspendLayout();
             this.GbRegistrationPaymentOption.SuspendLayout();
@@ -62,6 +62,7 @@
             // 
             // GbRegistrationUserInfo
             // 
+            this.GbRegistrationUserInfo.BackColor = System.Drawing.SystemColors.Control;
             this.GbRegistrationUserInfo.Controls.Add(this.TbRegistrationPA);
             this.GbRegistrationUserInfo.Controls.Add(this.TxtRegistrationPAgain);
             this.GbRegistrationUserInfo.Controls.Add(this.TbRegistrationPassword);
@@ -143,6 +144,7 @@
             // 
             // GbRegistrationpPersonalInfo
             // 
+            this.GbRegistrationpPersonalInfo.BackColor = System.Drawing.SystemColors.Control;
             this.GbRegistrationpPersonalInfo.Controls.Add(this.DTPRegistrationBirthday);
             this.GbRegistrationpPersonalInfo.Controls.Add(this.TxtRegistrationBirthday);
             this.GbRegistrationpPersonalInfo.Controls.Add(this.TbRegistrationLastName);
@@ -207,11 +209,12 @@
             // 
             // GbRegistrationPaymentOption
             // 
+            this.GbRegistrationPaymentOption.BackColor = System.Drawing.SystemColors.Control;
+            this.GbRegistrationPaymentOption.Controls.Add(this.MtbRegistrationCardNumber);
+            this.GbRegistrationPaymentOption.Controls.Add(this.MtbRegistrationCVC);
             this.GbRegistrationPaymentOption.Controls.Add(this.DTPRegistrationExpirationDate);
             this.GbRegistrationPaymentOption.Controls.Add(this.TxtRegistrationExpirationDate);
-            this.GbRegistrationPaymentOption.Controls.Add(this.TbRegistrationCVC);
             this.GbRegistrationPaymentOption.Controls.Add(this.TxtRegistrationCVC);
-            this.GbRegistrationPaymentOption.Controls.Add(this.TbRegistrationCardNumber);
             this.GbRegistrationPaymentOption.Controls.Add(this.TxtRegistrationCardNumber);
             this.GbRegistrationPaymentOption.Controls.Add(this.TbRegistrationCardHolder);
             this.GbRegistrationPaymentOption.Controls.Add(this.TxtRegistrationCardHolder);
@@ -238,13 +241,6 @@
             this.TxtRegistrationExpirationDate.TabIndex = 12;
             this.TxtRegistrationExpirationDate.Text = "*Expiration Date:";
             // 
-            // TbRegistrationCVC
-            // 
-            this.TbRegistrationCVC.Location = new System.Drawing.Point(52, 105);
-            this.TbRegistrationCVC.Name = "TbRegistrationCVC";
-            this.TbRegistrationCVC.Size = new System.Drawing.Size(100, 20);
-            this.TbRegistrationCVC.TabIndex = 11;
-            // 
             // TxtRegistrationCVC
             // 
             this.TxtRegistrationCVC.AutoSize = true;
@@ -253,13 +249,6 @@
             this.TxtRegistrationCVC.Size = new System.Drawing.Size(35, 13);
             this.TxtRegistrationCVC.TabIndex = 10;
             this.TxtRegistrationCVC.Text = "*CVC:";
-            // 
-            // TbRegistrationCardNumber
-            // 
-            this.TbRegistrationCardNumber.Location = new System.Drawing.Point(93, 70);
-            this.TbRegistrationCardNumber.Name = "TbRegistrationCardNumber";
-            this.TbRegistrationCardNumber.Size = new System.Drawing.Size(100, 20);
-            this.TbRegistrationCardNumber.TabIndex = 9;
             // 
             // TxtRegistrationCardNumber
             // 
@@ -306,10 +295,27 @@
             this.BtnRegistrationCancel.UseVisualStyleBackColor = true;
             this.BtnRegistrationCancel.Click += new System.EventHandler(this.BtnRegistrationCancel_Click);
             // 
+            // MtbRegistrationCVC
+            // 
+            this.MtbRegistrationCVC.Location = new System.Drawing.Point(52, 105);
+            this.MtbRegistrationCVC.Mask = "000";
+            this.MtbRegistrationCVC.Name = "MtbRegistrationCVC";
+            this.MtbRegistrationCVC.Size = new System.Drawing.Size(26, 20);
+            this.MtbRegistrationCVC.TabIndex = 14;
+            // 
+            // MtbRegistrationCardNumber
+            // 
+            this.MtbRegistrationCardNumber.Location = new System.Drawing.Point(93, 70);
+            this.MtbRegistrationCardNumber.Mask = "0000-0000-0000-0000";
+            this.MtbRegistrationCardNumber.Name = "MtbRegistrationCardNumber";
+            this.MtbRegistrationCardNumber.Size = new System.Drawing.Size(115, 20);
+            this.MtbRegistrationCardNumber.TabIndex = 15;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(624, 442);
             this.Controls.Add(this.BtnRegistrationCancel);
             this.Controls.Add(this.BtnRegistrationCreate);
@@ -351,11 +357,11 @@
         private System.Windows.Forms.Button BtnRegistrationCancel;
         private System.Windows.Forms.DateTimePicker DTPRegistrationExpirationDate;
         private System.Windows.Forms.Label TxtRegistrationExpirationDate;
-        private System.Windows.Forms.TextBox TbRegistrationCVC;
         private System.Windows.Forms.Label TxtRegistrationCVC;
-        private System.Windows.Forms.TextBox TbRegistrationCardNumber;
         private System.Windows.Forms.Label TxtRegistrationCardNumber;
         private System.Windows.Forms.TextBox TbRegistrationCardHolder;
         private System.Windows.Forms.Label TxtRegistrationCardHolder;
+        private System.Windows.Forms.MaskedTextBox MtbRegistrationCardNumber;
+        private System.Windows.Forms.MaskedTextBox MtbRegistrationCVC;
     }
 }

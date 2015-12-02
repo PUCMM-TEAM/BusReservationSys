@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditView.Designer.cs">
+      <DependentUpon>AdminEditView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Destination Features\DestinationListView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Features\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationListView.Designer.cs">
+      <DependentUpon>ReservationListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Route Features\EditRouteView.cs">
       <SubType>Form</SubType>
@@ -159,6 +171,9 @@
     <Compile Include="Vehicle Features\VehicleListView.Designer.cs">
       <DependentUpon>VehicleListView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminEditView.resx">
+      <DependentUpon>AdminEditView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Destination Features\DestinationListView.resx">
       <DependentUpon>DestinationListView.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationListView.resx">
+      <DependentUpon>ReservationListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route Features\EditRouteView.resx">
       <DependentUpon>EditRouteView.cs</DependentUpon>
@@ -253,6 +271,9 @@
       <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
       <Name>BRS.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reservation Features\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

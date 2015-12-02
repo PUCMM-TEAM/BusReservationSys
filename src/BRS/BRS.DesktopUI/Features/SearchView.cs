@@ -26,6 +26,11 @@ namespace BRS.DesktopUI
             var source = new BindingSource(bindingList, null);//fill with data
             DGVSearchTrip.DataSource = source;
 
+            DGVSearchTrip.Columns["Deleted"].Visible = false;
+            DGVSearchTrip.Columns["CreatedDate"].Visible = false;
+            DGVSearchTrip.Columns["ModifiedDate"].Visible = false;
+            DGVSearchTrip.Columns["ID"].Visible = false;
+
             //Origin and Destination
             var originlist = RepositoryFactory.Instance().DestinationRepository().ReadAll().ToList();
             var bindinglistori = new BindingList<Destination>(originlist);//Create a new list to show data from database

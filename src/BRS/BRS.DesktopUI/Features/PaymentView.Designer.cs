@@ -23,8 +23,8 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ChPaymentAgree = new System.Windows.Forms.CheckBox();
+            this.BtnPaymentPay = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,33 +54,34 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnPaymentCancel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // ChPaymentAgree
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 327);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(60, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "I Agree";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChPaymentAgree.AutoSize = true;
+            this.ChPaymentAgree.Location = new System.Drawing.Point(12, 327);
+            this.ChPaymentAgree.Margin = new System.Windows.Forms.Padding(2);
+            this.ChPaymentAgree.Name = "ChPaymentAgree";
+            this.ChPaymentAgree.Size = new System.Drawing.Size(60, 17);
+            this.ChPaymentAgree.TabIndex = 0;
+            this.ChPaymentAgree.Text = "I Agree";
+            this.ChPaymentAgree.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnPaymentPay
             // 
-            this.button1.Location = new System.Drawing.Point(385, 329);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Pay Now";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnPaymentPay.Location = new System.Drawing.Point(385, 329);
+            this.BtnPaymentPay.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPaymentPay.Name = "BtnPaymentPay";
+            this.BtnPaymentPay.Size = new System.Drawing.Size(56, 19);
+            this.BtnPaymentPay.TabIndex = 1;
+            this.BtnPaymentPay.Text = "Pay Now";
+            this.BtnPaymentPay.UseVisualStyleBackColor = true;
+            this.BtnPaymentPay.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -358,28 +359,28 @@
             this.label22.TabIndex = 6;
             this.label22.Text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod";
             // 
-            // button2
+            // BtnPaymentCancel
             // 
-            this.button2.Location = new System.Drawing.Point(324, 329);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnPaymentCancel.Location = new System.Drawing.Point(324, 329);
+            this.BtnPaymentCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPaymentCancel.Name = "BtnPaymentCancel";
+            this.BtnPaymentCancel.Size = new System.Drawing.Size(56, 19);
+            this.BtnPaymentCancel.TabIndex = 24;
+            this.BtnPaymentCancel.Text = "Cancel";
+            this.BtnPaymentCancel.UseVisualStyleBackColor = true;
+            this.BtnPaymentCancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // PaymentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 352);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnPaymentCancel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BtnPaymentPay);
+            this.Controls.Add(this.ChPaymentAgree);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -400,8 +401,8 @@
 
     #endregion
 
-    private System.Windows.Forms.CheckBox checkBox1;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.CheckBox ChPaymentAgree;
+    private System.Windows.Forms.Button BtnPaymentPay;
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -423,7 +424,7 @@
     private System.Windows.Forms.Label label19;
     private System.Windows.Forms.GroupBox groupBox3;
     private System.Windows.Forms.Label label22;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button BtnPaymentCancel;
         private System.Windows.Forms.Label TxtPaymentOrigin;
         private System.Windows.Forms.Label TxtPaymentDestination;
         private System.Windows.Forms.Label TxtPaymentDepartureDate;
