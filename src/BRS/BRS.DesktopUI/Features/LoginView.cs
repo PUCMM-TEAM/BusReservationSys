@@ -1,5 +1,6 @@
 ﻿using BRS.Core.Models;
 using BRS.Data;
+using BRS.Logical.Account;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,11 +37,26 @@ namespace BRS.DesktopUI
 
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
-            
-               SearchView searchview = new SearchView();
-               searchview.Show();
-            
-          
+           if(AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
+            {
+
+                if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
+                {
+                    SearchView searchview = new SearchView();
+                    searchview.Show();
+                }
+                else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                {
+                    AdminEditView adminview = new AdminEditView();
+                    adminview.Show();
+                }
+            }
+         else
+            {
+                MessageBox.Show("Not a user");
+            }
+        
+              
         }
     }
 }

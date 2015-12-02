@@ -7,6 +7,6 @@ namespace BRS.Core.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Birthday { get; set; }
-        public virtual IEnumerable<CreditCard> CreditCards { get; set; } 
+        public CreditCard CreditCard { get; set; } 
     }
 }

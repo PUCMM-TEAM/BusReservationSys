@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BRS.Core.Models;
 using BRS.Data;
 using BRS.Core.Repositories;
+using BRS.Logical.Account;
 
 namespace BRS.DesktopUI {
   public partial class PaymentView : Form {
@@ -80,13 +81,13 @@ namespace BRS.DesktopUI {
                 credit.ModifiedDate = DateTime.Now;
                 credit.Deleted = false;
 
+               
+
                 Reservation reservation = new Reservation();
                 reservation.ID = 0;
                 reservation.Trip = trip;
-                reservation.Customer = customer;
-                reservation.CreditCard = credit;
-                //reservation.Customer = RepositoryFactory.Instance().CustomerRepository().Read(2);
-                //reservation.CreditCard = RepositoryFactory.Instance().CreditCardRepository().Read(1);
+                reservation.Customer = AccountManager.Instance.CurrentUser.Customer;
+                //reservation.CreditCard = AccountManager.Instance.CurrentUser.Customer.CreditCards.FirstOrDefault();
                 reservation.ReservationDate = value;
                 reservation.NumPassenger = noPassengers;
                 reservation.CreatedDate = DateTime.Now;

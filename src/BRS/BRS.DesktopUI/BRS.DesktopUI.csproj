@@ -263,13 +263,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Core\BRS.Core.csproj">
+    <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
       <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
       <Name>BRS.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Data\BRS.Data.csproj">
+    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
       <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
       <Name>BRS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Logical\BRS.Logic.csproj">
+      <Project>{7ee76b8a-17fd-47ef-8230-cbf58c729880}</Project>
+      <Name>BRS.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
