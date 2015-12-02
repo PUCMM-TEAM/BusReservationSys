@@ -15,6 +15,7 @@ namespace BRS.Data
         private IRepository<User> _userRepository;
         private IRepository<Vehicle> _vehicleRepository;
         private IRepository<Reservation> _reservationRepository;
+        private IRepository<Role> _roleRepository;
         private RepositoryFactory()
         {
             _context = new Context();
@@ -26,6 +27,7 @@ namespace BRS.Data
             _userRepository = new UserSqlRepository(_context);
             _vehicleRepository = new VehicleSqlRepository(_context);
             _reservationRepository = new ReservationSqlRepository(_context);
+            _roleRepository = new RoleSqlRepository(_context);
         }
 
         public static RepositoryFactory Instance()
@@ -73,6 +75,10 @@ namespace BRS.Data
         {
             return _reservationRepository;
         }
+
+      public IRepository<Role> RoleRepository(){
+        return _roleRepository;
+      } 
 
 
 

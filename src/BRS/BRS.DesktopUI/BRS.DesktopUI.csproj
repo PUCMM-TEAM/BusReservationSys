@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5172705B-FC97-4A73-B12F-ECDA5F6FC515}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BRS.DesktopUI</RootNamespace>
+    <AssemblyName>BRS.DesktopUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditView.Designer.cs">
+      <DependentUpon>AdminEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destination Features\DestinationListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destination Features\DestinationListView.Designer.cs">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destino.cs" />
+    <Compile Include="Destination Features\EditDestinationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destination Features\EditDestinationView.Designer.cs">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationListView.Designer.cs">
+      <DependentUpon>ReservationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Route Features\EditRouteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Route Features\EditRouteView.Designer.cs">
+      <DependentUpon>EditRouteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip Features\EditTripView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip Features\EditTripView.Designer.cs">
+      <DependentUpon>EditTripView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip Features\TripListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip Features\TripListView.Designer.cs">
+      <DependentUpon>TripListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Features\EditUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Features\EditUserView.Designer.cs">
+      <DependentUpon>EditUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FrontView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\FrontView.Designer.cs">
+      <DependentUpon>FrontView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\PaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\PaymentView.Designer.cs">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Route Features\RouteListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Route Features\RouteListView.Designer.cs">
+      <DependentUpon>RouteListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\SearchView.Designer.cs">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Features\UserListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Features\UserListView.Designer.cs">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle Features\EditVehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle Features\EditVehicleView.Designer.cs">
+      <DependentUpon>EditVehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle Features\VehicleListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle Features\VehicleListView.Designer.cs">
+      <DependentUpon>VehicleListView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminEditView.resx">
+      <DependentUpon>AdminEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destination Features\DestinationListView.resx">
+      <DependentUpon>DestinationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destination Features\EditDestinationView.resx">
+      <DependentUpon>EditDestinationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationListView.resx">
+      <DependentUpon>ReservationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Route Features\EditRouteView.resx">
+      <DependentUpon>EditRouteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip Features\EditTripView.resx">
+      <DependentUpon>EditTripView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip Features\TripListView.resx">
+      <DependentUpon>TripListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Features\EditUserView.resx">
+      <DependentUpon>EditUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\FrontView.resx">
+      <DependentUpon>FrontView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\PaymentView.resx">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Route Features\RouteListView.resx">
+      <DependentUpon>RouteListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\SearchView.resx">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Features\UserListView.resx">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle Features\EditVehicleView.resx">
+      <DependentUpon>EditVehicleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle Features\VehicleListView.resx">
+      <DependentUpon>VehicleListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Core\BRS.Core.csproj">
+      <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
+      <Name>BRS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Data\BRS.Data.csproj">
+      <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
+      <Name>BRS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reservation Features\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

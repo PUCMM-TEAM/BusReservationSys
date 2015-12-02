@@ -66,29 +66,19 @@ namespace BRS.Data.SqlRepositories
             _context.SaveChanges();
         }
 
-        public Role GetRoleInstance(Erole erole) {
-            var roles = _context.Roles;
-            switch (erole)
-            {
-                case Erole.Administrator:
-                    return roles.First(x => x.Name.Contains("Admin"));
-                case Erole.Operator:
-                    return roles.First(x => x.Name.Contains("Opera"));
-                case Erole.Customer:
-                    return roles.First(x => x.Name.Contains("Cust"));
-                default:
-                    return roles.First(x => x.Name.Contains("Gues"));
-            }
-        }
-    }
-
-
-
-    public enum Erole
-    {
-        Administrator,
-        Operator,
-        Customer,
-        Guest
+        //public Role GetRoleInstance(Erole erole) {
+        //    var roles = _context.Roles;
+        //    switch (erole)
+        //    {
+        //        case Erole.Administrator:
+        //            return roles.First(x => x.Name.Contains("Admin"));
+        //        case Erole.Operator:
+        //            return roles.First(x => x.Name.Contains("Opera"));
+        //        case Erole.Customer:
+        //            return roles.First(x => x.Name.Contains("Cust"));
+        //        default:
+        //            return roles.First(x => x.Name.Contains("Gues"));
+        //    }
+        //}
     }
 }

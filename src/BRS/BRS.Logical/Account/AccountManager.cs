@@ -7,11 +7,9 @@ namespace BRS.Logical.Account {
   public class AccountManager {
     private static AccountManager _instance;
     private User _currentUser;
-    private UserSqlRepository _repository;
 
     private AccountManager() {
-      //_repository = new UserSqlRepository();
-      Role role = _repository.GetRoleInstance(Erole.Guest);
+      Role role = GetRole(Erole.Guest);
       _currentUser = RepositoryFactory.Instance().UserRepository().ReadAll().First(x => x.Role == role);
     }
 
@@ -38,18 +36,17 @@ namespace BRS.Logical.Account {
     }
 
     public Role GetRole(Erole erole){
-      
-      //switch (erole) {
-      //  case Erole.Administrator:
-      //    return roles.First(x => x.Name.Contains("Admin"));
-      //  case Erole.Operator:
-      //    return roles.First(x => x.Name.Contains("Opera"));
-      //  case Erole.Customer:
-      //    return roles.First(x => x.Name.Contains("Cust"));
-      //  default:
-      //    return roles.First(x => x.Name.Contains("Gues"));
-      //}
-      return new Role();
+      var roles = RepositoryFactory.Instance().RoleRepository().ReadAll();
+      switch (erole) {
+        case Erole.Administrator:
+          return roles.First(x => x.Name.Contains("Admin"));
+        case Erole.Operator:
+          return roles.First(x => x.Name.Contains("Opera"));
+        case Erole.Customer:
+          return roles.First(x => x.Name.Contains("Cust"));
+        default:
+          return roles.First(x => x.Name.Contains("Gues"));
+      }
     }
 
     public Erole UserRole {
@@ -66,6 +63,13 @@ namespace BRS.Logical.Account {
             return Erole.Guest;
         }
       }
+    }
+
+    public enum Erole {
+      Administrator,
+      Operator,
+      Customer,
+      Guest
     }
   }
 }

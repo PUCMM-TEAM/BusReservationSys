@@ -18,7 +18,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Logic", "BRS.Logical\BR
 		{F4E9C87C-9C7B-41E3-AEB2-4B626043D379} = {F4E9C87C-9C7B-41E3-AEB2-4B626043D379}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.DesktopUI", "F:\BRS.DesktopUI\BRS.DesktopUI.csproj", "{5172705B-FC97-4A73-B12F-ECDA5F6FC515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.DesktopUI", "BRS.DesktopUI\BRS.DesktopUI.csproj", "{5172705B-FC97-4A73-B12F-ECDA5F6FC515}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

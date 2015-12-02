@@ -13,9 +13,8 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public RoleSqlRepository()
-        {
-            _context = new Context();
+        public RoleSqlRepository(Context context){
+          _context = context;
         }
 
         public void Create(Role entity)
