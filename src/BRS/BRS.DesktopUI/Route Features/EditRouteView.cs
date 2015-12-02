@@ -64,5 +64,11 @@ namespace BRS.DesktopUI
         {
 
         }
+
+        private void BtnRouteList_Click(object sender, EventArgs e)
+        {
+            RouteListView routeview = new RouteListView();
+            routeview.Show();
+        }
     }
 }

@@ -58,5 +58,11 @@ namespace BRS.DesktopUI
             //db.SaveChanges();
             repo.Create(trip);
         }
+
+        private void BtnTripList_Click(object sender, EventArgs e)
+        {
+            TripListView tripview = new TripListView();
+            tripview.Show();
+        }
     }
 }

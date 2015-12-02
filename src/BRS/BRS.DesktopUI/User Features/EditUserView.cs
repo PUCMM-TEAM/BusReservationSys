@@ -33,5 +33,11 @@ namespace BRS.DesktopUI {
         {
             this.Close();
         }
+
+        private void BtnUserList_Click(object sender, EventArgs e)
+        {
+            UserListView userview = new UserListView();
+            userview.Show();
+        }
     }
 }

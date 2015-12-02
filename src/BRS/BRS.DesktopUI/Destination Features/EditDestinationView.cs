@@ -37,5 +37,11 @@ namespace BRS.DesktopUI
             //db.SaveChanges();
             repo.Create(destination);
         }
+
+        private void BtnDestinationList_Click(object sender, EventArgs e)
+        {
+            UserListView userview = new UserListView();
+            userview.Show();
+        }
     }
 }

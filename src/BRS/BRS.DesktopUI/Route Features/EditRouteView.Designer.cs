@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.GbRoute = new System.Windows.Forms.GroupBox();
+            this.CbRouteDropoff = new System.Windows.Forms.ComboBox();
+            this.CbRoutePickup = new System.Windows.Forms.ComboBox();
             this.TxtRouteDropoff = new System.Windows.Forms.Label();
             this.TxtRoutePickup = new System.Windows.Forms.Label();
             this.BtnRouteCreate = new System.Windows.Forms.Button();
             this.BtnRouteDelete = new System.Windows.Forms.Button();
             this.BtnRouteCancel = new System.Windows.Forms.Button();
-            this.CbRoutePickup = new System.Windows.Forms.ComboBox();
-            this.CbRouteDropoff = new System.Windows.Forms.ComboBox();
+            this.BtnRouteList = new System.Windows.Forms.Button();
             this.GbRoute.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,24 @@
             this.GbRoute.TabIndex = 0;
             this.GbRoute.TabStop = false;
             this.GbRoute.Text = "Routes ";
+            // 
+            // CbRouteDropoff
+            // 
+            this.CbRouteDropoff.FormattingEnabled = true;
+            this.CbRouteDropoff.Location = new System.Drawing.Point(61, 63);
+            this.CbRouteDropoff.Name = "CbRouteDropoff";
+            this.CbRouteDropoff.Size = new System.Drawing.Size(121, 21);
+            this.CbRouteDropoff.TabIndex = 5;
+            this.CbRouteDropoff.SelectedIndexChanged += new System.EventHandler(this.CbRouteDropoff_SelectedIndexChanged);
+            // 
+            // CbRoutePickup
+            // 
+            this.CbRoutePickup.FormattingEnabled = true;
+            this.CbRoutePickup.Location = new System.Drawing.Point(56, 32);
+            this.CbRoutePickup.Name = "CbRoutePickup";
+            this.CbRoutePickup.Size = new System.Drawing.Size(121, 21);
+            this.CbRoutePickup.TabIndex = 4;
+            this.CbRoutePickup.SelectedIndexChanged += new System.EventHandler(this.CbRoutePickup_SelectedIndexChanged);
             // 
             // TxtRouteDropoff
             // 
@@ -91,7 +110,7 @@
             // 
             // BtnRouteCancel
             // 
-            this.BtnRouteCancel.Location = new System.Drawing.Point(215, 287);
+            this.BtnRouteCancel.Location = new System.Drawing.Point(134, 287);
             this.BtnRouteCancel.Name = "BtnRouteCancel";
             this.BtnRouteCancel.Size = new System.Drawing.Size(75, 23);
             this.BtnRouteCancel.TabIndex = 3;
@@ -99,29 +118,22 @@
             this.BtnRouteCancel.UseVisualStyleBackColor = true;
             this.BtnRouteCancel.Click += new System.EventHandler(this.BtnRouteCancel_Click);
             // 
-            // CbRoutePickup
+            // BtnRouteList
             // 
-            this.CbRoutePickup.FormattingEnabled = true;
-            this.CbRoutePickup.Location = new System.Drawing.Point(56, 32);
-            this.CbRoutePickup.Name = "CbRoutePickup";
-            this.CbRoutePickup.Size = new System.Drawing.Size(121, 21);
-            this.CbRoutePickup.TabIndex = 4;
-            this.CbRoutePickup.SelectedIndexChanged += new System.EventHandler(this.CbRoutePickup_SelectedIndexChanged);
-            // 
-            // CbRouteDropoff
-            // 
-            this.CbRouteDropoff.FormattingEnabled = true;
-            this.CbRouteDropoff.Location = new System.Drawing.Point(61, 63);
-            this.CbRouteDropoff.Name = "CbRouteDropoff";
-            this.CbRouteDropoff.Size = new System.Drawing.Size(121, 21);
-            this.CbRouteDropoff.TabIndex = 5;
-            this.CbRouteDropoff.SelectedIndexChanged += new System.EventHandler(this.CbRouteDropoff_SelectedIndexChanged);
+            this.BtnRouteList.Location = new System.Drawing.Point(215, 287);
+            this.BtnRouteList.Name = "BtnRouteList";
+            this.BtnRouteList.Size = new System.Drawing.Size(75, 23);
+            this.BtnRouteList.TabIndex = 4;
+            this.BtnRouteList.Text = "List";
+            this.BtnRouteList.UseVisualStyleBackColor = true;
+            this.BtnRouteList.Click += new System.EventHandler(this.BtnRouteList_Click);
             // 
             // EditRouteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 322);
+            this.Controls.Add(this.BtnRouteList);
             this.Controls.Add(this.BtnRouteCancel);
             this.Controls.Add(this.BtnRouteDelete);
             this.Controls.Add(this.BtnRouteCreate);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button BtnRouteCancel;
         private System.Windows.Forms.ComboBox CbRouteDropoff;
         private System.Windows.Forms.ComboBox CbRoutePickup;
+        private System.Windows.Forms.Button BtnRouteList;
     }
 }
