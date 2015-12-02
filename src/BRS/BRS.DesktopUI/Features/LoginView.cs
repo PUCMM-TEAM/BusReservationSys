@@ -1,4 +1,5 @@
 ﻿using BRS.Core.Models;
+using BRS.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,9 +37,10 @@ namespace BRS.DesktopUI
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
             
+               SearchView searchview = new SearchView();
+               searchview.Show();
             
-            SearchView searchview = new SearchView();
-            searchview.Show();
+          
         }
     }
 }

@@ -34,7 +34,6 @@
             this.BtnLogin2 = new System.Windows.Forms.Button();
             this.BtnSignup = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
-            this.CBRememberme = new System.Windows.Forms.CheckBox();
             this.TxtPassword = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.Label();
             this.GbLogin.SuspendLayout();
@@ -48,7 +47,6 @@
             this.GbLogin.Controls.Add(this.BtnLogin2);
             this.GbLogin.Controls.Add(this.BtnSignup);
             this.GbLogin.Controls.Add(this.BtnCancel);
-            this.GbLogin.Controls.Add(this.CBRememberme);
             this.GbLogin.Controls.Add(this.TxtPassword);
             this.GbLogin.Controls.Add(this.TxtUsername);
             this.GbLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -66,6 +64,7 @@
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.Size = new System.Drawing.Size(152, 22);
             this.TbPassword.TabIndex = 13;
+            this.TbPassword.UseSystemPasswordChar = true;
             // 
             // TbUsername
             // 
@@ -105,17 +104,6 @@
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
-            // CBRememberme
-            // 
-            this.CBRememberme.AutoSize = true;
-            this.CBRememberme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBRememberme.Location = new System.Drawing.Point(9, 97);
-            this.CBRememberme.Name = "CBRememberme";
-            this.CBRememberme.Size = new System.Drawing.Size(110, 19);
-            this.CBRememberme.TabIndex = 8;
-            this.CBRememberme.Text = "Remember me";
-            this.CBRememberme.UseVisualStyleBackColor = true;
             // 
             // TxtPassword
             // 
@@ -159,7 +147,6 @@
         private System.Windows.Forms.Button BtnLogin2;
         private System.Windows.Forms.Button BtnSignup;
         private System.Windows.Forms.Button BtnCancel;
-        private System.Windows.Forms.CheckBox CBRememberme;
         private System.Windows.Forms.Label TxtPassword;
         private System.Windows.Forms.Label TxtUsername;
         private System.Windows.Forms.TextBox TbPassword;

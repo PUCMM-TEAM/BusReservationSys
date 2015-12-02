@@ -20,7 +20,7 @@ namespace BRS.DesktopUI
         public DestinationListView()
         {
             InitializeComponent();
-            IRepository<Destination> repo = new DestinationSqlRepository();
+            IRepository<Destination> repo = RepositoryFactory.Instance().DestinationRepository();
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Destinations.ToList();//Gets info from database
             List<Destination> destinations = repo.ReadAll().ToList();

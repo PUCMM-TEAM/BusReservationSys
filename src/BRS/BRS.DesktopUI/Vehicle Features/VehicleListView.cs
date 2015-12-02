@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BRS.Data.SqlRepositories;
+using BRS.Data;
 
 namespace BRS.DesktopUI
 {
@@ -19,7 +20,7 @@ namespace BRS.DesktopUI
         public VehicleListView()
         {
             InitializeComponent();
-            IRepository<Vehicle> repo = new VehicleSqlRepository();
+            IRepository<Vehicle> repo = RepositoryFactory.Instance().VehicleRepository();
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Destinations.ToList();//Gets info from database
             List<Vehicle> vehicle = repo.ReadAll().ToList();

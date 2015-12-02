@@ -29,51 +29,37 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.CbSearchArrivalTime = new System.Windows.Forms.ComboBox();
-            this.CbSearchDepartueTime = new System.Windows.Forms.ComboBox();
+            this.MtbSearchNumPass = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.CbSearchDestination = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CbSearchOrigin = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtArrivalTime = new System.Windows.Forms.Label();
-            this.TxtDepartureTime = new System.Windows.Forms.Label();
-            this.LVSearch = new System.Windows.Forms.ListView();
+            this.TxtRoute = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button3 = new System.Windows.Forms.Button();
-            this.TxtRoute = new System.Windows.Forms.Label();
-            this.CbSearchRoute = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CbSearchVehicle = new System.Windows.Forms.ComboBox();
-            this.Route = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AvailableDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DepartureTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ArrivalTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Vehicle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DGVSearchTrip = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVSearchTrip)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.groupBox1.Controls.Add(this.CbSearchVehicle);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.CbSearchRoute);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.CbSearchArrivalTime);
-            this.groupBox1.Controls.Add(this.CbSearchDepartueTime);
+            this.groupBox1.Controls.Add(this.MtbSearchNumPass);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.CbSearchDestination);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.CbSearchOrigin);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.TxtArrivalTime);
-            this.groupBox1.Controls.Add(this.TxtDepartureTime);
             this.groupBox1.Controls.Add(this.TxtRoute);
             this.groupBox1.Location = new System.Drawing.Point(372, 60);
             this.groupBox1.Name = "groupBox1";
@@ -81,6 +67,48 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
+            // 
+            // MtbSearchNumPass
+            // 
+            this.MtbSearchNumPass.Location = new System.Drawing.Point(130, 126);
+            this.MtbSearchNumPass.Mask = "00";
+            this.MtbSearchNumPass.Name = "MtbSearchNumPass";
+            this.MtbSearchNumPass.Size = new System.Drawing.Size(22, 20);
+            this.MtbSearchNumPass.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Number of Passengers:";
+            // 
+            // CbSearchDestination
+            // 
+            this.CbSearchDestination.FormattingEnabled = true;
+            this.CbSearchDestination.Location = new System.Drawing.Point(75, 60);
+            this.CbSearchDestination.Name = "CbSearchDestination";
+            this.CbSearchDestination.Size = new System.Drawing.Size(121, 21);
+            this.CbSearchDestination.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Destination:";
+            // 
+            // CbSearchOrigin
+            // 
+            this.CbSearchOrigin.FormattingEnabled = true;
+            this.CbSearchOrigin.Location = new System.Drawing.Point(53, 27);
+            this.CbSearchOrigin.Name = "CbSearchOrigin";
+            this.CbSearchOrigin.Size = new System.Drawing.Size(121, 21);
+            this.CbSearchOrigin.TabIndex = 25;
             // 
             // button1
             // 
@@ -92,88 +120,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(77, 88);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePicker2.TabIndex = 22;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(96, 60);
+            this.dateTimePicker1.Location = new System.Drawing.Point(96, 98);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(125, 20);
             this.dateTimePicker1.TabIndex = 21;
             // 
-            // CbSearchArrivalTime
-            // 
-            this.CbSearchArrivalTime.FormattingEnabled = true;
-            this.CbSearchArrivalTime.Location = new System.Drawing.Point(77, 141);
-            this.CbSearchArrivalTime.Name = "CbSearchArrivalTime";
-            this.CbSearchArrivalTime.Size = new System.Drawing.Size(101, 21);
-            this.CbSearchArrivalTime.TabIndex = 20;
-            // 
-            // CbSearchDepartueTime
-            // 
-            this.CbSearchDepartueTime.FormattingEnabled = true;
-            this.CbSearchDepartueTime.Location = new System.Drawing.Point(95, 114);
-            this.CbSearchDepartueTime.Name = "CbSearchDepartueTime";
-            this.CbSearchDepartueTime.Size = new System.Drawing.Size(101, 21);
-            this.CbSearchDepartueTime.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Arrival Date:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 60);
+            this.label1.Location = new System.Drawing.Point(6, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Departure Date:";
             // 
-            // TxtArrivalTime
+            // TxtRoute
             // 
-            this.TxtArrivalTime.AutoSize = true;
-            this.TxtArrivalTime.Location = new System.Drawing.Point(6, 141);
-            this.TxtArrivalTime.Name = "TxtArrivalTime";
-            this.TxtArrivalTime.Size = new System.Drawing.Size(65, 13);
-            this.TxtArrivalTime.TabIndex = 14;
-            this.TxtArrivalTime.Text = "Arrival Time:";
-            this.TxtArrivalTime.Click += new System.EventHandler(this.TxtArrivalTime_Click);
-            // 
-            // TxtDepartureTime
-            // 
-            this.TxtDepartureTime.AutoSize = true;
-            this.TxtDepartureTime.Location = new System.Drawing.Point(6, 114);
-            this.TxtDepartureTime.Name = "TxtDepartureTime";
-            this.TxtDepartureTime.Size = new System.Drawing.Size(83, 13);
-            this.TxtDepartureTime.TabIndex = 13;
-            this.TxtDepartureTime.Text = "Departure Time:";
-            // 
-            // LVSearch
-            // 
-            this.LVSearch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Route,
-            this.AvailableDate,
-            this.DepartureTime,
-            this.ArrivalTime,
-            this.Vehicle,
-            this.Price});
-            this.LVSearch.Location = new System.Drawing.Point(13, 60);
-            this.LVSearch.Name = "LVSearch";
-            this.LVSearch.Size = new System.Drawing.Size(353, 339);
-            this.LVSearch.TabIndex = 1;
-            this.LVSearch.UseCompatibleStateImageBehavior = false;
-            this.LVSearch.View = System.Windows.Forms.View.Details;
+            this.TxtRoute.AutoSize = true;
+            this.TxtRoute.Location = new System.Drawing.Point(6, 27);
+            this.TxtRoute.Name = "TxtRoute";
+            this.TxtRoute.Size = new System.Drawing.Size(37, 13);
+            this.TxtRoute.TabIndex = 9;
+            this.TxtRoute.Text = "Origin:";
             // 
             // menuStrip1
             // 
@@ -212,77 +182,18 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // button3
+            // DGVSearchTrip
             // 
-            this.button3.Location = new System.Drawing.Point(455, 376);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Book Trip";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // TxtRoute
-            // 
-            this.TxtRoute.AutoSize = true;
-            this.TxtRoute.Location = new System.Drawing.Point(6, 27);
-            this.TxtRoute.Name = "TxtRoute";
-            this.TxtRoute.Size = new System.Drawing.Size(39, 13);
-            this.TxtRoute.TabIndex = 9;
-            this.TxtRoute.Text = "Route:";
-            // 
-            // CbSearchRoute
-            // 
-            this.CbSearchRoute.FormattingEnabled = true;
-            this.CbSearchRoute.Location = new System.Drawing.Point(52, 27);
-            this.CbSearchRoute.Name = "CbSearchRoute";
-            this.CbSearchRoute.Size = new System.Drawing.Size(121, 21);
-            this.CbSearchRoute.TabIndex = 25;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Vehicle:";
-            // 
-            // CbSearchVehicle
-            // 
-            this.CbSearchVehicle.FormattingEnabled = true;
-            this.CbSearchVehicle.Location = new System.Drawing.Point(58, 172);
-            this.CbSearchVehicle.Name = "CbSearchVehicle";
-            this.CbSearchVehicle.Size = new System.Drawing.Size(121, 21);
-            this.CbSearchVehicle.TabIndex = 27;
-            // 
-            // Route
-            // 
-            this.Route.Text = "Route";
-            this.Route.Width = 84;
-            // 
-            // AvailableDate
-            // 
-            this.AvailableDate.Text = "AvailableDate";
-            this.AvailableDate.Width = 91;
-            // 
-            // DepartureTime
-            // 
-            this.DepartureTime.Text = "DepartureTime";
-            this.DepartureTime.Width = 76;
-            // 
-            // ArrivalTime
-            // 
-            this.ArrivalTime.Text = "ArrivalTime";
-            this.ArrivalTime.Width = 61;
-            // 
-            // Vehicle
-            // 
-            this.Vehicle.Text = "Vehicle";
-            // 
-            // Price
-            // 
-            this.Price.Text = "Price";
+            this.DGVSearchTrip.AllowUserToAddRows = false;
+            this.DGVSearchTrip.AllowUserToDeleteRows = false;
+            this.DGVSearchTrip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVSearchTrip.Location = new System.Drawing.Point(13, 60);
+            this.DGVSearchTrip.Name = "DGVSearchTrip";
+            this.DGVSearchTrip.ReadOnly = true;
+            this.DGVSearchTrip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVSearchTrip.Size = new System.Drawing.Size(353, 294);
+            this.DGVSearchTrip.TabIndex = 4;
+            this.DGVSearchTrip.DoubleClick += new System.EventHandler(this.DGVSearchTrip_DoubleClick);
             // 
             // SearchView
             // 
@@ -290,8 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(624, 442);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.LVSearch);
+            this.Controls.Add(this.DGVSearchTrip);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -301,6 +211,7 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVSearchTrip)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,31 +220,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView LVSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Label TxtArrivalTime;
-        private System.Windows.Forms.Label TxtDepartureTime;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox CbSearchArrivalTime;
-        private System.Windows.Forms.ComboBox CbSearchDepartueTime;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox CbSearchVehicle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox CbSearchRoute;
+        private System.Windows.Forms.ComboBox CbSearchOrigin;
         private System.Windows.Forms.Label TxtRoute;
-        private System.Windows.Forms.ColumnHeader Route;
-        private System.Windows.Forms.ColumnHeader AvailableDate;
-        private System.Windows.Forms.ColumnHeader DepartureTime;
-        private System.Windows.Forms.ColumnHeader ArrivalTime;
-        private System.Windows.Forms.ColumnHeader Vehicle;
-        private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.DataGridView DGVSearchTrip;
+        private System.Windows.Forms.ComboBox CbSearchDestination;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox MtbSearchNumPass;
     }
 }

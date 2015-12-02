@@ -32,6 +32,7 @@
             this.BtnUserCreate = new System.Windows.Forms.Button();
             this.BtnUserDelete = new System.Windows.Forms.Button();
             this.BtnUserCancel = new System.Windows.Forms.Button();
+            this.BtnUserList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +112,7 @@
             // 
             // BtnUserCancel
             // 
-            this.BtnUserCancel.Location = new System.Drawing.Point(280, 323);
+            this.BtnUserCancel.Location = new System.Drawing.Point(220, 323);
             this.BtnUserCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUserCancel.Name = "BtnUserCancel";
             this.BtnUserCancel.Size = new System.Drawing.Size(56, 19);
@@ -120,11 +121,23 @@
             this.BtnUserCancel.UseVisualStyleBackColor = true;
             this.BtnUserCancel.Click += new System.EventHandler(this.BtnUserCancel_Click);
             // 
+            // BtnUserList
+            // 
+            this.BtnUserList.Location = new System.Drawing.Point(280, 322);
+            this.BtnUserList.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnUserList.Name = "BtnUserList";
+            this.BtnUserList.Size = new System.Drawing.Size(56, 19);
+            this.BtnUserList.TabIndex = 9;
+            this.BtnUserList.Text = "List";
+            this.BtnUserList.UseVisualStyleBackColor = true;
+            this.BtnUserList.Click += new System.EventHandler(this.BtnUserList_Click);
+            // 
             // EditUserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 352);
+            this.Controls.Add(this.BtnUserList);
             this.Controls.Add(this.BtnUserCancel);
             this.Controls.Add(this.BtnUserDelete);
             this.Controls.Add(this.BtnUserCreate);
@@ -153,5 +166,6 @@
     private System.Windows.Forms.Button BtnUserCreate;
     private System.Windows.Forms.Button BtnUserDelete;
     private System.Windows.Forms.Button BtnUserCancel;
-  }
+        private System.Windows.Forms.Button BtnUserList;
+    }
 }

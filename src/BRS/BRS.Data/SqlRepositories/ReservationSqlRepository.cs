@@ -15,13 +15,15 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public ReservationSqlRepository()
+        public ReservationSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Reservation entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Reservations.Add(entity);
             _context.SaveChanges();
         }
@@ -61,8 +63,9 @@ namespace BRS.Data.SqlRepositories
             reservation.NumPassenger = entity.NumPassenger;
             reservation.CreditCard = entity.CreditCard;
             reservation.ReservationDate = entity.ReservationDate;
+            entity.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(reservation).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

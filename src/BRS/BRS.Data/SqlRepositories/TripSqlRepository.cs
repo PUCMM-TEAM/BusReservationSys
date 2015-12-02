@@ -15,13 +15,15 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public TripSqlRepository()
+        public TripSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Trip entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Trips.Add(entity);
             _context.SaveChanges();
         }
@@ -62,8 +64,9 @@ namespace BRS.Data.SqlRepositories
             trip.ArrivalTime = entity.ArrivalTime;
             trip.Vehicle = entity.Vehicle;
             trip.Price = entity.Price;
+            entity.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(trip).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

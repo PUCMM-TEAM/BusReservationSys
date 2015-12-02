@@ -15,13 +15,15 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public RouteSqlRepository()
+        public RouteSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Route entity)
         {
+            entity.CreatedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.Now;
             _context.Routes.Add(entity);
             _context.SaveChanges();
         }
@@ -58,8 +60,9 @@ namespace BRS.Data.SqlRepositories
             Route route = Read(entity.ID);
             route.Pickup = entity.Pickup;
             route.DropOff = entity.DropOff;
+            entity.ModifiedDate = DateTime.Now;
 
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Entry(route).State = EntityState.Modified;
             _context.SaveChanges();
         }
     }

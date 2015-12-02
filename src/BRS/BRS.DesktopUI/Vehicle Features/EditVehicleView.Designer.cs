@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GbVehicle = new System.Windows.Forms.GroupBox();
+            this.TbVehicleImage = new System.Windows.Forms.TextBox();
             this.MtbVehiclePassCap = new System.Windows.Forms.MaskedTextBox();
             this.TbVehicleDescription = new System.Windows.Forms.TextBox();
             this.TbVehicleVeTy = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
             this.BtnVehicleCreate = new System.Windows.Forms.Button();
             this.BtnVehicleDelete = new System.Windows.Forms.Button();
             this.BtnVehicleCancel = new System.Windows.Forms.Button();
-            this.TbVehicleImage = new System.Windows.Forms.TextBox();
+            this.BtnVehicleList = new System.Windows.Forms.Button();
             this.GbVehicle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,13 @@
             this.GbVehicle.TabIndex = 0;
             this.GbVehicle.TabStop = false;
             this.GbVehicle.Text = "Vehicle Information";
+            // 
+            // TbVehicleImage
+            // 
+            this.TbVehicleImage.Location = new System.Drawing.Point(63, 183);
+            this.TbVehicleImage.Name = "TbVehicleImage";
+            this.TbVehicleImage.Size = new System.Drawing.Size(100, 20);
+            this.TbVehicleImage.TabIndex = 9;
             // 
             // MtbVehiclePassCap
             // 
@@ -164,7 +172,7 @@
             // 
             // BtnVehicleCancel
             // 
-            this.BtnVehicleCancel.Location = new System.Drawing.Point(215, 287);
+            this.BtnVehicleCancel.Location = new System.Drawing.Point(134, 287);
             this.BtnVehicleCancel.Name = "BtnVehicleCancel";
             this.BtnVehicleCancel.Size = new System.Drawing.Size(75, 23);
             this.BtnVehicleCancel.TabIndex = 3;
@@ -172,18 +180,22 @@
             this.BtnVehicleCancel.UseVisualStyleBackColor = true;
             this.BtnVehicleCancel.Click += new System.EventHandler(this.BtnVehicleCancel_Click);
             // 
-            // TbVehicleImage
+            // BtnVehicleList
             // 
-            this.TbVehicleImage.Location = new System.Drawing.Point(63, 183);
-            this.TbVehicleImage.Name = "TbVehicleImage";
-            this.TbVehicleImage.Size = new System.Drawing.Size(100, 20);
-            this.TbVehicleImage.TabIndex = 9;
+            this.BtnVehicleList.Location = new System.Drawing.Point(215, 287);
+            this.BtnVehicleList.Name = "BtnVehicleList";
+            this.BtnVehicleList.Size = new System.Drawing.Size(75, 23);
+            this.BtnVehicleList.TabIndex = 4;
+            this.BtnVehicleList.Text = "List";
+            this.BtnVehicleList.UseVisualStyleBackColor = true;
+            this.BtnVehicleList.Click += new System.EventHandler(this.BtnVehicleList_Click);
             // 
             // EditVehicleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 322);
+            this.Controls.Add(this.BtnVehicleList);
             this.Controls.Add(this.BtnVehicleCancel);
             this.Controls.Add(this.BtnVehicleDelete);
             this.Controls.Add(this.BtnVehicleCreate);
@@ -212,5 +224,6 @@
         private System.Windows.Forms.TextBox TbVehicleVeTy;
         private System.Windows.Forms.TextBox TbVehicleName;
         private System.Windows.Forms.TextBox TbVehicleImage;
+        private System.Windows.Forms.Button BtnVehicleList;
     }
 }

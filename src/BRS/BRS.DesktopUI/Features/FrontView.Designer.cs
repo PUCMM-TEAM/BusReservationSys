@@ -24,9 +24,6 @@
     /// </summary>
     private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", 1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("", 2);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFrontView));
             this.BtnLogin = new System.Windows.Forms.Button();
             this.BtnRegister = new System.Windows.Forms.Button();
@@ -38,14 +35,16 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.destinationReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.DGVFrontTrips = new System.Windows.Forms.DataGridView();
+            this.TxtFrontTrips = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVFrontTrips)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(537, 27);
+            this.BtnLogin.Location = new System.Drawing.Point(377, 27);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(75, 23);
             this.BtnLogin.TabIndex = 1;
@@ -55,7 +54,7 @@
             // 
             // BtnRegister
             // 
-            this.BtnRegister.Location = new System.Drawing.Point(456, 27);
+            this.BtnRegister.Location = new System.Drawing.Point(296, 27);
             this.BtnRegister.Name = "BtnRegister";
             this.BtnRegister.Size = new System.Drawing.Size(75, 23);
             this.BtnRegister.TabIndex = 2;
@@ -98,7 +97,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(464, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,21 +124,6 @@
             this.destinationReportsToolStripMenuItem.Text = "DestinationReports";
             this.destinationReportsToolStripMenuItem.Click += new System.EventHandler(this.destinationReportsToolStripMenuItem_Click);
             // 
-            // listView1
-            // 
-            this.listView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView1.LargeImageList = this.imageList1;
-            this.listView1.Location = new System.Drawing.Point(12, 103);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(600, 309);
-            this.listView1.StateImageList = this.imageList1;
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -148,13 +132,35 @@
             this.imageList1.Images.SetKeyName(1, "Lighthouse.jpg");
             this.imageList1.Images.SetKeyName(2, "Penguins.jpg");
             // 
+            // DGVFrontTrips
+            // 
+            this.DGVFrontTrips.AllowUserToAddRows = false;
+            this.DGVFrontTrips.AllowUserToDeleteRows = false;
+            this.DGVFrontTrips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVFrontTrips.Location = new System.Drawing.Point(12, 80);
+            this.DGVFrontTrips.Name = "DGVFrontTrips";
+            this.DGVFrontTrips.ReadOnly = true;
+            this.DGVFrontTrips.Size = new System.Drawing.Size(440, 230);
+            this.DGVFrontTrips.TabIndex = 3;
+            // 
+            // TxtFrontTrips
+            // 
+            this.TxtFrontTrips.AutoSize = true;
+            this.TxtFrontTrips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFrontTrips.Location = new System.Drawing.Point(13, 61);
+            this.TxtFrontTrips.Name = "TxtFrontTrips";
+            this.TxtFrontTrips.Size = new System.Drawing.Size(114, 16);
+            this.TxtFrontTrips.TabIndex = 4;
+            this.TxtFrontTrips.Text = "Available Trips";
+            // 
             // FormFrontView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(623, 442);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(464, 322);
+            this.Controls.Add(this.TxtFrontTrips);
+            this.Controls.Add(this.DGVFrontTrips);
             this.Controls.Add(this.BtnRegister);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.menuStrip1);
@@ -163,6 +169,7 @@
             this.Text = "BusReservationSys";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVFrontTrips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,8 +186,9 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem destinationReportsToolStripMenuItem;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridView DGVFrontTrips;
+        private System.Windows.Forms.Label TxtFrontTrips;
     }
 }
 

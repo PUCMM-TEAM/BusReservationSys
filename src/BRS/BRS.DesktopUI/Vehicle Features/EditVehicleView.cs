@@ -38,5 +38,11 @@ namespace BRS.DesktopUI.VehicleFeatures
             //db.SaveChanges();
             repo.Create(vehicle);
         }
+
+        private void BtnVehicleList_Click(object sender, EventArgs e)
+        {
+            VehicleListView vehicleview = new VehicleListView();
+            vehicleview.Show();
+        }
     }
 }

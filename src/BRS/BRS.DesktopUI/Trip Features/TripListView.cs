@@ -1,4 +1,6 @@
 ﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
+using BRS.Data;
 using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace BRS.DesktopUI
         public TripListView()
         {
             InitializeComponent();
-            TripRepository repo = new TripRepository();
+            IRepository<Trip> repo = RepositoryFactory.Instance().TripRepository();
             //Context context = new Context();//Manages the data.Can get or set data
             //var list = context.Destinations.ToList();//Gets info from database
             List<Trip> trip = repo.ReadAll().ToList();

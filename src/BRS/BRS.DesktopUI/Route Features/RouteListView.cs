@@ -23,7 +23,7 @@ namespace BRS.DesktopUI {
 
             // destinations.Select(x => x);
 
-            IRepository<Route> repo = new RouteSqlRepository();
+            IRepository<Route> repo = RepositoryFactory.Instance().RouteRepository();
             List<Route> routes = repo.ReadAll().ToList();
             var bindingList = new BindingList<Route>(routes);//Create a new list to show data from database
             var source = new BindingSource(bindingList, null);//fill with data
