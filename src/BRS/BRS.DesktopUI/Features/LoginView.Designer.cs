@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class LoginView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -155,14 +158,14 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbLogin;
-        private System.Windows.Forms.Button BtnLogin2;
-        private System.Windows.Forms.Button BtnSignup;
-        private System.Windows.Forms.Button BtnCancel;
-        private System.Windows.Forms.CheckBox CBRememberme;
-        private System.Windows.Forms.Label TxtPassword;
-        private System.Windows.Forms.Label TxtUsername;
-        private System.Windows.Forms.TextBox TbPassword;
-        private System.Windows.Forms.TextBox TbUsername;
+        private GroupBox GbLogin;
+        private Button BtnLogin2;
+        private Button BtnSignup;
+        private Button BtnCancel;
+        private CheckBox CBRememberme;
+        private Label TxtPassword;
+        private Label TxtUsername;
+        private TextBox TbPassword;
+        private TextBox TbUsername;
     }
 }

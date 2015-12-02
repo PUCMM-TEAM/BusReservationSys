@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class EditTripView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -310,28 +313,28 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbRouteDetails;
-        private System.Windows.Forms.Label TxtVehicle;
-        private System.Windows.Forms.Label TxtDate;
-        private System.Windows.Forms.Button BtnCancel3;
-        private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.Button BtnCreate;
-        private System.Windows.Forms.ComboBox CbTripRoute;
-        private System.Windows.Forms.Label TxtArrivalTime;
-        private System.Windows.Forms.Label TxtDepartureTime;
-        private System.Windows.Forms.Label TxtRoute;
-        private System.Windows.Forms.ComboBox CbTripVehicle;
-        private System.Windows.Forms.CheckBox ChTodos;
-        private System.Windows.Forms.CheckBox ChDomingo;
-        private System.Windows.Forms.CheckBox ChSabado;
-        private System.Windows.Forms.CheckBox ChViernes;
-        private System.Windows.Forms.CheckBox ChJueves;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox ChMartes;
-        private System.Windows.Forms.CheckBox ChLunes;
-        private System.Windows.Forms.ComboBox CbTripArrivalTime;
-        private System.Windows.Forms.ComboBox CbTripDepartureTime;
-        private System.Windows.Forms.MaskedTextBox MtbTripPrice;
-        private System.Windows.Forms.Label label1;
+        private GroupBox GbRouteDetails;
+        private Label TxtVehicle;
+        private Label TxtDate;
+        private Button BtnCancel3;
+        private Button BtnDelete;
+        private Button BtnCreate;
+        private ComboBox CbTripRoute;
+        private Label TxtArrivalTime;
+        private Label TxtDepartureTime;
+        private Label TxtRoute;
+        private ComboBox CbTripVehicle;
+        private CheckBox ChTodos;
+        private CheckBox ChDomingo;
+        private CheckBox ChSabado;
+        private CheckBox ChViernes;
+        private CheckBox ChJueves;
+        private CheckBox checkBox1;
+        private CheckBox ChMartes;
+        private CheckBox ChLunes;
+        private ComboBox CbTripArrivalTime;
+        private ComboBox CbTripDepartureTime;
+        private MaskedTextBox MtbTripPrice;
+        private Label label1;
     }
 }

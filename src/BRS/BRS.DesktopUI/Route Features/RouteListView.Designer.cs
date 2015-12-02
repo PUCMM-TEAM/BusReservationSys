@@ -1,9 +1,12 @@
-﻿namespace BRS.DesktopUI {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI {
   partial class RouteListView {
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    private IContainer components = null;
 
     /// <summary>
     /// Clean up any resources being used.
@@ -83,8 +86,8 @@
 
     #endregion
 
-    private System.Windows.Forms.DataGridView DGVRoutes;
-    private System.Windows.Forms.MenuStrip menuStrip1;
-    private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+    private DataGridView DGVRoutes;
+    private MenuStrip menuStrip1;
+    private ToolStripMenuItem fileToolStripMenuItem;
   }
 }

@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class DestinationListView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -80,8 +83,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGVDestination;
-        private System.Windows.Forms.Button BtnDestinationSearch;
-        private System.Windows.Forms.TextBox TbDestinationSearch;
+        private DataGridView DGVDestination;
+        private Button BtnDestinationSearch;
+        private TextBox TbDestinationSearch;
     }
 }

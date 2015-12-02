@@ -1,9 +1,12 @@
-﻿namespace BRS.DesktopUI {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI {
   partial class PaymentView {
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    private IContainer components = null;
 
     /// <summary>
     /// Clean up any resources being used.
@@ -453,40 +456,40 @@
 
     #endregion
 
-    private System.Windows.Forms.CheckBox checkBox1;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.MenuStrip menuStrip1;
-    private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-    private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.Label label10;
-    private System.Windows.Forms.Label label8;
-    private System.Windows.Forms.Label label9;
-    private System.Windows.Forms.Label label6;
-    private System.Windows.Forms.Label label7;
-    private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.GroupBox groupBox2;
-    private System.Windows.Forms.Label label14;
-    private System.Windows.Forms.DateTimePicker dateTimePicker1;
-    private System.Windows.Forms.TextBox textBox5;
-    private System.Windows.Forms.Label label12;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.Label label11;
-    private System.Windows.Forms.Label label13;
-    private System.Windows.Forms.Label label17;
-    private System.Windows.Forms.Label label19;
-    private System.Windows.Forms.GroupBox groupBox3;
-    private System.Windows.Forms.Label label22;
-    private System.Windows.Forms.Button button2;
+    private CheckBox checkBox1;
+    private Button button1;
+    private PictureBox pictureBox1;
+    private MenuStrip menuStrip1;
+    private ToolStripMenuItem fileToolStripMenuItem;
+    private ToolStripMenuItem editToolStripMenuItem;
+    private ToolStripMenuItem viewToolStripMenuItem;
+    private ToolStripMenuItem helpToolStripMenuItem;
+    private GroupBox groupBox1;
+    private Label label10;
+    private Label label8;
+    private Label label9;
+    private Label label6;
+    private Label label7;
+    private Label label4;
+    private Label label5;
+    private Label label3;
+    private Label label2;
+    private Label label1;
+    private GroupBox groupBox2;
+    private Label label14;
+    private DateTimePicker dateTimePicker1;
+    private TextBox textBox5;
+    private Label label12;
+    private TextBox textBox4;
+    private TextBox textBox3;
+    private TextBox textBox2;
+    private TextBox textBox1;
+    private Label label11;
+    private Label label13;
+    private Label label17;
+    private Label label19;
+    private GroupBox groupBox3;
+    private Label label22;
+    private Button button2;
   }
 }

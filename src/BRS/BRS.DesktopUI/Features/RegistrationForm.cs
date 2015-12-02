@@ -1,16 +1,8 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
+﻿using System;
+using System.Windows.Forms;
+using BRS.Core.Models;
 using BRS.Data;
 using BRS.Data.SqlRepositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
@@ -33,7 +25,7 @@ namespace BRS.DesktopUI
 
         private void BtnRegistrationCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)
@@ -51,7 +43,7 @@ namespace BRS.DesktopUI
 
             customer.FirstName = TbRegistrationFirstName.Text;
             customer.LastName = TbRegistrationLastName.Text;
-            customer.Birthday = DTPRegistrationBirthday.Text;
+            customer.Birthday = DTPRegistrationBirthday.Value;
 
             CreditCard creditcard = new CreditCard();
 

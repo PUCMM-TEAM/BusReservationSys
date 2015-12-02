@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Collections.Generic;
 using BRS.Core;
 using BRS.Core.CallBacks;
@@ -22,7 +23,7 @@ namespace BRS.Data.Repositories {
     }
 
     public void Read(int id, IResponse<Destination> reponse){
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public Destination Read(int id){
@@ -30,7 +31,7 @@ namespace BRS.Data.Repositories {
     }
 
     public void Update(Destination entity){
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public void Delete(int id){
@@ -42,7 +43,7 @@ namespace BRS.Data.Repositories {
     }
 
     public void ReadAll(IListResponse<Destination> callback){
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
   }
 }

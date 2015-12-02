@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -330,32 +333,32 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbRegistrationUserInfo;
-        private System.Windows.Forms.TextBox TbRegistrationPA;
-        private System.Windows.Forms.Label TxtRegistrationPAgain;
-        private System.Windows.Forms.TextBox TbRegistrationPassword;
-        private System.Windows.Forms.Label TxtRegistrationPassword;
-        private System.Windows.Forms.TextBox TbRegistrationEmail;
-        private System.Windows.Forms.Label TxtRegistrationEmail;
-        private System.Windows.Forms.TextBox TbRegistrationUsername;
-        private System.Windows.Forms.Label TxtRegistrationUsername;
-        private System.Windows.Forms.GroupBox GbRegistrationpPersonalInfo;
-        private System.Windows.Forms.DateTimePicker DTPRegistrationBirthday;
-        private System.Windows.Forms.Label TxtRegistrationBirthday;
-        private System.Windows.Forms.TextBox TbRegistrationLastName;
-        private System.Windows.Forms.Label TxtRegistrationLastName;
-        private System.Windows.Forms.TextBox TbRegistrationFirstName;
-        private System.Windows.Forms.Label TxtRegistrationFirstName;
-        private System.Windows.Forms.GroupBox GbRegistrationPaymentOption;
-        private System.Windows.Forms.Button BtnRegistrationCreate;
-        private System.Windows.Forms.Button BtnRegistrationCancel;
-        private System.Windows.Forms.DateTimePicker DTPRegistrationExpirationDate;
-        private System.Windows.Forms.Label TxtRegistrationExpirationDate;
-        private System.Windows.Forms.TextBox TbRegistrationCVC;
-        private System.Windows.Forms.Label TxtRegistrationCVC;
-        private System.Windows.Forms.TextBox TbRegistrationCardNumber;
-        private System.Windows.Forms.Label TxtRegistrationCardNumber;
-        private System.Windows.Forms.TextBox TbRegistrationCardHolder;
-        private System.Windows.Forms.Label TxtRegistrationCardHolder;
+        private GroupBox GbRegistrationUserInfo;
+        private TextBox TbRegistrationPA;
+        private Label TxtRegistrationPAgain;
+        private TextBox TbRegistrationPassword;
+        private Label TxtRegistrationPassword;
+        private TextBox TbRegistrationEmail;
+        private Label TxtRegistrationEmail;
+        private TextBox TbRegistrationUsername;
+        private Label TxtRegistrationUsername;
+        private GroupBox GbRegistrationpPersonalInfo;
+        private DateTimePicker DTPRegistrationBirthday;
+        private Label TxtRegistrationBirthday;
+        private TextBox TbRegistrationLastName;
+        private Label TxtRegistrationLastName;
+        private TextBox TbRegistrationFirstName;
+        private Label TxtRegistrationFirstName;
+        private GroupBox GbRegistrationPaymentOption;
+        private Button BtnRegistrationCreate;
+        private Button BtnRegistrationCancel;
+        private DateTimePicker DTPRegistrationExpirationDate;
+        private Label TxtRegistrationExpirationDate;
+        private TextBox TbRegistrationCVC;
+        private Label TxtRegistrationCVC;
+        private TextBox TbRegistrationCardNumber;
+        private Label TxtRegistrationCardNumber;
+        private TextBox TbRegistrationCardHolder;
+        private Label TxtRegistrationCardHolder;
     }
 }

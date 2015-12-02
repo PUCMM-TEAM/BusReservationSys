@@ -17,7 +17,7 @@
     @Html.ValidationSummary(true, "", new{@class = "text-danger"})
 
     <div class="form-group">
-      @Html.LabelFor(model => model.RouteId, "Route", htmlAttributes: new{@class = "control-label col-md-2"})
+      @Html.LabelFor(model => model.RouteId, "Route", new{@class = "control-label col-md-2"})
       <div class="col-md-10">
         @Html.DropDownListFor(model => model.RouteId,
           new SelectList(
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.DateAvailable, htmlAttributes: new{@class = "control-label col-md-2"})
+      @Html.LabelFor(model => model.DateAvailable, new{@class = "control-label col-md-2"})
       <div class="col-md-10">
 
         <label class="checkbox-inline">
@@ -63,7 +63,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.DepartureTime, htmlAttributes: new{@class = "control-label col-md-2"})
+      @Html.LabelFor(model => model.DepartureTime, new{@class = "control-label col-md-2"})
       <div class="col-md-10">
         @Html.EditorFor(model => model.DepartureTime, new{htmlAttributes = new{@class = "form-control"}})
         @Html.ValidationMessageFor(model => model.DepartureTime, "", new{@class = "text-danger"})
@@ -71,7 +71,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.ArrivalTime, htmlAttributes: new{@class = "control-label col-md-2"})
+      @Html.LabelFor(model => model.ArrivalTime, new{@class = "control-label col-md-2"})
       <div class="col-md-10">
         @Html.EditorFor(model => model.ArrivalTime, new{htmlAttributes = new{@class = "form-control"}})
         @Html.ValidationMessageFor(model => model.ArrivalTime, "", new{@class = "text-danger"})
@@ -79,7 +79,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.VehicleId, "Vehicle", htmlAttributes: new { @class = "control-label col-md-2" })
+      @Html.LabelFor(model => model.VehicleId, "Vehicle", new { @class = "control-label col-md-2" })
       <div class="col-md-10">
         @Html.DropDownListFor(model => model.VehicleId,
             new SelectList(
@@ -91,7 +91,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+      @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
       <div class="col-md-10">
         @*@Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })*@
         <div class="input-group">

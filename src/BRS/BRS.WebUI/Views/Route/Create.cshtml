@@ -18,7 +18,7 @@
     @Html.HiddenFor(x => x.Id)
 
     <div class="form-group">
-      @Html.LabelFor(model => model.PickUpId, "PickUp", htmlAttributes: new { @class = "control-label col-md-2" })
+      @Html.LabelFor(model => model.PickUpId, "PickUp", new { @class = "control-label col-md-2" })
       <div class="col-md-10">
         @Html.DropDownListFor(model => model.PickUpId,
                 new SelectList(
@@ -30,7 +30,7 @@
     </div>
 
     <div class="form-group">
-      @Html.LabelFor(model => model.DropOffId, "DropOff", htmlAttributes: new { @class = "control-label col-md-2" })
+      @Html.LabelFor(model => model.DropOffId, "DropOff", new { @class = "control-label col-md-2" })
       <div class="col-md-10">
         @Html.DropDownListFor(model => model.DropOffId,
                 new SelectList(

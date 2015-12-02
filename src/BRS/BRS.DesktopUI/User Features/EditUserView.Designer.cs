@@ -1,9 +1,12 @@
-﻿namespace BRS.DesktopUI {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI {
   partial class EditUserView {
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    private IContainer components = null;
 
     /// <summary>
     /// Clean up any resources being used.
@@ -144,14 +147,14 @@
 
     #endregion
 
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox TbUserUsername;
-    private System.Windows.Forms.TextBox TbUserPassword;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox TbUserPasswordAgain;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Button BtnUserCreate;
-    private System.Windows.Forms.Button BtnUserDelete;
-    private System.Windows.Forms.Button BtnUserCancel;
+    private Label label1;
+    private TextBox TbUserUsername;
+    private TextBox TbUserPassword;
+    private Label label2;
+    private TextBox TbUserPasswordAgain;
+    private Label label3;
+    private Button BtnUserCreate;
+    private Button BtnUserDelete;
+    private Button BtnUserCancel;
   }
 }

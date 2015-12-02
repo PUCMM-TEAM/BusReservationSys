@@ -1,9 +1,12 @@
-﻿namespace BRS.DesktopUI {
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI {
   partial class FormFrontView {
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.IContainer components = null;
+    private IContainer components = null;
 
     /// <summary>
     /// Clean up any resources being used.
@@ -169,18 +172,18 @@
     }
 
         #endregion
-        private System.Windows.Forms.Button BtnLogin;
-        private System.Windows.Forms.Button BtnRegister;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userReportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem destinationReportsToolStripMenuItem;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ImageList imageList1;
+        private Button BtnLogin;
+        private Button BtnRegister;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem reportsToolStripMenuItem;
+        private ToolStripMenuItem userReportsToolStripMenuItem;
+        private ToolStripMenuItem destinationReportsToolStripMenuItem;
+        private ListView listView1;
+        private ImageList imageList1;
     }
 }
 

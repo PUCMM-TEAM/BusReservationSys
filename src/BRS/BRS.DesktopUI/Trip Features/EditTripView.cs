@@ -1,14 +1,7 @@
-﻿using BRS.Core.Models;
-using BRS.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using BRS.Core.Models;
+using BRS.Data.Repositories;
 
 namespace BRS.DesktopUI
 {
@@ -53,7 +46,7 @@ namespace BRS.DesktopUI
             //trip.DepartureTime =
             //trip.ArrivalTime =
             //trip.Vehicle =
-            trip.Price = float.Parse(MtbTripPrice.Text.ToString());
+            trip.Price = float.Parse(MtbTripPrice.Text);
             //db.Destinations.Add(destination);
             //db.SaveChanges();
             repo.Create(trip);

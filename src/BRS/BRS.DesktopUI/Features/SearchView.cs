@@ -1,14 +1,7 @@
-﻿using BRS.Core.Models;
-using BRS.Data.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BRS.Data.Repositories;
 
 namespace BRS.DesktopUI
 {
@@ -20,7 +13,7 @@ namespace BRS.DesktopUI
             TripRepository repotrips = new TripRepository();
             //Populate listview
            
-           LVSearch.Items.AddRange(new ListViewItem[]{
+           LVSearch.Items.AddRange(new[]{
         new ListViewItem("Amy Alberts"),
         new ListViewItem("Amy Recker"),
         new ListViewItem("Erin Hagens"),
@@ -45,13 +38,13 @@ namespace BRS.DesktopUI
             BindingSource bs = new BindingSource();
             BindingSource bs2 = new BindingSource();
             bs.DataSource = new List<Destino>();// From where the data comes from
-            bs.Add(new Destino() { Name = "Santo Domingo" });
-            bs.Add(new Destino() { Name = "Santiago" });
+            bs.Add(new Destino{ Name = "Santo Domingo" });
+            bs.Add(new Destino{ Name = "Santiago" });
 
 
             bs2.DataSource = new List<Destino>();
-            bs2.Add(new Destino() { Name = "Santo Domingo" });
-            bs2.Add(new Destino() { Name = "Santiago" });
+            bs2.Add(new Destino{ Name = "Santo Domingo" });
+            bs2.Add(new Destino{ Name = "Santiago" });
 
 
             // routebs.DataSource = reporoutes.ReadAll().ToList();

@@ -1,12 +1,8 @@
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Web.Security;
 using BRS.Core.Models;
 
 namespace BRS.Data {
-  using System;
-  using System.Data.Entity;
-  using System.Linq;
-
   public class Context : DbContext {
     // Your context has been configured to use a 'DbContext' connection string from your application's 
     // configuration file (App.config or Web.config). By default, this connection string targets the 

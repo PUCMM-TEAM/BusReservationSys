@@ -2,30 +2,129 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="row">
+
+  <div id="sidebar" class="col-sm-4">
+    <h3>Where do you want to go?</h3>
+    <form method="POST" action="Home/Index">
+      <fieldset>
+        <div class="form-group">
+          <label for="origin">*Origin</label>
+          <input type="hidden" id="originId" name="originId">
+          <input id="origin" name="origin" type="text" class="form-control" placeholder="Santo Domingo" />
+        </div>
+        <div class="form-group">
+          <label for="destination">*Destination</label>
+          <input type="hidden" id="destinationId" name="destinationId">
+          <input id="destination" name="destination" type="text" class="form-control" placeholder="Santiago" />
+        </div>
+
+        <div class="form-group">
+          <label for="date">*Date</label>
+          <input id="date" name="date" type="date" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="noPassengers">*No. Passengers</label>
+          <input id="noPassengers" name="noPassengers" type="number" class="form-control" />
+        </div>
+
+      </fieldset>
+      <button class="btn btn-danger">Clear</button>
+      <button class="btn btn-warning">Search</button>
+    </form>
+  </div>
+
+
+  <div class="col-sm-8">
+    <h1>Today's Offer</h1>
+
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="http://placehold.it/240x200" alt="placeholder"/>
+        <div class="caption">
+          <h3>Offer 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="http://placehold.it/240x200" alt="placeholder"/>
+        <div class="caption">
+          <h3>Offer 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="http://placehold.it/240x200" alt="placeholder"/>
+        <div class="caption">
+          <h3>Offer 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@section Scripts {
+  <script>
+    $(document).ready(function () {
+
+      var action = '@Url.Action("DestinationsAutocomplete")';
+
+      var getData = function(request, response) {
+        $.getJSON(action, { term: request.term }, function(data) {
+          response(
+            $.map(data, function(el) {
+              return {
+                label: el.Name,
+                value: el.ID
+              }
+            }));
+        });
+      };
+
+      $('#origin').autocomplete({
+        minLength: 0,
+        source: getData,
+        focus: function (event, ui) {
+          $("#origin").val(ui.item.label);
+          return false;
+        },
+        select: function (event, ui) {
+          $("#origin").val(ui.item.label);
+          $("#originId").val(ui.item.value);
+          return false;
+        }
+      });
+
+      $('#destination').autocomplete({
+        minLength: 0,
+        source: getData,
+        focus: function (event, ui) {
+          $("#destination").val(ui.item.label);
+          return false;
+        },
+        select: function (event, ui) {
+          $("#destination").val(ui.item.label);
+          $("#destinationId").val(ui.item.value);
+          return false;
+        }
+      });
+    });
+  </script>
+}

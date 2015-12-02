@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BRS.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BRS.WebUI\Bin\BRS.Data.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,21 +54,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
-    <Compile Include="Migrations\201512011459022_white.cs" />
-    <Compile Include="Migrations\201512011459022_white.Designer.cs">
-      <DependentUpon>201512011459022_white.cs</DependentUpon>
+    <Compile Include="Migrations\201512021543475_init.cs" />
+    <Compile Include="Migrations\201512021543475_init.Designer.cs">
+      <DependentUpon>201512021543475_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CreditCardRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\DestinationRepository.cs" />
-    <Compile Include="Repositories\LocalGenericRepository.cs" />
     <Compile Include="Repositories\ReservationRepository.cs" />
     <Compile Include="Repositories\RouteRepository.cs" />
     <Compile Include="Repositories\TripRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
+    <Compile Include="RepositoryFactory.cs" />
+    <Compile Include="SqlRepositories\CreditCardSqlRepository.cs" />
+    <Compile Include="SqlRepositories\CustomerSqlRepository.cs" />
+    <Compile Include="SqlRepositories\DestinationSqlRepository.cs" />
+    <Compile Include="SqlRepositories\ReservationSqlRepository.cs" />
+    <Compile Include="SqlRepositories\RoleSqlRepository.cs" />
+    <Compile Include="SqlRepositories\RouteSqlRepository.cs" />
+    <Compile Include="SqlRepositories\TripSqlRepository.cs" />
+    <Compile Include="SqlRepositories\UserSqlRepository.cs" />
+    <Compile Include="SqlRepositories\VehicleSqlRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
@@ -77,8 +90,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512011459022_white.resx">
-      <DependentUpon>201512011459022_white.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512021543475_init.resx">
+      <DependentUpon>201512021543475_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

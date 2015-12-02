@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BRS.DesktopUI
+﻿namespace BRS.DesktopUI
 {
     public class Destino
     {

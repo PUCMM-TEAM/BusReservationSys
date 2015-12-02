@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class EditDestinationView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -135,13 +138,13 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbDestination;
-        private System.Windows.Forms.TextBox TbDestinationName;
-        private System.Windows.Forms.TextBox TbDestinationID;
-        private System.Windows.Forms.Label TxtDestinationName;
-        private System.Windows.Forms.Label TxtDestinationID;
-        private System.Windows.Forms.Button BtnDestinationCreate;
-        private System.Windows.Forms.Button BtnDestinationDelete;
-        private System.Windows.Forms.Button BtnDestinationCancel;
+        private GroupBox GbDestination;
+        private TextBox TbDestinationName;
+        private TextBox TbDestinationID;
+        private Label TxtDestinationName;
+        private Label TxtDestinationID;
+        private Button BtnDestinationCreate;
+        private Button BtnDestinationDelete;
+        private Button BtnDestinationCancel;
     }
 }

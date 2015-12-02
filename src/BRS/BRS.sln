@@ -8,11 +8,21 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.DesktopUI", "BRS.DesktopUI\BRS.DesktopUI.csproj", "{5172705B-FC97-4A73-B12F-ECDA5F6FC515}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D} = {FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880} = {7EE76B8A-17FD-47EF-8230-CBF58C729880}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Data", "BRS.Data\BRS.Data.csproj", "{F4E9C87C-9C7B-41E3-AEB2-4B626043D379}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.WebUI", "BRS.WebUI\BRS.WebUI.csproj", "{C3ED88F0-D8EE-499C-9CAF-F31F5D15442D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880} = {7EE76B8A-17FD-47EF-8230-CBF58C729880}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Logic", "BRS.Logical\BRS.Logic.csproj", "{7EE76B8A-17FD-47EF-8230-CBF58C729880}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D} = {FE9B1E30-99F7-45F0-93C3-E2F2DF49BA9D}
+		{F4E9C87C-9C7B-41E3-AEB2-4B626043D379} = {F4E9C87C-9C7B-41E3-AEB2-4B626043D379}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +46,10 @@ Global
 		{C3ED88F0-D8EE-499C-9CAF-F31F5D15442D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3ED88F0-D8EE-499C-9CAF-F31F5D15442D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3ED88F0-D8EE-499C-9CAF-F31F5D15442D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE76B8A-17FD-47EF-8230-CBF58C729880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

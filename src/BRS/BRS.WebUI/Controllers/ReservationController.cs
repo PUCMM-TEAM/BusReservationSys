@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using BRS.Core.Models;
 using BRS.Data;
@@ -14,16 +13,15 @@ namespace BRS.WebUI.Controllers
       private Context db = new Context();
 
         // GET: Reservation
-        public ActionResult Index(){
-          SearchResultViewModel vmodel = new SearchResultViewModel();
-          List<Trip> trips = db.Trips.ToList();
-          vmodel.Trips = trips;
-          vmodel.DepartureDate = DateTime.Now;
-          vmodel.NoPassengers = 1;
-          return View(vmodel);
-        }
+        //public ActionResult Index(){
+        //  SearchResultViewModel vmodel = new SearchResultViewModel();
+        //  List<Trip> trips = db.Trips.ToList();
+        //  vmodel.Trips = trips;
+        //  vmodel.DepartureDate = DateTime.Now;
+        //  vmodel.NoPassengers = 1;
+        //  return View(vmodel);
+        //}
 
-      [HttpPost]
       public ActionResult Index(int originId, int destinationId, DateTime date, int noPassengers){
         SearchResultViewModel vmodel = new SearchResultViewModel();
         List<Trip> trips = db.Trips.ToList(); 
@@ -48,8 +46,8 @@ namespace BRS.WebUI.Controllers
       [HttpPost]
       public ActionResult Book([Bind(Include = "Name,Email,CardHolder,CardNumber,CVC,ExpirationDate,TripId,DepartureDate,NoPassengers,Price")] ReservationViewModel vModel) {
               vModel.Trip = db.Trips.Find(vModel.TripId);
-        if (ModelState.IsValid){
 
+        if (ModelState.IsValid){
           string[] name = vModel.Name.Split(' ');
           Customer cust = new Customer{FirstName = name[0], LastName = name[1], CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, Deleted = false};
           
@@ -67,7 +65,7 @@ namespace BRS.WebUI.Controllers
 
           db.Reservations.Add(reservation);
           db.SaveChanges();
-          return RedirectToAction("Index", "Reservation");
+          return RedirectToAction("Index");
         }
   
         return View(vModel);
