@@ -1,17 +1,10 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using BRS.Data;
-using BRS.Data.Repositories;
-using BRS.Data.SqlRepositories;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BRS.Core.Models;
+using BRS.Core.Repositories;
+using BRS.Data.SqlRepositories;
 
 namespace BRS.DesktopUI
 {

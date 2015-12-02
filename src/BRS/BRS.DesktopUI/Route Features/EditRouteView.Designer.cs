@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class EditRouteView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -148,14 +151,13 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbRoute;
-        private System.Windows.Forms.Label TxtRouteDropoff;
-        private System.Windows.Forms.Label TxtRoutePickup;
-        private System.Windows.Forms.Button BtnRouteCreate;
-        private System.Windows.Forms.Button BtnRouteDelete;
-        private System.Windows.Forms.Button BtnRouteCancel;
-        private System.Windows.Forms.ComboBox CbRouteDropoff;
-        private System.Windows.Forms.ComboBox CbRoutePickup;
-        private System.Windows.Forms.Button BtnRouteList;
+        private GroupBox GbRoute;
+        private Label TxtRouteDropoff;
+        private Label TxtRoutePickup;
+        private Button BtnRouteCreate;
+        private Button BtnRouteDelete;
+        private Button BtnRouteCancel;
+        private ComboBox CbRouteDropoff;
+        private ComboBox CbRoutePickup;
     }
 }

@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class UserListView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -77,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGVUsers;
-        private System.Windows.Forms.Button BtnUserSearch;
-        private System.Windows.Forms.TextBox TxtUserSearch;
+        private DataGridView DGVUsers;
+        private Button BtnUserSearch;
+        private TextBox TxtUserSearch;
     }
 }

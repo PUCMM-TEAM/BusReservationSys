@@ -119,19 +119,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DestinationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RouteController.cs" />
     <Compile Include="Controllers\TripController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginUserViewModel.cs" />
+    <Compile Include="Models\NewUserViewModel.cs" />
     <Compile Include="Models\ReservationViewModel.cs" />
     <Compile Include="Models\RouteViewModel.cs" />
     <Compile Include="Models\SearchResultViewModel.cs" />
     <Compile Include="Models\TripViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +250,13 @@
     <Content Include="Views\Trip\Index.cshtml" />
     <Content Include="Views\Reservation\Index.cshtml" />
     <Content Include="Views\Reservation\Book.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -264,6 +276,10 @@
     <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
       <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
       <Name>BRS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Logical\BRS.Logic.csproj">
+      <Project>{7EE76B8A-17FD-47EF-8230-CBF58C729880}</Project>
+      <Name>BRS.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

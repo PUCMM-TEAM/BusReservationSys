@@ -1,13 +1,4 @@
-﻿using BRS.Core.Models;
-using BRS.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace BRS.DesktopUI
@@ -31,7 +22,7 @@ namespace BRS.DesktopUI
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnLogin2_Click(object sender, EventArgs e)

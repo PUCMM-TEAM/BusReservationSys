@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class VehicleListView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -76,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGVVehicle;
-        private System.Windows.Forms.Button BtnVehicleSearch;
-        private System.Windows.Forms.TextBox TbVehicleSearch;
+        private DataGridView DGVVehicle;
+        private Button BtnVehicleSearch;
+        private TextBox TbVehicleSearch;
     }
 }

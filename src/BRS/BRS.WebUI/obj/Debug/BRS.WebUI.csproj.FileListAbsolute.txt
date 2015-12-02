@@ -66,3 +66,5 @@ C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\bin\N
 C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.csprojResolveAssemblyReference.cache
 C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.dll
 C:\Users\Rafael White\Documents\GitHub\BusReservationSys\src\BRS\BRS.WebUI\obj\Debug\BRS.WebUI.pdb
+C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Logical.dll
+C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.WebUI\bin\BRS.Logical.pdb

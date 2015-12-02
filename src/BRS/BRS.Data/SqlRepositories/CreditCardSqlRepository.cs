@@ -1,13 +1,11 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BRS.Core;
 using BRS.Core.CallBacks;
-using System.Data.Entity;
+using BRS.Core.Models;
+using BRS.Core.Repositories;
 
 namespace BRS.Data.SqlRepositories
 {

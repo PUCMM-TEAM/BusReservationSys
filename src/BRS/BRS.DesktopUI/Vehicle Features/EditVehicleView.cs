@@ -1,14 +1,7 @@
-﻿using BRS.Core.Models;
-using BRS.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using BRS.Core.Models;
+using BRS.Data.Repositories;
 
 namespace BRS.DesktopUI.VehicleFeatures
 {
@@ -24,16 +17,16 @@ namespace BRS.DesktopUI.VehicleFeatures
 
         private void BtnVehicleCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnVehicleCreate_Click(object sender, EventArgs e)
         {
             Vehicle vehicle = new Vehicle();
-            vehicle.Name = TbVehicleName.Text.ToString();
-            vehicle.PassengerCapacity = Int32.Parse(MtbVehiclePassCap.Text.ToString());
-            vehicle.VehicleType = TbVehicleVeTy.Text.ToString();
-            vehicle.Image = TbVehicleImage.Text.ToString();
+            vehicle.Name = TbVehicleName.Text;
+            vehicle.PassengerCapacity = Int32.Parse(MtbVehiclePassCap.Text);
+            vehicle.VehicleType = TbVehicleVeTy.Text;
+            vehicle.Image = TbVehicleImage.Text;
             //db.Destinations.Add(destination);
             //db.SaveChanges();
             repo.Create(vehicle);

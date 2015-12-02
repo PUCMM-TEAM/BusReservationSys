@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI.VehicleFeatures
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI.VehicleFeatures
 {
     partial class EditVehicleView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -210,20 +213,19 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbVehicle;
-        private System.Windows.Forms.Label TxtVechicleDescription;
-        private System.Windows.Forms.Label TxtVehicleVeTy;
-        private System.Windows.Forms.Label TxtVehiclePassCap;
-        private System.Windows.Forms.Label TxtVehicleName;
-        private System.Windows.Forms.Button BtnVehicleCreate;
-        private System.Windows.Forms.Button BtnVehicleDelete;
-        private System.Windows.Forms.Button BtnVehicleCancel;
-        private System.Windows.Forms.Label TxtVehicleImage;
-        private System.Windows.Forms.MaskedTextBox MtbVehiclePassCap;
-        private System.Windows.Forms.TextBox TbVehicleDescription;
-        private System.Windows.Forms.TextBox TbVehicleVeTy;
-        private System.Windows.Forms.TextBox TbVehicleName;
-        private System.Windows.Forms.TextBox TbVehicleImage;
-        private System.Windows.Forms.Button BtnVehicleList;
+        private GroupBox GbVehicle;
+        private Label TxtVechicleDescription;
+        private Label TxtVehicleVeTy;
+        private Label TxtVehiclePassCap;
+        private Label TxtVehicleName;
+        private Button BtnVehicleCreate;
+        private Button BtnVehicleDelete;
+        private Button BtnVehicleCancel;
+        private Label TxtVehicleImage;
+        private MaskedTextBox MtbVehiclePassCap;
+        private TextBox TbVehicleDescription;
+        private TextBox TbVehicleVeTy;
+        private TextBox TbVehicleName;
+        private TextBox TbVehicleImage;
     }
 }

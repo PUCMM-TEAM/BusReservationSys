@@ -1,13 +1,11 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BRS.Core;
 using BRS.Core.CallBacks;
-using System.Data.Entity;
+using BRS.Core.Models;
+using BRS.Core.Repositories;
 
 namespace BRS.Data.SqlRepositories
 {
@@ -38,7 +36,7 @@ namespace BRS.Data.SqlRepositories
 
         public User Read(int id)
         {
-            return _context.Users.Where(x => x.Deleted == false && x.ID == id).First();
+            return _context.Users.First(x => x.Deleted == false && x.ID == id);
         }
 
         public void Read(int id, IResponse<User> reponse)
@@ -73,13 +71,13 @@ namespace BRS.Data.SqlRepositories
             switch (erole)
             {
                 case Erole.Administrator:
-                    return roles.Where(x => x.Name.Contains("Admin")).First();
+                    return roles.First(x => x.Name.Contains("Admin"));
                 case Erole.Operator:
-                    return roles.Where(x => x.Name.Contains("Opera")).First();
+                    return roles.First(x => x.Name.Contains("Opera"));
                 case Erole.Customer:
-                    return roles.Where(x => x.Name.Contains("Cust")).First();
+                    return roles.First(x => x.Name.Contains("Cust"));
                 default:
-                    return roles.Where(x => x.Name.Contains("Gues")).First();
+                    return roles.First(x => x.Name.Contains("Gues"));
             }
         }
     }

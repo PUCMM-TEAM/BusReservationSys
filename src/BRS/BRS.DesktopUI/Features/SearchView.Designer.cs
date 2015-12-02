@@ -1,11 +1,14 @@
-﻿namespace BRS.DesktopUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace BRS.DesktopUI
 {
     partial class SearchView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -219,21 +222,32 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox CbSearchOrigin;
-        private System.Windows.Forms.Label TxtRoute;
-        private System.Windows.Forms.DataGridView DGVSearchTrip;
-        private System.Windows.Forms.ComboBox CbSearchDestination;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox MtbSearchNumPass;
+        private GroupBox groupBox1;
+        private ListView LVSearch;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private Label TxtArrivalTime;
+        private Label TxtDepartureTime;
+        private Label label2;
+        private Label label1;
+        private Button button1;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox CbSearchArrivalTime;
+        private ComboBox CbSearchDepartueTime;
+        private Button button3;
+        private ComboBox CbSearchVehicle;
+        private Label label3;
+        private ComboBox CbSearchRoute;
+        private Label TxtRoute;
+        private ColumnHeader Route;
+        private ColumnHeader AvailableDate;
+        private ColumnHeader DepartureTime;
+        private ColumnHeader ArrivalTime;
+        private ColumnHeader Vehicle;
+        private ColumnHeader Price;
     }
 }

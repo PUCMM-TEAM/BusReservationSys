@@ -1,16 +1,8 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
+﻿using System;
+using System.Windows.Forms;
+using BRS.Core.Models;
 using BRS.Data;
 using BRS.Data.SqlRepositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
@@ -33,7 +25,39 @@ namespace BRS.DesktopUI
 
         private void BtnRegistrationCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void BtnRegistrationCreate_Click(object sender, EventArgs e)
+        {
+            UserSqlRepository userRepo = new UserSqlRepository();
+
+            User user = new User();
+
+            user.Username = TbRegistrationUsername.Text;
+            user.Email = TbRegistrationEmail.Text;
+            user.Password = TbRegistrationPassword.Text;
+            user.Role = userRepo.GetRoleInstance(Erole.Customer);
+            
+            Customer customer = new Customer();
+
+            customer.FirstName = TbRegistrationFirstName.Text;
+            customer.LastName = TbRegistrationLastName.Text;
+            customer.Birthday = DTPRegistrationBirthday.Value;
+
+            CreditCard creditcard = new CreditCard();
+
+            creditcard.CardHolder = TbRegistrationCardHolder.Text;
+            creditcard.CardNumber = TbRegistrationCardNumber.Text;
+            creditcard.CVC = TbRegistrationCVC.Text;
+            creditcard.ExpirationDate =   DTPRegistrationExpirationDate.Value.Millisecond;
+
+            RepositoryFactory.Instance().UserRepository().Create(user);
+            RepositoryFactory.Instance().CustomerRepository().Create(customer);
+            RepositoryFactory.Instance().CreditCardRepository().Create(creditcard);
+
+            MessageBox.Show("Succesfully Added!");
+
         }
 
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)

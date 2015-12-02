@@ -1,20 +1,20 @@
+using System;
+using System.Data.Entity.Migrations;
+using System.Linq;
+using BRS.Core.Models;
+
 namespace BRS.Data.Migrations
 {
-    using Core.Models;
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<BRS.Data.Context>
+  internal sealed class Configuration : DbMigrationsConfiguration<Context>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
             //ContextKey = "BRS.Data.Context";
+          AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(BRS.Data.Context context)
+        protected override void Seed(Context context)
         {
             //  This method will be called after migrating to the latest version.
 

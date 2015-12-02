@@ -1,16 +1,7 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using BRS.Data;
-using BRS.Data.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BRS.Data.Repositories;
 
 namespace BRS.DesktopUI
 {
@@ -19,23 +10,19 @@ namespace BRS.DesktopUI
         public SearchView()
         {
             InitializeComponent();
-            MtbSearchNumPass.Text = "01";
-            IRepository<Trip> repo = RepositoryFactory.Instance().TripRepository();
-            List<Trip> trip = repo.ReadAll().ToList();
-            var bindingList = new BindingList<Trip>(trip);//Create a new list to show data from database
-            var source = new BindingSource(bindingList, null);//fill with data
-            DGVSearchTrip.DataSource = source;
+            TripRepository repotrips = new TripRepository();
+            //Populate listview
+           
+           LVSearch.Items.AddRange(new[]{
+        new ListViewItem("Amy Alberts"),
+        new ListViewItem("Amy Recker"),
+        new ListViewItem("Erin Hagens"),
+        new ListViewItem("Barry Johnson"),
+        new ListViewItem("Jay Hamlin"),
+        new ListViewItem("Brian Valentine"),
+        new ListViewItem("Brian Welker"),
+        new ListViewItem("Daniel Weisman") });
 
-            DGVSearchTrip.Columns["Deleted"].Visible = false;
-            DGVSearchTrip.Columns["CreatedDate"].Visible = false;
-            DGVSearchTrip.Columns["ModifiedDate"].Visible = false;
-            DGVSearchTrip.Columns["ID"].Visible = false;
-
-            //Origin and Destination
-            var originlist = RepositoryFactory.Instance().DestinationRepository().ReadAll().ToList();
-            var bindinglistori = new BindingList<Destination>(originlist);//Create a new list to show data from database
-            var sourceori = new BindingSource(bindinglistori, null);//fill with data
-            
 
             //Departure time and Arrival Time
             var departure_list = RepositoryFactory.Instance().TripRepository().ReadAll().ToList();
@@ -62,13 +49,16 @@ namespace BRS.DesktopUI
             //CbSearchDepartueTime.DisplayMember = "DepartureTime";
             //CbSearchDepartueTime.ValueMember = "ID";
 
-            //CbSearchArrivalTime.DisplayMember = "ArrivalTime";
-            //CbSearchArrivalTime.ValueMember = "ID";
+            BindingSource bs = new BindingSource();
+            BindingSource bs2 = new BindingSource();
+            bs.DataSource = new List<Destino>();// From where the data comes from
+            bs.Add(new Destino{ Name = "Santo Domingo" });
+            bs.Add(new Destino{ Name = "Santiago" });
 
 
-            ////Vehicle
-            //CbSearchVehicle.DisplayMember = "Name";
-            //CbSearchVehicle.ValueMember = "ID";
+            bs2.DataSource = new List<Destino>();
+            bs2.Add(new Destino{ Name = "Santo Domingo" });
+            bs2.Add(new Destino{ Name = "Santiago" });
 
 
             //Origin and Destination

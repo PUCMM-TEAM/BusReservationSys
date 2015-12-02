@@ -1,18 +1,8 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using BRS.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace BRS.DesktopUI {
-  public partial class FormFrontView : System.Windows.Forms.Form {
+  public partial class FormFrontView : Form {
     public FormFrontView() {
       InitializeComponent();
 

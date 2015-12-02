@@ -1,15 +1,7 @@
-﻿using BRS.Core.Models;
-using BRS.Data;
-using BRS.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using BRS.Core.Models;
+using BRS.Data.Repositories;
 
 namespace BRS.DesktopUI
 {
@@ -37,12 +29,12 @@ namespace BRS.DesktopUI
             CbRoutePickup.DataSource = source;
             CbRouteDropoff.DataSource = source;
 
-            this.CbRoutePickup.DropDownStyle = ComboBoxStyle.DropDownList;
+            CbRoutePickup.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void BtnRouteCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnRouteCreate_Click(object sender, EventArgs e)

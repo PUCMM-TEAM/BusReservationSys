@@ -1,11 +1,11 @@
-﻿using BRS.Core.Models;
-using BRS.Core.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BRS.Core;
+using BRS.Core.CallBacks;
+using BRS.Core.Models;
+using BRS.Core.Repositories;
 
 namespace BRS.Data.SqlRepositories 
 {
@@ -40,7 +40,7 @@ namespace BRS.Data.SqlRepositories
             return _context.Routes.Where(x => x.Deleted == false && x.ID == id).First();
         }
 
-        public void Read(int id, Core.IResponse<Route> reponse)
+        public void Read(int id, IResponse<Route> reponse)
         {
             throw new NotImplementedException();
         }
@@ -50,7 +50,7 @@ namespace BRS.Data.SqlRepositories
             return _context.Routes.Where(x => x.Deleted == false);
         }
 
-        public void ReadAll(Core.CallBacks.IListResponse<Route> callback)
+        public void ReadAll(IListResponse<Route> callback)
         {
             throw new NotImplementedException();
         }
