@@ -4,8 +4,8 @@ using BRS.Data.SqlRepositories;
 
 namespace BRS.Data
 {
-    public class RepositoryFactory
-    {
+    public class RepositoryFactory{
+      private Context _context;
         private static RepositoryFactory _instance;
         private IRepository<Destination> _destinationRepository;
         private IRepository<Route> _routeRepository;
@@ -17,16 +17,15 @@ namespace BRS.Data
         private IRepository<Reservation> _reservationRepository;
         private RepositoryFactory()
         {
-            _destinationRepository = new DestinationSqlRepository();
-            _routeRepository = new RouteSqlRepository();
-            _tripRepository = new TripSqlRepository();
-            _customerRepository = new CustomerSqlRepository();
-            _creditcardRepository = new CreditCardSqlRepository();
-            _userRepository = new UserSqlRepository();
-            _vehicleRepository = new VehicleSqlRepository();
-            _reservationRepository = new ReservationSqlRepository();
-
-
+            _context = new Context();
+            _destinationRepository = new DestinationSqlRepository(_context);
+            _routeRepository = new RouteSqlRepository(_context);
+            _tripRepository = new TripSqlRepository(_context);
+            _customerRepository = new CustomerSqlRepository(_context);
+            _creditcardRepository = new CreditCardSqlRepository(_context);
+            _userRepository = new UserSqlRepository(_context);
+            _vehicleRepository = new VehicleSqlRepository(_context);
+            _reservationRepository = new ReservationSqlRepository(_context);
         }
 
         public static RepositoryFactory Instance()

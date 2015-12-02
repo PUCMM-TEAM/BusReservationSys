@@ -10,7 +10,7 @@ namespace BRS.Logical.Account {
     private UserSqlRepository _repository;
 
     private AccountManager() {
-      _repository = new UserSqlRepository();
+      //_repository = new UserSqlRepository();
       Role role = _repository.GetRoleInstance(Erole.Guest);
       _currentUser = RepositoryFactory.Instance().UserRepository().ReadAll().First(x => x.Role == role);
     }
@@ -49,6 +49,7 @@ namespace BRS.Logical.Account {
       //  default:
       //    return roles.First(x => x.Name.Contains("Gues"));
       //}
+      return new Role();
     }
 
     public Erole UserRole {
