@@ -62,25 +62,42 @@ namespace BRS.DesktopUI {
         {
             if(ChPaymentAgree.Checked)
             {
+
                 customer = new Customer();
                 customer.FirstName = "Rafael";
                 customer.LastName = "White";
                 customer.Birthday = value.ToString();
+                customer.CreatedDate = DateTime.Now;
+                customer.ModifiedDate = DateTime.Now;
+                customer.Deleted = false;
+
                 credit = new CreditCard();
                 credit.CardHolder = "Rafael";
                 credit.CardNumber = "588282";
                 credit.ExpirationDate = 0;
+                credit.CVC = "123";
+                credit.CreatedDate = DateTime.Now;
+                credit.ModifiedDate = DateTime.Now;
+                credit.Deleted = false;
 
                 Reservation reservation = new Reservation();
+                reservation.ID = 0;
                 reservation.Trip = trip;
-                reservation.Customer = RepositoryFactory.Instance().CustomerRepository().Read(2);
-                reservation.CreditCard = RepositoryFactory.Instance().CreditCardRepository().Read(1);
+                reservation.Customer = customer;
+                reservation.CreditCard = credit;
+                //reservation.Customer = RepositoryFactory.Instance().CustomerRepository().Read(2);
+                //reservation.CreditCard = RepositoryFactory.Instance().CreditCardRepository().Read(1);
                 reservation.ReservationDate = value;
                 reservation.NumPassenger = noPassengers;
+                reservation.CreatedDate = DateTime.Now;
+                reservation.ModifiedDate = DateTime.Now;
+
+
                 RepositoryFactory.Instance().ReservationRepository().Create(reservation);
 
                 MessageBox.Show("The reservation was made");
 
+             
 
 
             }

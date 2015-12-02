@@ -15,9 +15,9 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public TripSqlRepository()
+        public TripSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Trip entity)

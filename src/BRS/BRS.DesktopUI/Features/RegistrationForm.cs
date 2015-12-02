@@ -38,7 +38,8 @@ namespace BRS.DesktopUI
 
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)
         {
-            UserSqlRepository userRepo = new UserSqlRepository();
+            //UserSqlRepository userRepo = new UserSqlRepository();
+
 
             User user = new User();
             if (TbRegistrationPassword.Text == TbRegistrationPA.Text)
@@ -46,7 +47,7 @@ namespace BRS.DesktopUI
                 user.Username = TbRegistrationUsername.Text;
                 user.Email = TbRegistrationEmail.Text;
                 user.Password = TbRegistrationPassword.Text;
-                user.Role = userRepo.GetRoleInstance(Erole.Customer);
+              //user.Role = userRepo.GetRoleInstance(Erole.Customer);
 
                 Customer customer = new Customer();
 

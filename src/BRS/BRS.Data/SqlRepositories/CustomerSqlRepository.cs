@@ -15,9 +15,9 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public CustomerSqlRepository()
+        public CustomerSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Customer entity)

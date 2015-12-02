@@ -15,9 +15,9 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public ReservationSqlRepository()
+        public ReservationSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(Reservation entity)

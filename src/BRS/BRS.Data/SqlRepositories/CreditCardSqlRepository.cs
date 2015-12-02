@@ -15,9 +15,9 @@ namespace BRS.Data.SqlRepositories
     {
         private Context _context;
 
-        public CreditCardSqlRepository()
+        public CreditCardSqlRepository(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
 
         public void Create(CreditCard entity)

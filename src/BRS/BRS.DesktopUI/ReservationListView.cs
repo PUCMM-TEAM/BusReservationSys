@@ -20,8 +20,8 @@ namespace BRS.DesktopUI
             InitializeComponent();
             IRepository<Reservation> repo = RepositoryFactory.Instance().ReservationRepository();
             List<Reservation> reservation = repo.ReadAll().ToList();
-            var bindingList = new BindingList<Reservation>(reservation);//Create a new list to show data from database
-            var source = new BindingSource(bindingList, null);//fill with data
+            var bindingList = new BindingList<Reservation>(reservation);
+            var source = new BindingSource(bindingList, null);
             DGVReservation.DataSource = source;
         }
     }
