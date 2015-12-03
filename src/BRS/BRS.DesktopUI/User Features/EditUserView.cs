@@ -1,4 +1,5 @@
 ﻿using BRS.Core.Models;
+using BRS.Data;
 using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -39,10 +40,10 @@ namespace BRS.DesktopUI {
         {
             User user = new User();
             user.Username = TbUserUsername.Text.ToString();
-            user.Password = TbUserPassword.Text.ToString();//Falta lo de password again para verificar si ese el password que desea usar.
-            //db.Destinations.Add(destination);
-            //db.SaveChanges();
-            repo.Create(user);
+            user.Password = TbUserPassword.Text.ToString();
+            user.Email = TbUserEmail.Text.ToString();
+            RepositoryFactory.Instance().UserRepository().Create(user);
+            MessageBox.Show("User succesfully created");
         }
 
 

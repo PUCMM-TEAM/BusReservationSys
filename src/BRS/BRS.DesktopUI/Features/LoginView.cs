@@ -54,25 +54,34 @@ namespace BRS.DesktopUI
         /// <param name="e">Data del evento</param>
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
-           if(AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
+            if (TbPassword.Text != "" && TbUsername.Text != "")
             {
+                if (AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
+                {
 
-                if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
-                {
-                    SearchView searchview = new SearchView();
-                    searchview.Show();
+                    if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
+                    {
+                        SearchView searchview = new SearchView();
+                        searchview.Show();
+                        this.Close();
+                    }
+                    else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                    {
+                        AdminEditView adminview = new AdminEditView();
+                        adminview.Show();
+                        this.Close();
+                    }
                 }
-                else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                else
                 {
-                    AdminEditView adminview = new AdminEditView();
-                    adminview.Show();
+                    MessageBox.Show("Not a user");
                 }
+
             }
-         else
+            else
             {
-                MessageBox.Show("Not a user");
+                MessageBox.Show("No Username or password provided");
             }
-        
               
         }
     }

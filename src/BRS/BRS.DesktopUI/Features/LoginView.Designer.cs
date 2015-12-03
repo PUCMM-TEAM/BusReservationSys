@@ -32,7 +32,6 @@
             this.TbPassword = new System.Windows.Forms.TextBox();
             this.TbUsername = new System.Windows.Forms.TextBox();
             this.BtnLogin2 = new System.Windows.Forms.Button();
-            this.BtnSignup = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.TxtPassword = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.GbLogin.Controls.Add(this.TbPassword);
             this.GbLogin.Controls.Add(this.TbUsername);
             this.GbLogin.Controls.Add(this.BtnLogin2);
-            this.GbLogin.Controls.Add(this.BtnSignup);
             this.GbLogin.Controls.Add(this.BtnCancel);
             this.GbLogin.Controls.Add(this.TxtPassword);
             this.GbLogin.Controls.Add(this.TxtUsername);
@@ -83,16 +81,6 @@
             this.BtnLogin2.Text = "Login";
             this.BtnLogin2.UseVisualStyleBackColor = true;
             this.BtnLogin2.Click += new System.EventHandler(this.BtnLogin2_Click);
-            // 
-            // BtnSignup
-            // 
-            this.BtnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignup.Location = new System.Drawing.Point(102, 140);
-            this.BtnSignup.Name = "BtnSignup";
-            this.BtnSignup.Size = new System.Drawing.Size(75, 23);
-            this.BtnSignup.TabIndex = 10;
-            this.BtnSignup.Text = "Sign up";
-            this.BtnSignup.UseVisualStyleBackColor = true;
             // 
             // BtnCancel
             // 
@@ -145,7 +133,6 @@
 
         private System.Windows.Forms.GroupBox GbLogin;
         private System.Windows.Forms.Button BtnLogin2;
-        private System.Windows.Forms.Button BtnSignup;
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Label TxtPassword;
         private System.Windows.Forms.Label TxtUsername;

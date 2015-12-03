@@ -66,5 +66,11 @@ namespace BRS.DesktopUI
             EditDestinationView destinationview = new EditDestinationView();
             destinationview.Show();
         }
+
+        private void BtnAdminReservationList_Click(object sender, EventArgs e)
+        {
+            ReservationListView reservationview = new ReservationListView();
+            reservationview.Show();
+        }
     }
 }
