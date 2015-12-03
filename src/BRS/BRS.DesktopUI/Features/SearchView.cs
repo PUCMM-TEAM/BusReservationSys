@@ -14,16 +14,22 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la busqueda de viajes.
+    /// </summary>
     public partial class SearchView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public SearchView()
         {
             InitializeComponent();
             MtbSearchNumPass.Text = "01";
             IRepository<Trip> repo = RepositoryFactory.Instance().TripRepository();
             List<Trip> trip = repo.ReadAll().ToList();
-            var bindingList = new BindingList<Trip>(trip);//Create a new list to show data from database
-            var source = new BindingSource(bindingList, null);//fill with data
+            var bindingList = new BindingList<Trip>(trip);
+            var source = new BindingSource(bindingList, null);
             DGVSearchTrip.DataSource = source;
 
             DGVSearchTrip.Columns["Deleted"].Visible = false;
@@ -31,55 +37,37 @@ namespace BRS.DesktopUI
             DGVSearchTrip.Columns["ModifiedDate"].Visible = false;
             DGVSearchTrip.Columns["ID"].Visible = false;
 
-            //Origin and Destination
+            
             var originlist = RepositoryFactory.Instance().DestinationRepository().ReadAll().ToList();
-            var bindinglistori = new BindingList<Destination>(originlist);//Create a new list to show data from database
-            var sourceori = new BindingSource(bindinglistori, null);//fill with data
+            var bindinglistori = new BindingList<Destination>(originlist);
+            var sourceori = new BindingSource(bindinglistori, null);
             
 
-            //Departure time and Arrival Time
+            
             var departure_list = RepositoryFactory.Instance().TripRepository().ReadAll().ToList();
-            var bind_list_departure = new BindingList<Trip>(departure_list);//Create a new list to show data from database
-            var source_departure = new BindingSource(bind_list_departure, null);//fill with data
+            var bind_list_departure = new BindingList<Trip>(departure_list);
+            var source_departure = new BindingSource(bind_list_departure, null);
 
             var arrival_list = RepositoryFactory.Instance().TripRepository().ReadAll().ToList();
-            var bind_list_arrival = new BindingList<Trip>(arrival_list);//Create a new list to show data from database
-            var source_arrival = new BindingSource(bind_list_arrival, null);//fill with data
+            var bind_list_arrival = new BindingList<Trip>(arrival_list);
+            var source_arrival = new BindingSource(bind_list_arrival, null);
 
-            //Vehicle
+            
             var vehiclelist = RepositoryFactory.Instance().VehicleRepository().ReadAll().ToList();
-            var bindinglistvehicle = new BindingList<Vehicle>(vehiclelist);//Create a new list to show data from database
-            var sourcevehicle = new BindingSource(bindinglistvehicle, null);//fill with data
+            var bindinglistvehicle = new BindingList<Vehicle>(vehiclelist);
+            var sourcevehicle = new BindingSource(bindinglistvehicle, null);
 
-            //Origin and Destination
+            
             CbSearchOrigin.DisplayMember = "Name";
             CbSearchOrigin.ValueMember = "ID";
 
             CbSearchDestination.DisplayMember = "Name";
             CbSearchDestination.ValueMember = "ID";
 
-            ////Departure time and Arrival Time
-            //CbSearchDepartueTime.DisplayMember = "DepartureTime";
-            //CbSearchDepartueTime.ValueMember = "ID";
-
-            //CbSearchArrivalTime.DisplayMember = "ArrivalTime";
-            //CbSearchArrivalTime.ValueMember = "ID";
-
-
-            ////Vehicle
-            //CbSearchVehicle.DisplayMember = "Name";
-            //CbSearchVehicle.ValueMember = "ID";
-
-
-            //Origin and Destination
+           
             CbSearchOrigin.DataSource = sourceori;
             CbSearchDestination.DataSource = sourceori;
-            ////Departure time and Arrival Time
-            //CbSearchDepartueTime.DataSource = source_departure;
-            //CbSearchArrivalTime.DataSource = source_arrival;
-
-            ////Vehicle
-            //CbSearchVehicle.DataSource = sourcevehicle;
+       
 
         }
 
@@ -112,6 +100,11 @@ namespace BRS.DesktopUI
             
         }
 
+        /// <summary>
+        /// Handler del evento de doble clickeo en el data grid view.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void DGVSearchTrip_DoubleClick(object sender, EventArgs e)
         {
             int idx = DGVSearchTrip.CurrentCell.RowIndex;

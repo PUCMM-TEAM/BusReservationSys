@@ -13,8 +13,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario del login.
+    /// </summary>
     public partial class LoginView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public LoginView()
         {
             InitializeComponent();
@@ -30,11 +36,22 @@ namespace BRS.DesktopUI
 
         }
 
+
+        /// <summary>
+        /// Handler del boton del salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handler del boton para hacer login.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
            if(AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))

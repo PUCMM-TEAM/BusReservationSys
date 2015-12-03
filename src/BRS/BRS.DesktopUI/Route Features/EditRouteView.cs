@@ -13,11 +13,17 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la edicion de una ruta.
+    /// </summary>
     public partial class EditRouteView : Form
     {
         RouteRepository repo = new RouteRepository();
        // private Context db = new Context();
 
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public EditRouteView()
         {
             InitializeComponent();
@@ -40,11 +46,21 @@ namespace BRS.DesktopUI
             this.CbRoutePickup.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        /// <summary>
+        /// Handler del boton de salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRouteCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handler del boton que crea una ruta nueva.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRouteCreate_Click(object sender, EventArgs e)
         {
             Route route= new Route();
@@ -65,6 +81,11 @@ namespace BRS.DesktopUI
 
         }
 
+        /// <summary>
+        /// Handler del boton para accesar al formulario de rutas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnRouteList_Click(object sender, EventArgs e)
         {
             RouteListView routeview = new RouteListView();

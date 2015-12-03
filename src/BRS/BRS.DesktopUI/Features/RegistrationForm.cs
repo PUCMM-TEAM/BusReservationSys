@@ -15,8 +15,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de registracion.
+    /// </summary>
     public partial class RegistrationForm : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public RegistrationForm()
         {
             InitializeComponent();
@@ -32,11 +38,21 @@ namespace BRS.DesktopUI
 
         }
 
+        /// <summary>
+        /// Handler del boton de salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRegistrationCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handler del boton para crear un registracion.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)
         {
             

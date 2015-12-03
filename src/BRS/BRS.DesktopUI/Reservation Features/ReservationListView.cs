@@ -13,8 +13,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la lista de reservaciones.
+    /// </summary>
     public partial class ReservationListView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public ReservationListView()
         {
             InitializeComponent();

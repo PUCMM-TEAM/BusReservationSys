@@ -14,8 +14,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la lista de usuarios.
+    /// </summary>
     public partial class UserListView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public UserListView()
         {
             InitializeComponent();

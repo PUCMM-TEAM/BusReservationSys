@@ -14,8 +14,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la lista de viajes.
+    /// </summary>
     public partial class TripListView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public TripListView()
         {
             InitializeComponent();

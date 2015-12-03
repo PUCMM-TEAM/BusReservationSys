@@ -91,10 +91,10 @@
     <Compile Include="Features\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReservationListView.cs">
+    <Compile Include="Reservation Features\ReservationListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservationListView.Designer.cs">
+    <Compile Include="Reservation Features\ReservationListView.Designer.cs">
       <DependentUpon>ReservationListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Route Features\EditRouteView.cs">
@@ -183,7 +183,7 @@
     <EmbeddedResource Include="Features\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservationListView.resx">
+    <EmbeddedResource Include="Reservation Features\ReservationListView.resx">
       <DependentUpon>ReservationListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route Features\EditRouteView.resx">
@@ -276,9 +276,7 @@
       <Name>BRS.Logic</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reservation Features\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

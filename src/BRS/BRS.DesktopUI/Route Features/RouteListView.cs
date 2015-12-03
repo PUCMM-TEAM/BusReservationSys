@@ -14,23 +14,22 @@ using BRS.Core.Repositories;
 using BRS.Data.SqlRepositories;
 
 namespace BRS.DesktopUI {
+  /// <summary>
+  /// Clase representativa del formulario de listas de rutas.
+  /// </summary>
   public partial class RouteListView : Form {
+    /// <summary>
+    /// Constructor de la clase.
+    /// </summary>
     public RouteListView() {
       InitializeComponent();
 
-            //Context context = new Context();
-            // IEnumerable<Destination> destinations = context.Destinations.ToList();
-
-            // destinations.Select(x => x);
 
             IRepository<Route> repo = RepositoryFactory.Instance().RouteRepository();
             List<Route> routes = repo.ReadAll().ToList();
-            var bindingList = new BindingList<Route>(routes);//Create a new list to show data from database
-            var source = new BindingSource(bindingList, null);//fill with data
+            var bindingList = new BindingList<Route>(routes);
+            var source = new BindingSource(bindingList, null);
             DGVRoutes.DataSource = source;
-
-
-
 
         }
   }
