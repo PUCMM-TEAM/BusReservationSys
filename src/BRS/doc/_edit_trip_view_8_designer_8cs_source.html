@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.DesktopUI/Trip Features/EditTripView.Designer.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_edit_trip_view_8_designer_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">EditTripView.Designer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_edit_trip_view_8_designer_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.DesktopUI</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keyword">partial class </span>EditTripView</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    {<span class="comment"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">        /// Required designer variable.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a4d75f9e7deee61bdea0b5cdf43f5d502">    8</a></span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.ComponentModel.IContainer components = null;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">        /// Clean up any resources being used.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        /// &lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a0acc44d8de785e1a3520b3a801533510">   14</a></span>&#160;<span class="comment"></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a0acc44d8de785e1a3520b3a801533510">Dispose</a>(<span class="keywordtype">bool</span> disposing)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (disposing &amp;&amp; (components != null))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                components.Dispose();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            base.Dispose(disposing);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">        #region Windows Form Designer generated code</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">        /// Required method for Designer support - do not modify</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        /// the contents of this method with the code editor.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ad2c40db4683447d2b8f6be1b0f5d4c8f">   29</a></span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ad2c40db4683447d2b8f6be1b0f5d4c8f">InitializeComponent</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            this.GbRouteDetails = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.GroupBox();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            this.MtbTripPrice = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.MaskedTextBox();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            this.label1 = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            this.CbTripArrivalTime = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            this.CbTripDepartureTime = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            this.ChTodos = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            this.ChDomingo = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            this.ChSabado = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            this.ChViernes = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            this.ChJueves = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            this.checkBox1 = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            this.ChMartes = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            this.ChLunes = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            this.CbTripVehicle = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            this.CbTripRoute = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            this.TxtVehicle = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            this.TxtArrivalTime = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            this.TxtDepartureTime = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            this.TxtDate = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            this.TxtRoute = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            this.BtnCancel3 = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            this.BtnDelete = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            this.BtnCreate = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            this.BtnTripList = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            this.GbRouteDetails.SuspendLayout();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            this.SuspendLayout();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// GbRouteDetails</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            this.GbRouteDetails.BackColor = <a class="code" href="namespace_system.html">System</a>.Drawing.Color.LightCyan;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            this.GbRouteDetails.Controls.Add(this.MtbTripPrice);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            this.GbRouteDetails.Controls.Add(this.label1);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            this.GbRouteDetails.Controls.Add(this.CbTripArrivalTime);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            this.GbRouteDetails.Controls.Add(this.CbTripDepartureTime);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChTodos);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChDomingo);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChSabado);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChViernes);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChJueves);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            this.GbRouteDetails.Controls.Add(this.checkBox1);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChMartes);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            this.GbRouteDetails.Controls.Add(this.ChLunes);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            this.GbRouteDetails.Controls.Add(this.CbTripVehicle);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            this.GbRouteDetails.Controls.Add(this.CbTripRoute);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            this.GbRouteDetails.Controls.Add(this.TxtVehicle);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            this.GbRouteDetails.Controls.Add(this.TxtArrivalTime);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            this.GbRouteDetails.Controls.Add(this.TxtDepartureTime);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            this.GbRouteDetails.Controls.Add(this.TxtDate);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            this.GbRouteDetails.Controls.Add(this.TxtRoute);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            this.GbRouteDetails.Font = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Font(<span class="stringliteral">&quot;Microsoft Sans Serif&quot;</span>, 9F, <a class="code" href="namespace_system.html">System</a>.Drawing.FontStyle.Bold, <a class="code" href="namespace_system.html">System</a>.Drawing.GraphicsUnit.Point, ((byte)(0)));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            this.GbRouteDetails.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(12, 12);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            this.GbRouteDetails.Name = <span class="stringliteral">&quot;GbRouteDetails&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            this.GbRouteDetails.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(600, 363);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            this.GbRouteDetails.TabIndex = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            this.GbRouteDetails.TabStop = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            this.GbRouteDetails.Text = <span class="stringliteral">&quot;Trip Details&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            this.GbRouteDetails.Enter += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.GbRouteDetails_Enter);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// MtbTripPrice</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            this.MtbTripPrice.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(64, 238);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            this.MtbTripPrice.Mask = <span class="stringliteral">&quot;0000&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            this.MtbTripPrice.Name = <span class="stringliteral">&quot;MtbTripPrice&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            this.MtbTripPrice.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(46, 21);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            this.MtbTripPrice.TabIndex = 23;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// label1</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            this.label1.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            this.label1.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(7, 238);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            this.label1.Name = <span class="stringliteral">&quot;label1&quot;</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            this.label1.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(50, 15);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            this.label1.TabIndex = 22;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            this.label1.Text = <span class="stringliteral">&quot;*Price:&quot;</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">// CbTripArrivalTime</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            this.CbTripArrivalTime.FormattingEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            this.CbTripArrivalTime.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(105, 165);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            this.CbTripArrivalTime.Name = <span class="stringliteral">&quot;CbTripArrivalTime&quot;</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            this.CbTripArrivalTime.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(121, 23);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            this.CbTripArrivalTime.TabIndex = 21;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">// CbTripDepartureTime</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            this.CbTripDepartureTime.FormattingEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            this.CbTripDepartureTime.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(130, 128);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            this.CbTripDepartureTime.Name = <span class="stringliteral">&quot;CbTripDepartureTime&quot;</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            this.CbTripDepartureTime.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(121, 23);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            this.CbTripDepartureTime.TabIndex = 20;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">// ChTodos</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            this.ChTodos.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            this.ChTodos.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(300, 85);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            this.ChTodos.Name = <span class="stringliteral">&quot;ChTodos&quot;</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            this.ChTodos.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(119, 19);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            this.ChTodos.TabIndex = 19;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            this.ChTodos.Text = <span class="stringliteral">&quot;Todos los dias&quot;</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            this.ChTodos.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            this.ChTodos.CheckedChanged += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.checkBox4_CheckedChanged);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="comment">// ChDomingo</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            this.ChDomingo.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            this.ChDomingo.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(210, 85);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            this.ChDomingo.Name = <span class="stringliteral">&quot;ChDomingo&quot;</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            this.ChDomingo.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(84, 19);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            this.ChDomingo.TabIndex = 18;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            this.ChDomingo.Text = <span class="stringliteral">&quot;Domingo&quot;</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            this.ChDomingo.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="comment">// ChSabado</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            this.ChSabado.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            this.ChSabado.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(129, 85);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            this.ChSabado.Name = <span class="stringliteral">&quot;ChSabado&quot;</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            this.ChSabado.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(75, 19);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            this.ChSabado.TabIndex = 17;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            this.ChSabado.Text = <span class="stringliteral">&quot;Sabado&quot;</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            this.ChSabado.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// ChViernes</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            this.ChViernes.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            this.ChViernes.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(447, 60);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            this.ChViernes.Name = <span class="stringliteral">&quot;ChViernes&quot;</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            this.ChViernes.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(74, 19);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            this.ChViernes.TabIndex = 16;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            this.ChViernes.Text = <span class="stringliteral">&quot;Viernes&quot;</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            this.ChViernes.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">// ChJueves</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            this.ChJueves.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            this.ChJueves.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(371, 60);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            this.ChJueves.Name = <span class="stringliteral">&quot;ChJueves&quot;</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            this.ChJueves.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(70, 19);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            this.ChJueves.TabIndex = 15;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            this.ChJueves.Text = <span class="stringliteral">&quot;Jueves&quot;</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            this.ChJueves.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// checkBox1</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            this.checkBox1.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            this.checkBox1.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(276, 60);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            this.checkBox1.Name = <span class="stringliteral">&quot;checkBox1&quot;</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            this.checkBox1.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(89, 19);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            this.checkBox1.TabIndex = 14;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            this.checkBox1.Text = <span class="stringliteral">&quot;Miercoles&quot;</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            this.checkBox1.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">// ChMartes</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            this.ChMartes.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            this.ChMartes.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(200, 60);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            this.ChMartes.Name = <span class="stringliteral">&quot;ChMartes&quot;</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            this.ChMartes.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(70, 19);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            this.ChMartes.TabIndex = 13;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            this.ChMartes.Text = <span class="stringliteral">&quot;Martes&quot;</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            this.ChMartes.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="comment">// ChLunes</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            this.ChLunes.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            this.ChLunes.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(129, 60);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            this.ChLunes.Name = <span class="stringliteral">&quot;ChLunes&quot;</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            this.ChLunes.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(65, 19);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            this.ChLunes.TabIndex = 12;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            this.ChLunes.Text = <span class="stringliteral">&quot;Lunes&quot;</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            this.ChLunes.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// CbTripVehicle</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            this.CbTripVehicle.FormattingEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            this.CbTripVehicle.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(78, 200);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            this.CbTripVehicle.Name = <span class="stringliteral">&quot;CbTripVehicle&quot;</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            this.CbTripVehicle.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(121, 23);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            this.CbTripVehicle.TabIndex = 11;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// CbTripRoute</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            this.CbTripRoute.FormattingEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            this.CbTripRoute.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(69, 28);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            this.CbTripRoute.Name = <span class="stringliteral">&quot;CbTripRoute&quot;</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            this.CbTripRoute.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(121, 23);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            this.CbTripRoute.TabIndex = 10;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="comment">// TxtVehicle</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            this.TxtVehicle.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            this.TxtVehicle.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(7, 200);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            this.TxtVehicle.Name = <span class="stringliteral">&quot;TxtVehicle&quot;</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            this.TxtVehicle.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(64, 15);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            this.TxtVehicle.TabIndex = 6;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            this.TxtVehicle.Text = <span class="stringliteral">&quot;*Vehicle:&quot;</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="comment">// TxtArrivalTime</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            this.TxtArrivalTime.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            this.TxtArrivalTime.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(6, 165);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            this.TxtArrivalTime.Name = <span class="stringliteral">&quot;TxtArrivalTime&quot;</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            this.TxtArrivalTime.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(93, 15);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            this.TxtArrivalTime.TabIndex = 4;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            this.TxtArrivalTime.Text = <span class="stringliteral">&quot;*Arrival Time:&quot;</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            this.TxtArrivalTime.Click += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.TxtArrivalTime_Click);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="comment">// TxtDepartureTime</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            this.TxtDepartureTime.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            this.TxtDepartureTime.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(6, 128);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            this.TxtDepartureTime.Name = <span class="stringliteral">&quot;TxtDepartureTime&quot;</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            this.TxtDepartureTime.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(117, 15);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            this.TxtDepartureTime.TabIndex = 3;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            this.TxtDepartureTime.Text = <span class="stringliteral">&quot;*Departure Time:&quot;</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="comment">// TxtDate</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            this.TxtDate.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            this.TxtDate.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(6, 60);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            this.TxtDate.Name = <span class="stringliteral">&quot;TxtDate&quot;</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            this.TxtDate.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(116, 15);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            this.TxtDate.TabIndex = 2;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            this.TxtDate.Text = <span class="stringliteral">&quot;*Available Dates:&quot;</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="comment">// TxtRoute</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            this.TxtRoute.AutoSize = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            this.TxtRoute.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(7, 28);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            this.TxtRoute.Name = <span class="stringliteral">&quot;TxtRoute&quot;</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            this.TxtRoute.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(55, 15);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            this.TxtRoute.TabIndex = 0;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            this.TxtRoute.Text = <span class="stringliteral">&quot;*Route:&quot;</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            this.TxtRoute.Click += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.label1_Click);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="comment">// BtnCancel3</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            this.BtnCancel3.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(251, 407);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            this.BtnCancel3.Name = <span class="stringliteral">&quot;BtnCancel3&quot;</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            this.BtnCancel3.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(75, 23);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            this.BtnCancel3.TabIndex = 3;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            this.BtnCancel3.Text = <span class="stringliteral">&quot;Cancel&quot;</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            this.BtnCancel3.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="comment">// BtnDelete</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            this.BtnDelete.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(413, 407);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            this.BtnDelete.Name = <span class="stringliteral">&quot;BtnDelete&quot;</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            this.BtnDelete.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(75, 23);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            this.BtnDelete.TabIndex = 4;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            this.BtnDelete.Text = <span class="stringliteral">&quot;Delete&quot;</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            this.BtnDelete.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="comment">// BtnCreate</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            this.BtnCreate.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(504, 407);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            this.BtnCreate.Name = <span class="stringliteral">&quot;BtnCreate&quot;</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            this.BtnCreate.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(75, 23);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            this.BtnCreate.TabIndex = 5;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            this.BtnCreate.Text = <span class="stringliteral">&quot;Create&quot;</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            this.BtnCreate.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            this.BtnCreate.Click += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.BtnCreate_Click);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="comment">// BtnTripList</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            this.BtnTripList.Location = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Point(332, 407);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            this.BtnTripList.Name = <span class="stringliteral">&quot;BtnTripList&quot;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            this.BtnTripList.Size = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(75, 23);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            this.BtnTripList.TabIndex = 6;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            this.BtnTripList.Text = <span class="stringliteral">&quot;List&quot;</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            this.BtnTripList.UseVisualStyleBackColor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            this.BtnTripList.Click += <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.EventHandler(this.BtnTripList_Click);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// EditTripView</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// </span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            this.AutoScaleDimensions = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.SizeF(6F, 13F);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            this.AutoScaleMode = <a class="code" href="namespace_system.html">System</a>.Windows.Forms.AutoScaleMode.Font;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            this.BackColor = <a class="code" href="namespace_system.html">System</a>.Drawing.Color.CornflowerBlue;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            this.ClientSize = <span class="keyword">new</span> <a class="code" href="namespace_system.html">System</a>.Drawing.Size(624, 442);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            this.Controls.Add(this.BtnTripList);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            this.Controls.Add(this.BtnCreate);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            this.Controls.Add(this.BtnDelete);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            this.Controls.Add(this.BtnCancel3);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            this.Controls.Add(this.GbRouteDetails);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            this.Name = <span class="stringliteral">&quot;EditTripView&quot;</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            this.Text = <span class="stringliteral">&quot;Edit Route&quot;</span>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            this.GbRouteDetails.ResumeLayout(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            this.GbRouteDetails.PerformLayout();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            this.ResumeLayout(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a767100ee8afca396a5d23ad16776e7e3">  325</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.GroupBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a767100ee8afca396a5d23ad16776e7e3">GbRouteDetails</a>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a310f70273a8e98020625560cba9553b9">  326</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a310f70273a8e98020625560cba9553b9">TxtVehicle</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a158bc8b3ab325183593ad8dde3d56986">  327</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a158bc8b3ab325183593ad8dde3d56986">TxtDate</a>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#affffcee3a83c4f11d6c917c3eda4b128">  328</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#affffcee3a83c4f11d6c917c3eda4b128">BtnCancel3</a>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a18b5c6a163273e7223ddd413a6616099">  329</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a18b5c6a163273e7223ddd413a6616099">BtnDelete</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a95a28be99124d6571dec263af56ab632">  330</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a95a28be99124d6571dec263af56ab632">BtnCreate</a>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a391a06ede87f5c044c8af0d6cbb28b3d">  331</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a391a06ede87f5c044c8af0d6cbb28b3d">CbTripRoute</a>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd1965ca9ec54385cceae3a3d4d2e16b">  332</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd1965ca9ec54385cceae3a3d4d2e16b">TxtArrivalTime</a>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a148919feda385ed074480b27ea8eea95">  333</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a148919feda385ed074480b27ea8eea95">TxtDepartureTime</a>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abb7070580eb3d2f7eade6194c12b36d1">  334</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abb7070580eb3d2f7eade6194c12b36d1">TxtRoute</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab9ebb7d0ed3908998c52dace99cc5577">  335</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab9ebb7d0ed3908998c52dace99cc5577">CbTripVehicle</a>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd9e3d71723a8425140f9c034c2174b7">  336</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd9e3d71723a8425140f9c034c2174b7">ChTodos</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a92ebdce97330a9c99ab90e866412f2d9">  337</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a92ebdce97330a9c99ab90e866412f2d9">ChDomingo</a>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ae8d98b2bd3640f64003298144696439e">  338</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ae8d98b2bd3640f64003298144696439e">ChSabado</a>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a9ce4cfb937d4fd7159665eac82b13522">  339</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a9ce4cfb937d4fd7159665eac82b13522">ChViernes</a>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab178914004b8d383bb31e4f32fb11863">  340</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab178914004b8d383bb31e4f32fb11863">ChJueves</a>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a12b81e0cf366a83361ac0868260cb2ce">  341</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a12b81e0cf366a83361ac0868260cb2ce">checkBox1</a>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a432ab87959049c9c8aad6b2750a76306">  342</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a432ab87959049c9c8aad6b2750a76306">ChMartes</a>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a3fadf2e6e0ce8949bc2193fcdc7a0b48">  343</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.CheckBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a3fadf2e6e0ce8949bc2193fcdc7a0b48">ChLunes</a>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab5f5bf646f7842df10fafc88d6849f92">  344</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab5f5bf646f7842df10fafc88d6849f92">CbTripArrivalTime</a>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a7d2302ec2614cf503ca04fb0ecd15b6b">  345</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.ComboBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a7d2302ec2614cf503ca04fb0ecd15b6b">CbTripDepartureTime</a>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#adf6c4e4a63006ce5912c674916fdf07e">  346</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.MaskedTextBox <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#adf6c4e4a63006ce5912c674916fdf07e">MtbTripPrice</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a4427aed51e9b5d1956a27504b617211c">  347</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Label <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a4427aed51e9b5d1956a27504b617211c">label1</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a5e55c175edb5ee483b88d41d2c746c98">  348</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_system.html">System</a>.Windows.Forms.Button <a class="code" href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a5e55c175edb5ee483b88d41d2c746c98">BtnTripList</a>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a9ce4cfb937d4fd7159665eac82b13522"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a9ce4cfb937d4fd7159665eac82b13522">BRS.DesktopUI.EditTripView.ChViernes</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChViernes</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00339">EditTripView.Designer.cs:339</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_abd1965ca9ec54385cceae3a3d4d2e16b"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd1965ca9ec54385cceae3a3d4d2e16b">BRS.DesktopUI.EditTripView.TxtArrivalTime</a></div><div class="ttdeci">System.Windows.Forms.Label TxtArrivalTime</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00332">EditTripView.Designer.cs:332</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_ad2c40db4683447d2b8f6be1b0f5d4c8f"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ad2c40db4683447d2b8f6be1b0f5d4c8f">BRS.DesktopUI.EditTripView.InitializeComponent</a></div><div class="ttdeci">void InitializeComponent()</div><div class="ttdoc">Required method for Designer support - do not modify the contents of this method with the code editor...</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00029">EditTripView.Designer.cs:29</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_affffcee3a83c4f11d6c917c3eda4b128"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#affffcee3a83c4f11d6c917c3eda4b128">BRS.DesktopUI.EditTripView.BtnCancel3</a></div><div class="ttdeci">System.Windows.Forms.Button BtnCancel3</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00328">EditTripView.Designer.cs:328</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a767100ee8afca396a5d23ad16776e7e3"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a767100ee8afca396a5d23ad16776e7e3">BRS.DesktopUI.EditTripView.GbRouteDetails</a></div><div class="ttdeci">System.Windows.Forms.GroupBox GbRouteDetails</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00325">EditTripView.Designer.cs:325</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a95a28be99124d6571dec263af56ab632"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a95a28be99124d6571dec263af56ab632">BRS.DesktopUI.EditTripView.BtnCreate</a></div><div class="ttdeci">System.Windows.Forms.Button BtnCreate</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00330">EditTripView.Designer.cs:330</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_ae8d98b2bd3640f64003298144696439e"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ae8d98b2bd3640f64003298144696439e">BRS.DesktopUI.EditTripView.ChSabado</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChSabado</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00338">EditTripView.Designer.cs:338</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a0acc44d8de785e1a3520b3a801533510"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a0acc44d8de785e1a3520b3a801533510">BRS.DesktopUI.EditTripView.Dispose</a></div><div class="ttdeci">override void Dispose(bool disposing)</div><div class="ttdoc">Clean up any resources being used. </div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00014">EditTripView.Designer.cs:14</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a5e55c175edb5ee483b88d41d2c746c98"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a5e55c175edb5ee483b88d41d2c746c98">BRS.DesktopUI.EditTripView.BtnTripList</a></div><div class="ttdeci">System.Windows.Forms.Button BtnTripList</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00348">EditTripView.Designer.cs:348</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a12b81e0cf366a83361ac0868260cb2ce"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a12b81e0cf366a83361ac0868260cb2ce">BRS.DesktopUI.EditTripView.checkBox1</a></div><div class="ttdeci">System.Windows.Forms.CheckBox checkBox1</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00341">EditTripView.Designer.cs:341</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_adf6c4e4a63006ce5912c674916fdf07e"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#adf6c4e4a63006ce5912c674916fdf07e">BRS.DesktopUI.EditTripView.MtbTripPrice</a></div><div class="ttdeci">System.Windows.Forms.MaskedTextBox MtbTripPrice</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00346">EditTripView.Designer.cs:346</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a3fadf2e6e0ce8949bc2193fcdc7a0b48"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a3fadf2e6e0ce8949bc2193fcdc7a0b48">BRS.DesktopUI.EditTripView.ChLunes</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChLunes</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00343">EditTripView.Designer.cs:343</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a148919feda385ed074480b27ea8eea95"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a148919feda385ed074480b27ea8eea95">BRS.DesktopUI.EditTripView.TxtDepartureTime</a></div><div class="ttdeci">System.Windows.Forms.Label TxtDepartureTime</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00333">EditTripView.Designer.cs:333</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a7d2302ec2614cf503ca04fb0ecd15b6b"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a7d2302ec2614cf503ca04fb0ecd15b6b">BRS.DesktopUI.EditTripView.CbTripDepartureTime</a></div><div class="ttdeci">System.Windows.Forms.ComboBox CbTripDepartureTime</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00345">EditTripView.Designer.cs:345</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a158bc8b3ab325183593ad8dde3d56986"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a158bc8b3ab325183593ad8dde3d56986">BRS.DesktopUI.EditTripView.TxtDate</a></div><div class="ttdeci">System.Windows.Forms.Label TxtDate</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00327">EditTripView.Designer.cs:327</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_ab9ebb7d0ed3908998c52dace99cc5577"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab9ebb7d0ed3908998c52dace99cc5577">BRS.DesktopUI.EditTripView.CbTripVehicle</a></div><div class="ttdeci">System.Windows.Forms.ComboBox CbTripVehicle</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00335">EditTripView.Designer.cs:335</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_abb7070580eb3d2f7eade6194c12b36d1"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abb7070580eb3d2f7eade6194c12b36d1">BRS.DesktopUI.EditTripView.TxtRoute</a></div><div class="ttdeci">System.Windows.Forms.Label TxtRoute</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00334">EditTripView.Designer.cs:334</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a391a06ede87f5c044c8af0d6cbb28b3d"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a391a06ede87f5c044c8af0d6cbb28b3d">BRS.DesktopUI.EditTripView.CbTripRoute</a></div><div class="ttdeci">System.Windows.Forms.ComboBox CbTripRoute</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00331">EditTripView.Designer.cs:331</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a4427aed51e9b5d1956a27504b617211c"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a4427aed51e9b5d1956a27504b617211c">BRS.DesktopUI.EditTripView.label1</a></div><div class="ttdeci">System.Windows.Forms.Label label1</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00347">EditTripView.Designer.cs:347</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a18b5c6a163273e7223ddd413a6616099"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a18b5c6a163273e7223ddd413a6616099">BRS.DesktopUI.EditTripView.BtnDelete</a></div><div class="ttdeci">System.Windows.Forms.Button BtnDelete</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00329">EditTripView.Designer.cs:329</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a310f70273a8e98020625560cba9553b9"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a310f70273a8e98020625560cba9553b9">BRS.DesktopUI.EditTripView.TxtVehicle</a></div><div class="ttdeci">System.Windows.Forms.Label TxtVehicle</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00326">EditTripView.Designer.cs:326</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a432ab87959049c9c8aad6b2750a76306"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a432ab87959049c9c8aad6b2750a76306">BRS.DesktopUI.EditTripView.ChMartes</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChMartes</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00342">EditTripView.Designer.cs:342</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_ab5f5bf646f7842df10fafc88d6849f92"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab5f5bf646f7842df10fafc88d6849f92">BRS.DesktopUI.EditTripView.CbTripArrivalTime</a></div><div class="ttdeci">System.Windows.Forms.ComboBox CbTripArrivalTime</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00344">EditTripView.Designer.cs:344</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_abd9e3d71723a8425140f9c034c2174b7"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#abd9e3d71723a8425140f9c034c2174b7">BRS.DesktopUI.EditTripView.ChTodos</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChTodos</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00336">EditTripView.Designer.cs:336</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_ab178914004b8d383bb31e4f32fb11863"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#ab178914004b8d383bb31e4f32fb11863">BRS.DesktopUI.EditTripView.ChJueves</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChJueves</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00340">EditTripView.Designer.cs:340</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view_html_a92ebdce97330a9c99ab90e866412f2d9"><div class="ttname"><a href="class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html#a92ebdce97330a9c99ab90e866412f2d9">BRS.DesktopUI.EditTripView.ChDomingo</a></div><div class="ttdeci">System.Windows.Forms.CheckBox ChDomingo</div><div class="ttdef"><b>Definition:</b> <a href="_edit_trip_view_8_designer_8cs_source.html#l00337">EditTripView.Designer.cs:337</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_46f1fddb0debbdfec52d820b2223858c.html">BRS.DesktopUI</a></li><li class="navelem"><a class="el" href="dir_c2e3edc549ffba2aef36d793b9ebcab0.html">Trip Features</a></li><li class="navelem"><a class="el" href="_edit_trip_view_8_designer_8cs.html">EditTripView.Designer.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:27 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

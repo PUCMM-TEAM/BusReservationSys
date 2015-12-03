@@ -1,0 +1,5 @@
+<map id="BRS.DesktopUI.UserListView.UserListView" name="BRS.DesktopUI.UserListView.UserListView">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="268,5,463,47"/>
+<area shape="rect" id="node3" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="251,71,480,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#ad362d1592ca602daeab8e4f57d8217f4" title="BRS.Data.RepositoryFactory.\lUserRepository" alt="" coords="268,136,463,177"/>
+</map>

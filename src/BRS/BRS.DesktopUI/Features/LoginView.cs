@@ -54,15 +54,15 @@ namespace BRS.DesktopUI
         /// <param name="e">Data del evento</param>
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
-           if(AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
+           if(UserSessionManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
             {
 
-                if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
+                if (UserSessionManager.Instance.UserRole == UserSessionManager.Erole.Customer)
                 {
                     SearchView searchview = new SearchView();
                     searchview.Show();
                 }
-                else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                else if (UserSessionManager.Instance.UserRole == UserSessionManager.Erole.Administrator)
                 {
                     AdminEditView adminview = new AdminEditView();
                     adminview.Show();

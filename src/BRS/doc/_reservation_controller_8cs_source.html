@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.WebUI/Controllers/ReservationController.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_reservation_controller_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ReservationController.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_reservation_controller_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Web.Mvc;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_models.html">Models</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_data.html">Data</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_web_u_i.html">WebUI</a>.<a class="code" href="namespace_b_r_s_1_1_web_u_i_1_1_models.html">Models</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.WebUI.Controllers</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html">ReservationController</a> : <a class="code" href="class_controller.html">Controller</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a703fa349159c2e9cfdd270c1f4e6f29e">   13</a></span>&#160;      <span class="keyword">private</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> db = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// GET: Reservation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//public ActionResult Index(){</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//  SearchResultViewModel vmodel = new SearchResultViewModel();</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//  List&lt;Trip&gt; trips = db.Trips.ToList();</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//  vmodel.Trips = trips;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//  vmodel.DepartureDate = DateTime.Now;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//  vmodel.NoPassengers = 1;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//  return View(vmodel);</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a66f7ea69bb63f5fc85d8eefdee64bd86">   25</a></span>&#160;      <span class="keyword">public</span> ActionResult <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a66f7ea69bb63f5fc85d8eefdee64bd86">Index</a>(<span class="keywordtype">int</span> originId, <span class="keywordtype">int</span> destinationId, DateTime date, <span class="keywordtype">int</span> noPassengers){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html">SearchResultViewModel</a> vmodel = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html">SearchResultViewModel</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        List&lt;Trip&gt; trips = db.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#a65be6096e97038edb9635a0d033a3b29">Trips</a>.ToList(); </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        var result = trips.Where(x =&gt; x.Route.Pickup.ID == originId &amp;&amp; x.Route.DropOff.ID == destinationId).ToList();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        vmodel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#a02e2102ee51cc1a3a9f590b095bc6227">Trips</a> = trips;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        vmodel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#ae2db5fa1164cabd0f934dc000683eb25">DepartureDate</a> = date;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        vmodel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#a1be2b17096197ddb1707e06196a769eb">NoPassengers</a> = noPassengers;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> View(vmodel);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a701af1103141a98a81da5d079786ae14">   36</a></span>&#160;      <span class="keyword">public</span> ActionResult <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a701af1103141a98a81da5d079786ae14">Book</a>(<span class="keywordtype">int</span> tripId, DateTime departureDate, <span class="keywordtype">int</span> noPassengers) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html">ReservationViewModel</a> reservation = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html">ReservationViewModel</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        reservation.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aeb0613b13a26651e97fad7a510198b2a">Trip</a> = db.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#a65be6096e97038edb9635a0d033a3b29">Trips</a>.Find(tripId);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        reservation.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a894b8ce53967c2421c05bcfdfdca24d0">DepartureDate</a> = departureDate;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        reservation.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a45c3c3819e77020bb09de8afca812d91">NoPassengers</a> = noPassengers;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        reservation.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a141612f2fa4ef227153a8851f753de4d">Price</a> = reservation.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aeb0613b13a26651e97fad7a510198b2a">Trip</a>.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a6accb018e57a5d85e99f300d811e92f9">Price</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> View(reservation);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      [HttpPost]</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#afee3d43a799a7b08d44e38b60c7cd489">   47</a></span>&#160;      <span class="keyword">public</span> ActionResult <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#afee3d43a799a7b08d44e38b60c7cd489">Book</a>([Bind(Include = <span class="stringliteral">&quot;Name,Email,CardHolder,CardNumber,CVC,ExpirationDate,TripId,DepartureDate,NoPassengers,Price&quot;</span>)] <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html">ReservationViewModel</a> vModel) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;              vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aeb0613b13a26651e97fad7a510198b2a">Trip</a> = db.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#a65be6096e97038edb9635a0d033a3b29">Trips</a>.Find(vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a8b9c74977262200a56ba471db83e6908">TripId</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (ModelState.IsValid){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keywordtype">string</span>[] name = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a6600e88d209d0dda073090e5c784c76f">Name</a>.Split(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_customer.html">Customer</a> cust = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_customer.html">Customer</a>{FirstName = name[0], LastName = name[1], CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, Deleted = <span class="keyword">false</span>};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> reservation = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            ID = 0,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            CreatedDate = DateTime.Now,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_credit_card.html">CreditCard</a> = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_credit_card.html">CreditCard</a> { CardHolder = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a815ef77936b9a7cc96e9d413aa3da7ed">CardHolder</a>,CardNumber = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aad0ca51c9acae4502a4f6312e2ad7042">CardNumber</a>, CreatedDate = DateTime.Now, CVC = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#af644f97257a1e05cdc260c6144b326a6">CVC</a>, Deleted = <span class="keyword">false</span>, ExpirationDate = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#af8d7430995ef7cfb446ef49d525f7579">ExpirationDate</a>.Millisecond, ModifiedDate = DateTime.Now},</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_customer.html">Customer</a> = cust,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            Deleted = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            ModifiedDate = DateTime.Now,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            NumPassenger = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a45c3c3819e77020bb09de8afca812d91">NoPassengers</a>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            ReservationDate = DateTime.Now,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html">Trip</a> = vModel.<a class="code" href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aeb0613b13a26651e97fad7a510198b2a">Trip</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          db.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">Reservations</a>.Add(reservation);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          db.SaveChanges();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          <span class="keywordflow">return</span> RedirectToAction(<span class="stringliteral">&quot;Index&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> View(vModel);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#aa6c6c6c300ba664028deb72e79923c54">   74</a></span>&#160;      <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#aa6c6c6c300ba664028deb72e79923c54">GetDayOfWeek</a>(DateTime date) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">switch</span> (date.DayOfWeek){</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <span class="keywordflow">case</span> DayOfWeek.Monday:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Tuesday:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Wednesday:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Thursday:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> 8;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Friday:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> 16;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Saturday:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> 32;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">case</span> DayOfWeek.Sunday:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> 64;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a61f672b196718ecd6cb091abe0b0c96a">   96</a></span>&#160;      <span class="keyword">public</span> ActionResult <a class="code" href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a61f672b196718ecd6cb091abe0b0c96a">DestinationsAutocomplete</a>(<span class="keywordtype">string</span> term){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        var items = db.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#ad006f1d15c27a7563a559486da5ffe97">Destinations</a>.ToList();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        var filteredItems = items.Where(x =&gt; x.Name.ToLower().Contains(term.ToLower()));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> Json(filteredItems, JsonRequestBehavior.AllowGet);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core.html">BRS.Core</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_credit_card_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_credit_card.html">BRS.Core.Models.CreditCard</a></div><div class="ttdoc">Clase representativa de una entidad de tarjerta de credito. </div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_8cs_source.html#l00005">CreditCard.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_aeb0613b13a26651e97fad7a510198b2a"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aeb0613b13a26651e97fad7a510198b2a">BRS.WebUI.Models.ReservationViewModel.Trip</a></div><div class="ttdeci">Trip Trip</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00008">ReservationViewModel.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a8b9c74977262200a56ba471db83e6908"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a8b9c74977262200a56ba471db83e6908">BRS.WebUI.Models.ReservationViewModel.TripId</a></div><div class="ttdeci">int TripId</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00010">ReservationViewModel.cs:10</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_trip_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html">BRS.Core.Models.Trip</a></div><div class="ttdoc">Clase representativa de la entidad viaje. </div><div class="ttdef"><b>Definition:</b> <a href="_trip_8cs_source.html#l00005">Trip.cs:5</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html_ad006f1d15c27a7563a559486da5ffe97"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html#ad006f1d15c27a7563a559486da5ffe97">BRS.Data.Context.Destinations</a></div><div class="ttdeci">virtual DbSet&lt; Destination &gt; Destinations</div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00020">Context.cs:20</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html">BRS.WebUI.Models.ReservationViewModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00005">ReservationViewModel.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html_afee3d43a799a7b08d44e38b60c7cd489"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#afee3d43a799a7b08d44e38b60c7cd489">BRS.WebUI.Controllers.ReservationController.Book</a></div><div class="ttdeci">ActionResult Book([Bind(Include=&quot;Name,Email,CardHolder,CardNumber,CVC,ExpirationDate,TripId,DepartureDate,NoPassengers,Price&quot;)] ReservationViewModel vModel)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00047">ReservationController.cs:47</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html_aa6c6c6c300ba664028deb72e79923c54"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#aa6c6c6c300ba664028deb72e79923c54">BRS.WebUI.Controllers.ReservationController.GetDayOfWeek</a></div><div class="ttdeci">static int GetDayOfWeek(DateTime date)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00074">ReservationController.cs:74</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a894b8ce53967c2421c05bcfdfdca24d0"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a894b8ce53967c2421c05bcfdfdca24d0">BRS.WebUI.Models.ReservationViewModel.DepartureDate</a></div><div class="ttdeci">DateTime DepartureDate</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00018">ReservationViewModel.cs:18</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_af644f97257a1e05cdc260c6144b326a6"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#af644f97257a1e05cdc260c6144b326a6">BRS.WebUI.Models.ReservationViewModel.CVC</a></div><div class="ttdeci">string CVC</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00016">ReservationViewModel.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html_a61f672b196718ecd6cb091abe0b0c96a"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a61f672b196718ecd6cb091abe0b0c96a">BRS.WebUI.Controllers.ReservationController.DestinationsAutocomplete</a></div><div class="ttdeci">ActionResult DestinationsAutocomplete(string term)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00096">ReservationController.cs:96</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html">BRS.WebUI.Controllers.ReservationController</a></div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00011">ReservationController.cs:11</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a45c3c3819e77020bb09de8afca812d91"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a45c3c3819e77020bb09de8afca812d91">BRS.WebUI.Models.ReservationViewModel.NoPassengers</a></div><div class="ttdeci">int NoPassengers</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00013">ReservationViewModel.cs:13</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_web_u_i_1_1_models_html"><div class="ttname"><a href="namespace_b_r_s_1_1_web_u_i_1_1_models.html">BRS.WebUI.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_login_user_view_model_8cs_source.html#l00006">LoginUserViewModel.cs:6</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model_html_ae2db5fa1164cabd0f934dc000683eb25"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#ae2db5fa1164cabd0f934dc000683eb25">BRS.WebUI.Models.SearchResultViewModel.DepartureDate</a></div><div class="ttdeci">DateTime DepartureDate</div><div class="ttdef"><b>Definition:</b> <a href="_search_result_view_model_8cs_source.html#l00009">SearchResultViewModel.cs:9</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html_a65be6096e97038edb9635a0d033a3b29"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html#a65be6096e97038edb9635a0d033a3b29">BRS.Data.Context.Trips</a></div><div class="ttdeci">virtual DbSet&lt; Trip &gt; Trips</div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00023">Context.cs:23</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_trip_html_a6accb018e57a5d85e99f300d811e92f9"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a6accb018e57a5d85e99f300d811e92f9">BRS.Core.Models.Trip.Price</a></div><div class="ttdeci">float Price</div><div class="ttdoc">Representa el precio del viaje. </div><div class="ttdef"><b>Definition:</b> <a href="_trip_8cs_source.html#l00021">Trip.cs:21</a></div></div>
+<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model_html_a1be2b17096197ddb1707e06196a769eb"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#a1be2b17096197ddb1707e06196a769eb">BRS.WebUI.Models.SearchResultViewModel.NoPassengers</a></div><div class="ttdeci">int NoPassengers</div><div class="ttdef"><b>Definition:</b> <a href="_search_result_view_model_8cs_source.html#l00008">SearchResultViewModel.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html">BRS.Data.Context</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00006">Context.cs:6</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_models_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_models.html">BRS.Core.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_8cs_source.html#l00001">CreditCard.cs:1</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">BRS.Core.Models.Reservation</a></div><div class="ttdoc">Clase representativa de la entidad reservacion. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00008">Reservation.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html_adace37d43a94d749a03d5a99a3a097fe"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">BRS.Data.Context.Reservations</a></div><div class="ttdeci">virtual DbSet&lt; Reservation &gt; Reservations</div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00026">Context.cs:26</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html_a701af1103141a98a81da5d079786ae14"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a701af1103141a98a81da5d079786ae14">BRS.WebUI.Controllers.ReservationController.Book</a></div><div class="ttdeci">ActionResult Book(int tripId, DateTime departureDate, int noPassengers)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00036">ReservationController.cs:36</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a815ef77936b9a7cc96e9d413aa3da7ed"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a815ef77936b9a7cc96e9d413aa3da7ed">BRS.WebUI.Models.ReservationViewModel.CardHolder</a></div><div class="ttdeci">string CardHolder</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00014">ReservationViewModel.cs:14</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_aad0ca51c9acae4502a4f6312e2ad7042"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#aad0ca51c9acae4502a4f6312e2ad7042">BRS.WebUI.Models.ReservationViewModel.CardNumber</a></div><div class="ttdeci">string CardNumber</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00015">ReservationViewModel.cs:15</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_data_html"><div class="ttname"><a href="namespace_b_r_s_1_1_data.html">BRS.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00005">Context.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model_html_a02e2102ee51cc1a3a9f590b095bc6227"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html#a02e2102ee51cc1a3a9f590b095bc6227">BRS.WebUI.Models.SearchResultViewModel.Trips</a></div><div class="ttdeci">IEnumerable&lt; Trip &gt; Trips</div><div class="ttdef"><b>Definition:</b> <a href="_search_result_view_model_8cs_source.html#l00007">SearchResultViewModel.cs:7</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_af8d7430995ef7cfb446ef49d525f7579"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#af8d7430995ef7cfb446ef49d525f7579">BRS.WebUI.Models.ReservationViewModel.ExpirationDate</a></div><div class="ttdeci">DateTime ExpirationDate</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00017">ReservationViewModel.cs:17</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a141612f2fa4ef227153a8851f753de4d"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a141612f2fa4ef227153a8851f753de4d">BRS.WebUI.Models.ReservationViewModel.Price</a></div><div class="ttdeci">float Price</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00009">ReservationViewModel.cs:9</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model_html_a6600e88d209d0dda073090e5c784c76f"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_reservation_view_model.html#a6600e88d209d0dda073090e5c784c76f">BRS.WebUI.Models.ReservationViewModel.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_view_model_8cs_source.html#l00011">ReservationViewModel.cs:11</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller_html_a66f7ea69bb63f5fc85d8eefdee64bd86"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_controllers_1_1_reservation_controller.html#a66f7ea69bb63f5fc85d8eefdee64bd86">BRS.WebUI.Controllers.ReservationController.Index</a></div><div class="ttdeci">ActionResult Index(int originId, int destinationId, DateTime date, int noPassengers)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_controller_8cs_source.html#l00025">ReservationController.cs:25</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_customer_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_customer.html">BRS.Core.Models.Customer</a></div><div class="ttdoc">Clase representativa de la entidad cliente. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cs_source.html#l00009">Customer.cs:9</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model_html"><div class="ttname"><a href="class_b_r_s_1_1_web_u_i_1_1_models_1_1_search_result_view_model.html">BRS.WebUI.Models.SearchResultViewModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_search_result_view_model_8cs_source.html#l00006">SearchResultViewModel.cs:6</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_web_u_i_html"><div class="ttname"><a href="namespace_b_r_s_1_1_web_u_i.html">BRS.WebUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_bundle_config_8cs_source.html#l00003">BundleConfig.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_1ffa4431208108d7ac6dc3d93383de87.html">BRS.WebUI</a></li><li class="navelem"><a class="el" href="dir_9ebb3fd33788b4c5bd6ef9f0d6ba95bc.html">Controllers</a></li><li class="navelem"><a class="el" href="_reservation_controller_8cs.html">ReservationController.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:27 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AccountManager.cs" />
+    <Compile Include="Account\UserSessionManager.cs" />
     <Compile Include="DateHandler.cs" />
     <Compile Include="Handlers\NavigationHandler.cs" />
     <Compile Include="Handlers\StateManager.cs" />

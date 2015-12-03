@@ -1,0 +1,5 @@
+<map id="BRS.DesktopUI.EditRouteView.EditRouteView" name="BRS.DesktopUI.EditRouteView.EditRouteView">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="277,5,472,47"/>
+<area shape="rect" id="node3" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="260,71,489,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#a62e8a7c1d803562c3beeb337408b1889" title="BRS.Data.RepositoryFactory.\lRouteRepository" alt="" coords="277,136,472,177"/>
+</map>

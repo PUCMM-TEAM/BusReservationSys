@@ -9,11 +9,11 @@ namespace BRS.Core.Models
       /// <summary>
       /// Representa un viaje.
       /// </summary>
-      public Trip Trip { get; set; }
+      public virtual Trip Trip { get; set; }
       /// <summary>
       /// Representa un cliente.
       /// </summary>
-      public Customer Customer { get; set; }
+      public virtual Customer Customer { get; set; }
       /// <summary>
       /// Representa el numero de pasajeros.
       /// </summary>
@@ -21,7 +21,7 @@ namespace BRS.Core.Models
       /// <summary>
       /// Representa una tarjeta de credito.
       /// </summary>
-      public CreditCard CreditCard { get; set; }
+      public virtual CreditCard CreditCard { get; set; }
       /// <summary>
       /// Representa la fecha de reservacion.
       /// </summary>

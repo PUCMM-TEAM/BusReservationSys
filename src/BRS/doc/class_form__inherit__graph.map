@@ -1,0 +1,18 @@
+<map id="Form" name="Form">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_desktop_u_i_1_1_admin_edit_view.html" title="Clase representativa del formulario de la pagina principal del administrador. " alt="" coords="5,182,211,435"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_desktop_u_i_1_1_destination_list_view.html" title="Clase representativa de el form de la lista de destino. " alt="" coords="235,211,423,406"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_desktop_u_i_1_1_edit_destination_view.html" title="Clase representativa del formulario de edicion de destino. " alt="" coords="447,145,681,472"/>
+<area shape="rect" id="node5" href="$class_b_r_s_1_1_desktop_u_i_1_1_edit_route_view.html" title="Clase representativa del formulario de la edicion de una ruta. " alt="" coords="705,131,914,487"/>
+<area shape="rect" id="node6" href="$class_b_r_s_1_1_desktop_u_i_1_1_edit_trip_view.html" title="Clase representativa del formulario de la edicion de viajes. " alt="" coords="938,131,1150,487"/>
+<area shape="rect" id="node7" href="$class_b_r_s_1_1_desktop_u_i_1_1_edit_user_view.html" title="Clase representativa del formulario de editar el usuario. " alt="" coords="1175,153,1369,465"/>
+<area shape="rect" id="node8" href="$class_b_r_s_1_1_desktop_u_i_1_1_login_view.html" title="Clase representativa del formulario del login. " alt="" coords="1394,167,1606,450"/>
+<area shape="rect" id="node9" href="$class_b_r_s_1_1_desktop_u_i_1_1_payment_view.html" title="Clase representativa del formulario de pago. " alt="" coords="1631,145,1828,472"/>
+<area shape="rect" id="node10" href="$class_b_r_s_1_1_desktop_u_i_1_1_registration_form.html" title="Clase representativa del formulario de registracion. " alt="" coords="1852,131,2068,487"/>
+<area shape="rect" id="node11" href="$class_b_r_s_1_1_desktop_u_i_1_1_reservation_list_view.html" title="Clase representativa del formulario de la lista de reservaciones. " alt="" coords="2092,233,2276,384"/>
+<area shape="rect" id="node12" href="$class_b_r_s_1_1_desktop_u_i_1_1_route_list_view.html" title="Clase representativa del formulario de listas de rutas. " alt="" coords="2300,233,2500,384"/>
+<area shape="rect" id="node13" href="$class_b_r_s_1_1_desktop_u_i_1_1_search_view.html" title="Clase representativa del formulario de la busqueda de viajes. " alt="" coords="2525,138,2729,479"/>
+<area shape="rect" id="node14" href="$class_b_r_s_1_1_desktop_u_i_1_1_trip_list_view.html" title="Clase representativa del formulario de la lista de viajes. " alt="" coords="2753,233,2940,384"/>
+<area shape="rect" id="node15" href="$class_b_r_s_1_1_desktop_u_i_1_1_user_list_view.html" title="Clase representativa del formulario de la lista de usuarios. " alt="" coords="2965,219,3158,399"/>
+<area shape="rect" id="node16" href="$class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html" title="Clase representativa del formulario de editar vehiculos. " alt="" coords="3182,153,3397,465"/>
+<area shape="rect" id="node17" href="$class_b_r_s_1_1_desktop_u_i_1_1_vehicle_list_view.html" title="Clase representativa del formulario de la lista de vehiculos. " alt="" coords="3421,233,3630,384"/>
+</map>

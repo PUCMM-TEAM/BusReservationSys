@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.Data/SqlRepositories/ReservationSqlRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_reservation_sql_repository_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ReservationSqlRepository.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_reservation_sql_repository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Data.Entity;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_call_backs.html">CallBacks</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_models.html">Models</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_repositories.html">Repositories</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.Data.SqlRepositories</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  /// Clase representativa de un repositorio de reservaciones que hereda la funcionabilidad de IRepository.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  /// Dicho repositorio extrae la data desde una base de datos ms sql.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html">   16</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html">ReservationSqlRepository</a> : <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository</a>&lt;Reservation&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {<span class="comment"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">      /// El contexto que maneja la base datos.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a973f187c9541154ffad57a67756dcd1f">   21</a></span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a973f187c9541154ffad57a67756dcd1f">_context</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        /// Crea una instancia que contiene un contexto dado</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">        /// &lt;param name=&quot;context&quot;&gt;Contexto de data&lt;/param&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ac2d36f817b9abb2a282f251dec35881b">   27</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ac2d36f817b9abb2a282f251dec35881b">ReservationSqlRepository</a>(<a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> context)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            _context = context;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">      /// Agrega una entidad al contexto</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">      /// &lt;param name=&quot;entity&quot;&gt;la entidad&lt;/param&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ad6f9274eaa84be2926c3674b145ec0af">   36</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ad6f9274eaa84be2926c3674b145ec0af">Create</a>(<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> entity)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#af151848d01a81fa0737d4ffd06ac4974">CreatedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">ModifiedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">Reservations</a>.Add(entity);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            _context.SaveChanges();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">      /// Elimina una entidad del contexto</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">      /// &lt;param name=&quot;id&quot;&gt;el indice de la entidad&lt;/param&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#adf422769db366761c026c7b1ada0408b">   48</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#adf422769db366761c026c7b1ada0408b">Delete</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> reservation = Read(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#ac3bee023fd7e198af2fcb5c4d475d626">Deleted</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            Update(reservation);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">      /// Devuelve una entidad del contexto</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">      /// &lt;param name=&quot;id&quot;&gt;El indice de la entidad&lt;/param&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">      /// &lt;returns&gt; La entidad encontrada o nulo&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a02976fb695268d8876e8375e9ec27d07">   60</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a02976fb695268d8876e8375e9ec27d07">Read</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">Reservations</a>.FirstOrDefault(x =&gt; x.Deleted == <span class="keyword">false</span> &amp;&amp; x.ID == <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a78a41ce654b1de1981856de4284559fa">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a78a41ce654b1de1981856de4284559fa">Read</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <a class="code" href="interface_b_r_s_1_1_core_1_1_i_response.html">IResponse&lt;Reservation&gt;</a> reponse)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">      /// Retorna todas las entidades vidas del contexto</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">      /// &lt;returns&gt;Las entidades encontradas&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a341a7626b7bb7765d9c03280630d07f8">   74</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> IEnumerable&lt;Reservation&gt; <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a341a7626b7bb7765d9c03280630d07f8">ReadAll</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">Reservations</a>.Where(x =&gt; x.Deleted == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a44f0675a927fb80cb2c5eb563620446e">   79</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a44f0675a927fb80cb2c5eb563620446e">ReadAll</a>(<a class="code" href="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response.html">IListResponse&lt;Reservation&gt;</a> callback)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">      /// Actualizada una entidad en el contexto.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">      /// &lt;param name=&quot;entity&quot;&gt;la entidad con los cambios&lt;/param&gt;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a07008b40adc5c9194e26b9a3f7ef8f3e">   88</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a07008b40adc5c9194e26b9a3f7ef8f3e">Update</a>(<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> entity)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">Reservation</a> reservation = Read(entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a200468be1e027dc5eee222f41cea4930">ID</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a8d0323e4a83a9df228ba45909a2bc5b8">Trip</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a8d0323e4a83a9df228ba45909a2bc5b8">Trip</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#aa5efbcde6123243211fffae1e67d510d">Customer</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#aa5efbcde6123243211fffae1e67d510d">Customer</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a440d3d84a38acac6fb77342471ee6524">NumPassenger</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a440d3d84a38acac6fb77342471ee6524">NumPassenger</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a62ee4d8cbe87f76fb3abb4391cfacadd">CreditCard</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a62ee4d8cbe87f76fb3abb4391cfacadd">CreditCard</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            reservation.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a673db7cf71040f457dfdbd03517a6961">ReservationDate</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a673db7cf71040f457dfdbd03517a6961">ReservationDate</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">ModifiedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            _context.Entry(reservation).State = EntityState.Modified;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            _context.SaveChanges();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_ac2d36f817b9abb2a282f251dec35881b"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ac2d36f817b9abb2a282f251dec35881b">BRS.Data.SqlRepositories.ReservationSqlRepository.ReservationSqlRepository</a></div><div class="ttdeci">ReservationSqlRepository(Context context)</div><div class="ttdoc">Crea una instancia que contiene un contexto dado </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00027">ReservationSqlRepository.cs:27</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core.html">BRS.Core</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">BRS.Core.Repositories.IRepository</a></div><div class="ttdoc">Interface que representa un repositorio. </div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00010">IRepository.cs:10</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a07008b40adc5c9194e26b9a3f7ef8f3e"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a07008b40adc5c9194e26b9a3f7ef8f3e">BRS.Data.SqlRepositories.ReservationSqlRepository.Update</a></div><div class="ttdeci">void Update(Reservation entity)</div><div class="ttdoc">Actualizada una entidad en el contexto. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00088">ReservationSqlRepository.cs:88</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_i_response_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_i_response.html">BRS.Core.IResponse</a></div><div class="ttdoc">Interface de la respuesta. </div><div class="ttdef"><b>Definition:</b> <a href="_i_response_8cs_source.html#l00008">IResponse.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html_a673db7cf71040f457dfdbd03517a6961"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a673db7cf71040f457dfdbd03517a6961">BRS.Core.Models.Reservation.ReservationDate</a></div><div class="ttdeci">DateTime ReservationDate</div><div class="ttdoc">Representa la fecha de reservacion. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00028">Reservation.cs:28</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html_a440d3d84a38acac6fb77342471ee6524"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a440d3d84a38acac6fb77342471ee6524">BRS.Core.Models.Reservation.NumPassenger</a></div><div class="ttdeci">int NumPassenger</div><div class="ttdoc">Representa el numero de pasajeros. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00020">Reservation.cs:20</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html_a62ee4d8cbe87f76fb3abb4391cfacadd"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a62ee4d8cbe87f76fb3abb4391cfacadd">BRS.Core.Models.Reservation.CreditCard</a></div><div class="ttdeci">CreditCard CreditCard</div><div class="ttdoc">Representa una tarjeta de credito. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00024">Reservation.cs:24</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a341a7626b7bb7765d9c03280630d07f8"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a341a7626b7bb7765d9c03280630d07f8">BRS.Data.SqlRepositories.ReservationSqlRepository.ReadAll</a></div><div class="ttdeci">IEnumerable&lt; Reservation &gt; ReadAll()</div><div class="ttdoc">Retorna todas las entidades vidas del contexto </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00074">ReservationSqlRepository.cs:74</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_repositories_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_repositories.html">BRS.Core.Repositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00005">IRepository.cs:5</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response.html">BRS.Core.CallBacks.IListResponse</a></div><div class="ttdoc">Interface de una lista respuestas. </div><div class="ttdef"><b>Definition:</b> <a href="_i_list_response_8cs_source.html#l00009">IListResponse.cs:9</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_adf422769db366761c026c7b1ada0408b"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#adf422769db366761c026c7b1ada0408b">BRS.Data.SqlRepositories.ReservationSqlRepository.Delete</a></div><div class="ttdeci">void Delete(int id)</div><div class="ttdoc">Elimina una entidad del contexto </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00048">ReservationSqlRepository.cs:48</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a44f0675a927fb80cb2c5eb563620446e"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a44f0675a927fb80cb2c5eb563620446e">BRS.Data.SqlRepositories.ReservationSqlRepository.ReadAll</a></div><div class="ttdeci">void ReadAll(IListResponse&lt; Reservation &gt; callback)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00079">ReservationSqlRepository.cs:79</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html_a8d0323e4a83a9df228ba45909a2bc5b8"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#a8d0323e4a83a9df228ba45909a2bc5b8">BRS.Core.Models.Reservation.Trip</a></div><div class="ttdeci">Trip Trip</div><div class="ttdoc">Representa un viaje. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00012">Reservation.cs:12</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html">BRS.Data.Context</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00006">Context.cs:6</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a78a41ce654b1de1981856de4284559fa"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a78a41ce654b1de1981856de4284559fa">BRS.Data.SqlRepositories.ReservationSqlRepository.Read</a></div><div class="ttdeci">void Read(int id, IResponse&lt; Reservation &gt; reponse)</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00065">ReservationSqlRepository.cs:65</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_models_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_models.html">BRS.Core.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_8cs_source.html#l00001">CreditCard.cs:1</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html">BRS.Core.Models.Reservation</a></div><div class="ttdoc">Clase representativa de la entidad reservacion. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00008">Reservation.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html">BRS.Data.SqlRepositories.ReservationSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de reservaciones que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00016">ReservationSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html_adace37d43a94d749a03d5a99a3a097fe"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html#adace37d43a94d749a03d5a99a3a097fe">BRS.Data.Context.Reservations</a></div><div class="ttdeci">virtual DbSet&lt; Reservation &gt; Reservations</div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00026">Context.cs:26</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_a200468be1e027dc5eee222f41cea4930"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a200468be1e027dc5eee222f41cea4930">BRS.Core.Models.Entity.ID</a></div><div class="ttdeci">int ID</div><div class="ttdoc">Representa el id de la entidad. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00011">Entity.cs:11</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_reservation_html_aa5efbcde6123243211fffae1e67d510d"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_reservation.html#aa5efbcde6123243211fffae1e67d510d">BRS.Core.Models.Reservation.Customer</a></div><div class="ttdeci">Customer Customer</div><div class="ttdoc">Representa un cliente. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_8cs_source.html#l00016">Reservation.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_ac3bee023fd7e198af2fcb5c4d475d626"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#ac3bee023fd7e198af2fcb5c4d475d626">BRS.Core.Models.Entity.Deleted</a></div><div class="ttdeci">bool Deleted</div><div class="ttdoc">Representa si la entidad se eliminara. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00023">Entity.cs:23</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_call_backs_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_call_backs.html">BRS.Core.CallBacks</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_list_response_8cs_source.html#l00004">IListResponse.cs:4</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a02976fb695268d8876e8375e9ec27d07"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a02976fb695268d8876e8375e9ec27d07">BRS.Data.SqlRepositories.ReservationSqlRepository.Read</a></div><div class="ttdeci">Reservation Read(int id)</div><div class="ttdoc">Devuelve una entidad del contexto </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00060">ReservationSqlRepository.cs:60</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_ad6f9274eaa84be2926c3674b145ec0af"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#ad6f9274eaa84be2926c3674b145ec0af">BRS.Data.SqlRepositories.ReservationSqlRepository.Create</a></div><div class="ttdeci">void Create(Reservation entity)</div><div class="ttdoc">Agrega una entidad al contexto </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00036">ReservationSqlRepository.cs:36</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_af151848d01a81fa0737d4ffd06ac4974"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#af151848d01a81fa0737d4ffd06ac4974">BRS.Core.Models.Entity.CreatedDate</a></div><div class="ttdeci">DateTime CreatedDate</div><div class="ttdoc">Representa la fecha de creacion. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00015">Entity.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_a4d7c6294dde590bf35727d69f3498f80"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">BRS.Core.Models.Entity.ModifiedDate</a></div><div class="ttdeci">DateTime ModifiedDate</div><div class="ttdoc">Representa la fecha de modificacion. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00019">Entity.cs:19</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html_a973f187c9541154ffad57a67756dcd1f"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html#a973f187c9541154ffad57a67756dcd1f">BRS.Data.SqlRepositories.ReservationSqlRepository._context</a></div><div class="ttdeci">Context _context</div><div class="ttdoc">El contexto que maneja la base datos. </div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00021">ReservationSqlRepository.cs:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6ad3a3fa78e5e2081a271f090f9eb812.html">BRS.Data</a></li><li class="navelem"><a class="el" href="dir_1d0c82ebfecd9b944a8cf13702700571.html">SqlRepositories</a></li><li class="navelem"><a class="el" href="_reservation_sql_repository_8cs.html">ReservationSqlRepository.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:26 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -18,10 +18,10 @@
     /// <summary>
     /// Representa el rol del usuario.
     /// </summary>
-    public Role Role { get; set; }
+    public virtual Role Role { get; set; }
     /// <summary>
     /// Representa un cliente.
     /// </summary>
-    public Customer Customer { get; set; }
+    public virtual Customer Customer { get; set; }
   }
 }

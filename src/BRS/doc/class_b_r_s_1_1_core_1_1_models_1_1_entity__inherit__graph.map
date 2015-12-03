@@ -1,0 +1,12 @@
+<map id="BRS.Core.Models.Entity" name="BRS.Core.Models.Entity">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_core_1_1_models_1_1_credit_card.html" title="Clase representativa de una entidad de tarjerta de credito. " alt="" coords="5,189,196,311"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_core_1_1_models_1_1_customer.html" title="Clase representativa de la entidad cliente. " alt="" coords="221,189,407,311"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_core_1_1_models_1_1_destination.html" title="Clase representativa de la entidad destino " alt="" coords="431,211,626,289"/>
+<area shape="rect" id="node5" href="$class_b_r_s_1_1_core_1_1_models_1_1_reservation.html" title="Clase representativa de la entidad reservacion. " alt="" coords="650,182,847,318"/>
+<area shape="rect" id="node6" href="$class_b_r_s_1_1_core_1_1_models_1_1_role.html" title="Clase representativa de la entidad rol. " alt="" coords="872,211,1028,289"/>
+<area shape="rect" id="node7" href="$class_b_r_s_1_1_core_1_1_models_1_1_route.html" title="Clase representativa de la entidad ruta. " alt="" coords="1052,197,1216,303"/>
+<area shape="rect" id="node8" href="$class_b_r_s_1_1_core_1_1_models_1_1_schedule.html" title="{BRS.Core.Models.Schedule\n|+ DepartureTime\l+ ArrivalTime\l|}" alt="" coords="1241,204,1425,296"/>
+<area shape="rect" id="node9" href="$class_b_r_s_1_1_core_1_1_models_1_1_trip.html" title="Clase representativa de la entidad viaje. " alt="" coords="1449,175,1600,325"/>
+<area shape="rect" id="node10" href="$class_b_r_s_1_1_core_1_1_models_1_1_user.html" title="Clase representativa de la entidad usuario. " alt="" coords="1625,182,1782,318"/>
+<area shape="rect" id="node11" href="$class_b_r_s_1_1_core_1_1_models_1_1_vehicle.html" title="Clase representativa de la entidad vehiculo. " alt="" coords="1806,182,1979,318"/>
+</map>

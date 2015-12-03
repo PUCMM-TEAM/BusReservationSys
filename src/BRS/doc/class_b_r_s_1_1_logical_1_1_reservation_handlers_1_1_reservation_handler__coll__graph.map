@@ -1,0 +1,4 @@
+<map id="BRS.Logical.ReservationHandlers.ReservationHandler" name="BRS.Logical.ReservationHandlers.ReservationHandler">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_context.html" title="{BRS.Data.Context\n|+ Destinations\l+ Routes\l+ Vehicles\l+ Trips\l+ Customers\l+ CreditCards\l+ Reservations\l+ Roles\l+ Users\l|+ Context()\l# OnModelCreating()\l}" alt="" coords="45,132,186,341"/>
+<area shape="rect" id="node3" href="$class_db_context.html" title="{DbContext\n||}" alt="" coords="74,5,157,83"/>
+</map>

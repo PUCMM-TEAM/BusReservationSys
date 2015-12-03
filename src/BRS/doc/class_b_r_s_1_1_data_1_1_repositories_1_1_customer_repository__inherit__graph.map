@@ -1,0 +1,4 @@
+<map id="BRS.Data.Repositories.CustomerRepository" name="BRS.Data.Repositories.CustomerRepository">
+<area shape="rect" id="node2" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html" title="{IRepository\&lt; Customer \&gt;\n||+ Create()\l+ Read()\l+ Read()\l+ Update()\l+ Delete()\l+ ReadAll()\l+ ReadAll()\l}" alt="" coords="50,233,217,399"/>
+<area shape="rect" id="node3" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html" title="Interface que representa un repositorio. " alt="" coords="5,5,261,171"/>
+</map>

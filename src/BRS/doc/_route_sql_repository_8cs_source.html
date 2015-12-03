@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.Data/SqlRepositories/RouteSqlRepository.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_route_sql_repository_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">RouteSqlRepository.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_route_sql_repository_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Data.Entity;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_call_backs.html">CallBacks</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_models.html">Models</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_repositories.html">Repositories</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.Data.SqlRepositories </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  /// Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IRepository.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  /// Dicho repositorio extrae la data desde una base de datos ms sql.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html">   16</a></span>&#160;<span class="comment"></span>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html">RouteSqlRepository</a> : <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository</a>&lt;Route&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {<span class="comment"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">       /// El contexto que maneja la base datos.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a27ce7f099e8b6ebed3c45bcd95a3f698">   21</a></span>&#160;<span class="comment"></span>        <span class="keyword">private</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a27ce7f099e8b6ebed3c45bcd95a3f698">_context</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        /// Crea una instancia que contiene un contexto dado</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">        /// &lt;param name=&quot;context&quot;&gt;Contexto de data&lt;/param&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a402efb29ec3a8e6e4e500f6dca38f869">   27</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a402efb29ec3a8e6e4e500f6dca38f869">RouteSqlRepository</a>(<a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> context)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            _context = context;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">       /// Agrega una entidad al contexto</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">       /// &lt;param name=&quot;entity&quot;&gt;&lt;/param&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#aa61c87b785d2fb5ea4571016929c37f9">   36</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#aa61c87b785d2fb5ea4571016929c37f9">Create</a>(<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> entity)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#af151848d01a81fa0737d4ffd06ac4974">CreatedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">ModifiedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#acf4bb1fb56d7377c5c4e4bf8617713c9">Routes</a>.Add(entity);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            _context.SaveChanges();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">       /// Elimina una entidad de la base de datos</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">       /// &lt;param name=&quot;id&quot;&gt;&lt;/param&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a45b99f7e38e776a21439d69e04ecdc22">   48</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a45b99f7e38e776a21439d69e04ecdc22">Delete</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> route = Read(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            route.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#ac3bee023fd7e198af2fcb5c4d475d626">Deleted</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            Update(route);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">       /// Busca y devuelve una entidad en el contexto</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">       /// &lt;param name=&quot;id&quot;&gt;El indice de la entidad que se desea buscar&lt;/param&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">       /// &lt;returns&gt;la entidad&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#af339b24c0e6b34ed7f6f900170c5b4e8">   60</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#af339b24c0e6b34ed7f6f900170c5b4e8">Read</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#acf4bb1fb56d7377c5c4e4bf8617713c9">Routes</a>.FirstOrDefault(x =&gt; x.Deleted == <span class="keyword">false</span> &amp;&amp; x.ID == <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a252dc72d1ba562137a0694ad8457ec3d">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a252dc72d1ba562137a0694ad8457ec3d">Read</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <a class="code" href="interface_b_r_s_1_1_core_1_1_i_response.html">IResponse&lt;Route&gt;</a> reponse)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">       /// Devuelve todas las entidades que no esten borradas del contexto</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">       /// &lt;returns&gt;&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a839be69128ab0836a4d8b0dca46863a4">   74</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> IEnumerable&lt;Route&gt; <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a839be69128ab0836a4d8b0dca46863a4">ReadAll</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> _context.<a class="code" href="class_b_r_s_1_1_data_1_1_context.html#acf4bb1fb56d7377c5c4e4bf8617713c9">Routes</a>.Where(x =&gt; x.Deleted == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#abf387e864c4b1e3cec400b4d9fb1c4c4">   79</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#abf387e864c4b1e3cec400b4d9fb1c4c4">ReadAll</a>(<a class="code" href="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response.html">IListResponse&lt;Route&gt;</a> callback)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">       /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">       /// Actualiza una entidad en el contexto</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">       /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">       /// &lt;param name=&quot;entity&quot;&gt;La entidad&lt;/param&gt;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a1e25a7c82220a9a7637f0436d232ad6f">   88</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a1e25a7c82220a9a7637f0436d232ad6f">Update</a>(<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> entity)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> route = Read(entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a200468be1e027dc5eee222f41cea4930">ID</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            route.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a0825cee70e52bc5ceba005417969e604">Pickup</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a0825cee70e52bc5ceba005417969e604">Pickup</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            route.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a8312eb08c7ee3d7816ad4f36397c0980">DropOff</a> = entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a8312eb08c7ee3d7816ad4f36397c0980">DropOff</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            entity.<a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">ModifiedDate</a> = DateTime.Now;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            _context.Entry(route).State = EntityState.Modified;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            _context.SaveChanges();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core.html">BRS.Core</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">BRS.Core.Repositories.IRepository</a></div><div class="ttdoc">Interface que representa un repositorio. </div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00010">IRepository.cs:10</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_route_html_a0825cee70e52bc5ceba005417969e604"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a0825cee70e52bc5ceba005417969e604">BRS.Core.Models.Route.Pickup</a></div><div class="ttdeci">virtual Destination Pickup</div><div class="ttdoc">Representa un destino de origen. </div><div class="ttdef"><b>Definition:</b> <a href="_route_8cs_source.html#l00010">Route.cs:10</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_aa61c87b785d2fb5ea4571016929c37f9"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#aa61c87b785d2fb5ea4571016929c37f9">BRS.Data.SqlRepositories.RouteSqlRepository.Create</a></div><div class="ttdeci">void Create(Route entity)</div><div class="ttdoc">Agrega una entidad al contexto </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00036">RouteSqlRepository.cs:36</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a45b99f7e38e776a21439d69e04ecdc22"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a45b99f7e38e776a21439d69e04ecdc22">BRS.Data.SqlRepositories.RouteSqlRepository.Delete</a></div><div class="ttdeci">void Delete(int id)</div><div class="ttdoc">Elimina una entidad de la base de datos </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00048">RouteSqlRepository.cs:48</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_i_response_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_i_response.html">BRS.Core.IResponse</a></div><div class="ttdoc">Interface de la respuesta. </div><div class="ttdef"><b>Definition:</b> <a href="_i_response_8cs_source.html#l00008">IResponse.cs:8</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a1e25a7c82220a9a7637f0436d232ad6f"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a1e25a7c82220a9a7637f0436d232ad6f">BRS.Data.SqlRepositories.RouteSqlRepository.Update</a></div><div class="ttdeci">void Update(Route entity)</div><div class="ttdoc">Actualiza una entidad en el contexto </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00088">RouteSqlRepository.cs:88</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_af339b24c0e6b34ed7f6f900170c5b4e8"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#af339b24c0e6b34ed7f6f900170c5b4e8">BRS.Data.SqlRepositories.RouteSqlRepository.Read</a></div><div class="ttdeci">Route Read(int id)</div><div class="ttdoc">Busca y devuelve una entidad en el contexto </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00060">RouteSqlRepository.cs:60</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html">BRS.Data.SqlRepositories.RouteSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IReposi...</div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00016">RouteSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_repositories_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_repositories.html">BRS.Core.Repositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00005">IRepository.cs:5</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_call_backs_1_1_i_list_response.html">BRS.Core.CallBacks.IListResponse</a></div><div class="ttdoc">Interface de una lista respuestas. </div><div class="ttdef"><b>Definition:</b> <a href="_i_list_response_8cs_source.html#l00009">IListResponse.cs:9</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a252dc72d1ba562137a0694ad8457ec3d"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a252dc72d1ba562137a0694ad8457ec3d">BRS.Data.SqlRepositories.RouteSqlRepository.Read</a></div><div class="ttdeci">void Read(int id, IResponse&lt; Route &gt; reponse)</div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00065">RouteSqlRepository.cs:65</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a402efb29ec3a8e6e4e500f6dca38f869"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a402efb29ec3a8e6e4e500f6dca38f869">BRS.Data.SqlRepositories.RouteSqlRepository.RouteSqlRepository</a></div><div class="ttdeci">RouteSqlRepository(Context context)</div><div class="ttdoc">Crea una instancia que contiene un contexto dado </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00027">RouteSqlRepository.cs:27</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html">BRS.Data.Context</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00006">Context.cs:6</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_models_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_models.html">BRS.Core.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_8cs_source.html#l00001">CreditCard.cs:1</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_a200468be1e027dc5eee222f41cea4930"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a200468be1e027dc5eee222f41cea4930">BRS.Core.Models.Entity.ID</a></div><div class="ttdeci">int ID</div><div class="ttdoc">Representa el id de la entidad. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00011">Entity.cs:11</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_ac3bee023fd7e198af2fcb5c4d475d626"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#ac3bee023fd7e198af2fcb5c4d475d626">BRS.Core.Models.Entity.Deleted</a></div><div class="ttdeci">bool Deleted</div><div class="ttdoc">Representa si la entidad se eliminara. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00023">Entity.cs:23</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_route_html_a8312eb08c7ee3d7816ad4f36397c0980"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_route.html#a8312eb08c7ee3d7816ad4f36397c0980">BRS.Core.Models.Route.DropOff</a></div><div class="ttdeci">virtual Destination DropOff</div><div class="ttdoc">Representa un destino final. </div><div class="ttdef"><b>Definition:</b> <a href="_route_8cs_source.html#l00014">Route.cs:14</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_call_backs_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_call_backs.html">BRS.Core.CallBacks</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_list_response_8cs_source.html#l00004">IListResponse.cs:4</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html_acf4bb1fb56d7377c5c4e4bf8617713c9"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html#acf4bb1fb56d7377c5c4e4bf8617713c9">BRS.Data.Context.Routes</a></div><div class="ttdeci">virtual DbSet&lt; Route &gt; Routes</div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00021">Context.cs:21</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_route_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">BRS.Core.Models.Route</a></div><div class="ttdoc">Clase representativa de la entidad ruta. </div><div class="ttdef"><b>Definition:</b> <a href="_route_8cs_source.html#l00006">Route.cs:6</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a27ce7f099e8b6ebed3c45bcd95a3f698"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a27ce7f099e8b6ebed3c45bcd95a3f698">BRS.Data.SqlRepositories.RouteSqlRepository._context</a></div><div class="ttdeci">Context _context</div><div class="ttdoc">El contexto que maneja la base datos. </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00021">RouteSqlRepository.cs:21</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_abf387e864c4b1e3cec400b4d9fb1c4c4"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#abf387e864c4b1e3cec400b4d9fb1c4c4">BRS.Data.SqlRepositories.RouteSqlRepository.ReadAll</a></div><div class="ttdeci">void ReadAll(IListResponse&lt; Route &gt; callback)</div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00079">RouteSqlRepository.cs:79</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html_a839be69128ab0836a4d8b0dca46863a4"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html#a839be69128ab0836a4d8b0dca46863a4">BRS.Data.SqlRepositories.RouteSqlRepository.ReadAll</a></div><div class="ttdeci">IEnumerable&lt; Route &gt; ReadAll()</div><div class="ttdoc">Devuelve todas las entidades que no esten borradas del contexto </div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00074">RouteSqlRepository.cs:74</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_af151848d01a81fa0737d4ffd06ac4974"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#af151848d01a81fa0737d4ffd06ac4974">BRS.Core.Models.Entity.CreatedDate</a></div><div class="ttdeci">DateTime CreatedDate</div><div class="ttdoc">Representa la fecha de creacion. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00015">Entity.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html_a4d7c6294dde590bf35727d69f3498f80"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html#a4d7c6294dde590bf35727d69f3498f80">BRS.Core.Models.Entity.ModifiedDate</a></div><div class="ttdeci">DateTime ModifiedDate</div><div class="ttdoc">Representa la fecha de modificacion. </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00019">Entity.cs:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6ad3a3fa78e5e2081a271f090f9eb812.html">BRS.Data</a></li><li class="navelem"><a class="el" href="dir_1d0c82ebfecd9b944a8cf13702700571.html">SqlRepositories</a></li><li class="navelem"><a class="el" href="_route_sql_repository_8cs.html">RouteSqlRepository.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:26 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

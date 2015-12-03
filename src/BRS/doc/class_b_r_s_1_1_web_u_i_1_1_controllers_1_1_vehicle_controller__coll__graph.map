@@ -1,0 +1,5 @@
+<map id="BRS.WebUI.Controllers.VehicleController" name="BRS.WebUI.Controllers.VehicleController">
+<area shape="rect" id="node2" href="$class_controller.html" title="{Controller\n||}" alt="" coords="25,198,103,275"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_data_1_1_context.html" title="{BRS.Data.Context\n|+ Destinations\l+ Routes\l+ Vehicles\l+ Trips\l+ Customers\l+ CreditCards\l+ Reservations\l+ Roles\l+ Users\l|+ Context()\l# OnModelCreating()\l}" alt="" coords="127,132,268,341"/>
+<area shape="rect" id="node4" href="$class_db_context.html" title="{DbContext\n||}" alt="" coords="156,5,239,83"/>
+</map>

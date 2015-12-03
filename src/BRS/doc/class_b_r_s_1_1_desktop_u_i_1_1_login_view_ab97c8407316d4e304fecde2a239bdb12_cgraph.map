@@ -1,0 +1,6 @@
+<map id="BRS.DesktopUI.LoginView.BtnLogin2_Click" name="BRS.DesktopUI.LoginView.BtnLogin2_Click">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_logical_1_1_account_1_1_user_session_manager.html#a33128b15596508b4601ba8c03529ee25" title="Atentica el usuario " alt="" coords="233,71,415,112"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="480,5,675,47"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#ad362d1592ca602daeab8e4f57d8217f4" title="BRS.Data.RepositoryFactory.\lUserRepository" alt="" coords="480,71,675,112"/>
+<area shape="rect" id="node5" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="463,136,692,177"/>
+</map>

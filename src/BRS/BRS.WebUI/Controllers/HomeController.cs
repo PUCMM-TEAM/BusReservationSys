@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using BRS.Core.Models;
 using BRS.Data;
+using BRS.Logical.Account;
 using BRS.WebUI.Models;
 
 namespace BRS.WebUI.Controllers {
@@ -48,7 +49,13 @@ namespace BRS.WebUI.Controllers {
       return View();
     }
 
+    
+public ActionResult Admin(){
+  if(UserSessionManager.Instance.UserRole != UserSessionManager.Erole.Administrator)
+      return RedirectToAction("Index");
 
+      return View();
+    }
 
     public ActionResult DestinationsAutocomplete(string term) {
 

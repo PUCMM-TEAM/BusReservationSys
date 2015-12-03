@@ -1,0 +1,5 @@
+<map id="BRS.DesktopUI.VehicleListView.VehicleListView" name="BRS.DesktopUI.VehicleListView.VehicleListView">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="252,5,447,47"/>
+<area shape="rect" id="node3" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="235,71,464,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#a51e669bf48acaf489cb65a216abf4de3" title="BRS.Data.RepositoryFactory.\lVehicleRepository" alt="" coords="252,136,447,177"/>
+</map>

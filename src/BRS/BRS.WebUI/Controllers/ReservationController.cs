@@ -49,7 +49,7 @@ namespace BRS.WebUI.Controllers
 
         if (ModelState.IsValid){
           string[] name = vModel.Name.Split(' ');
-          Customer cust = new Customer{FirstName = name[0], LastName = name[1], CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, Deleted = false};
+          Customer cust = new Customer{FirstName = name[0], LastName = name[1], Birthday = DateTime.Now, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, Deleted = false};
           
           Reservation reservation = new Reservation{
             ID = 0,
@@ -65,10 +65,16 @@ namespace BRS.WebUI.Controllers
 
           db.Reservations.Add(reservation);
           db.SaveChanges();
-          return RedirectToAction("Index");
+          return RedirectToAction("ConfirmationTicket", new {reservationId = reservation.ID});
         }
   
         return View(vModel);
+      }
+
+      public ActionResult ConfirmationTicket(int reservationId){
+        Reservation reservation = db.Reservations.FirstOrDefault(x => x.ID == reservationId);
+
+        return View(reservation);
       }
 
       private static int GetDayOfWeek(DateTime date) {

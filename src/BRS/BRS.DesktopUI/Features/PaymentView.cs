@@ -127,8 +127,8 @@ namespace BRS.DesktopUI {
                 Reservation reservation = new Reservation();
                 reservation.ID = 0;
                 reservation.Trip = trip;
-                reservation.Customer = AccountManager.Instance.CurrentUser.Customer;
-                //reservation.CreditCard = AccountManager.Instance.CurrentUser.Customer.CreditCards.FirstOrDefault();
+                reservation.Customer = UserSessionManager.Instance.CurrentUser.Customer;
+                //reservation.CreditCard = UserSessionManager.Instance.CurrentUser.Customer.CreditCards.FirstOrDefault();
                 reservation.ReservationDate = value;
                 reservation.NumPassenger = noPassengers;
                 reservation.CreatedDate = DateTime.Now;

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.Core/Models/Trip.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_trip_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Trip.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_trip_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.Core.Models {<span class="comment"></span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  /// Clase representativa de la entidad viaje.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html">    5</a></span>&#160;<span class="comment"></span>  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html">Trip</a> : <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html">Entity</a> {<span class="comment"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    /// Representa los dias que esta disponible el viaje.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a33d04c98d1d813e6f0c1d96f7a8601c6">    9</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> byte DateAvailable { <span class="keyword">get</span>; set; }<span class="comment"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    /// Representa la hora de salida.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a6c3472d13039201c5d56e73e083fa32a">   13</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> DepartureTime { <span class="keyword">get</span>; set; }<span class="comment"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    /// Representa la hora de llegada.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#acbb2f7eb760eb6a2d4ead959f06f445b">   17</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> ArrivalTime { <span class="keyword">get</span>; set; }<span class="comment"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    /// Representa el precio del viaje.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a6accb018e57a5d85e99f300d811e92f9">   21</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> Price { <span class="keyword">get</span>; set; }<span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    /// Representa una ruta.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#ad264dfba156c3a55950c4633fbb4ff49">   25</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">Route</a> { <span class="keyword">get</span>; set; }<span class="comment"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// Representa un vehiculo.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html#a0b28bfc90bb4a6286c38dfcb9c1b4c56">   29</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_vehicle.html">Vehicle</a> <a class="code" href="class_b_r_s_1_1_core_1_1_models_1_1_vehicle.html">Vehicle</a>{ <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_vehicle_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_vehicle.html">BRS.Core.Models.Vehicle</a></div><div class="ttdoc">Clase representativa de la entidad vehiculo. </div><div class="ttdef"><b>Definition:</b> <a href="_vehicle_8cs_source.html#l00006">Vehicle.cs:6</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_trip_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_trip.html">BRS.Core.Models.Trip</a></div><div class="ttdoc">Clase representativa de la entidad viaje. </div><div class="ttdef"><b>Definition:</b> <a href="_trip_8cs_source.html#l00005">Trip.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_entity_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_entity.html">BRS.Core.Models.Entity</a></div><div class="ttdoc">Clase abstracta de una entidad </div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00007">Entity.cs:7</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_core_1_1_models_1_1_route_html"><div class="ttname"><a href="class_b_r_s_1_1_core_1_1_models_1_1_route.html">BRS.Core.Models.Route</a></div><div class="ttdoc">Clase representativa de la entidad ruta. </div><div class="ttdef"><b>Definition:</b> <a href="_route_8cs_source.html#l00006">Route.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a8f58aa4976ed5bed464726ad929b0c6.html">BRS.Core</a></li><li class="navelem"><a class="el" href="dir_3d102b2e4dd3b07026f10c064135e327.html">Models</a></li><li class="navelem"><a class="el" href="_trip_8cs.html">Trip.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:26 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

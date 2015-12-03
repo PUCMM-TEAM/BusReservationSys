@@ -1,0 +1,7 @@
+<map id="BRS.DesktopUI.SearchView.SearchView" name="BRS.DesktopUI.SearchView.SearchView">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#aa6bdcd8bb56153bf2068eb6e14fa72ca" title="BRS.Data.RepositoryFactory.\lDestinationRepository" alt="" coords="261,5,456,47"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="261,71,456,112"/>
+<area shape="rect" id="node4" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="244,136,473,177"/>
+<area shape="rect" id="node5" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#af2c9a740fa1a2f8d298e35cb46331bc9" title="BRS.Data.RepositoryFactory.\lTripRepository" alt="" coords="261,201,456,243"/>
+<area shape="rect" id="node6" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#a51e669bf48acaf489cb65a216abf4de3" title="BRS.Data.RepositoryFactory.\lVehicleRepository" alt="" coords="261,267,456,308"/>
+</map>

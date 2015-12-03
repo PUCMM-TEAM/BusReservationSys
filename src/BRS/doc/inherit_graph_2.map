@@ -1,0 +1,13 @@
+<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
+<area shape="rect" id="node1" href="$class_b_r_s_1_1_core_1_1_models_1_1_entity.html" title="Clase abstracta de una entidad " alt="" coords="5,233,169,260"/>
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_core_1_1_models_1_1_credit_card.html" title="Clase representativa de una entidad de tarjerta de credito. " alt="" coords="221,5,411,32"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_core_1_1_models_1_1_customer.html" title="Clase representativa de la entidad cliente. " alt="" coords="223,56,409,83"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_core_1_1_models_1_1_destination.html" title="Clase representativa de la entidad destino " alt="" coords="219,107,413,133"/>
+<area shape="rect" id="node5" href="$class_b_r_s_1_1_core_1_1_models_1_1_reservation.html" title="Clase representativa de la entidad reservacion. " alt="" coords="217,157,415,184"/>
+<area shape="rect" id="node6" href="$class_b_r_s_1_1_core_1_1_models_1_1_role.html" title="Clase representativa de la entidad rol. " alt="" coords="238,208,394,235"/>
+<area shape="rect" id="node7" href="$class_b_r_s_1_1_core_1_1_models_1_1_route.html" title="Clase representativa de la entidad ruta. " alt="" coords="234,259,398,285"/>
+<area shape="rect" id="node8" href="$class_b_r_s_1_1_core_1_1_models_1_1_schedule.html" title="BRS.Core.Models.Schedule" alt="" coords="224,309,408,336"/>
+<area shape="rect" id="node9" href="$class_b_r_s_1_1_core_1_1_models_1_1_trip.html" title="Clase representativa de la entidad viaje. " alt="" coords="241,360,391,387"/>
+<area shape="rect" id="node10" href="$class_b_r_s_1_1_core_1_1_models_1_1_user.html" title="Clase representativa de la entidad usuario. " alt="" coords="237,411,395,437"/>
+<area shape="rect" id="node11" href="$class_b_r_s_1_1_core_1_1_models_1_1_vehicle.html" title="Clase representativa de la entidad vehiculo. " alt="" coords="229,461,403,488"/>
+</map>

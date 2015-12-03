@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -43,10 +44,11 @@ namespace BRS.WebUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,CreatedDate,ModifiedDate,Deleted")] Destination destination)
+        public ActionResult Create([Bind(Include = "ID,Name")] Destination destination)
         {
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid){
+              destination.CreatedDate = destination.ModifiedDate = DateTime.Now;
+              destination.Deleted = false;
                 db.Destinations.Add(destination);
                 db.SaveChanges();
                 return RedirectToAction("Index");

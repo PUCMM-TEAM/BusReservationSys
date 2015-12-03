@@ -1,0 +1,5 @@
+<map id="BRS.DesktopUI.DestinationListView.DestinationListView" name="BRS.DesktopUI.DestinationListView.DestinationListView">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#aa6bdcd8bb56153bf2068eb6e14fa72ca" title="BRS.Data.RepositoryFactory.\lDestinationRepository" alt="" coords="260,5,455,47"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="260,71,455,112"/>
+<area shape="rect" id="node4" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a55a685f96d44464278f4701f4f8346d6" title="Devuelve todas las instancias de una entidad. " alt="" coords="243,136,472,177"/>
+</map>

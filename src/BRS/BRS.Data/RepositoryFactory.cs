@@ -4,6 +4,10 @@ using BRS.Data.SqlRepositories;
 
 namespace BRS.Data
 {
+  /// <summary>
+  /// Clase representativa que contiene la instance de todos los repositorios
+  /// Este es un singleton
+  /// </summary>
     public class RepositoryFactory{
       private Context _context;
         private static RepositoryFactory _instance;
@@ -30,6 +34,10 @@ namespace BRS.Data
             _roleRepository = new RoleSqlRepository(_context);
         }
 
+      /// <summary>
+      /// Metodo para accesar a la instancia
+      /// </summary>
+      /// <returns>La instancia</returns>
         public static RepositoryFactory Instance()
         {
             if (_instance == null)

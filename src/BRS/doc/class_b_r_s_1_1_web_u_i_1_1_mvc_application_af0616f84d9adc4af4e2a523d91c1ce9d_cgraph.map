@@ -1,0 +1,5 @@
+<map id="BRS.WebUI.MvcApplication.Application_Start" name="BRS.WebUI.MvcApplication.Application_Start">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_web_u_i_1_1_bundle_config.html#a2bca1f1ce99907b3d7cc0310fe55476d" title="BRS.WebUI.BundleConfig.Register\lBundles" alt="" coords="240,5,464,47"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_web_u_i_1_1_filter_config.html#a0369c6d711b70c2e0173a15f93bfa9d2" title="BRS.WebUI.FilterConfig.Register\lGlobalFilters" alt="" coords="245,71,459,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_web_u_i_1_1_route_config.html#a3f1f5a9ee4d7c7716c5a7005d10e783e" title="BRS.WebUI.RouteConfig.Register\lRoutes" alt="" coords="243,136,461,177"/>
+</map>

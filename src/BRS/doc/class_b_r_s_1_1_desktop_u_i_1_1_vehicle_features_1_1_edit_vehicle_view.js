@@ -1,0 +1,26 @@
+var class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view =
+[
+    [ "EditVehicleView", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a5d3642e68e03822d684171ea046ccd20", null ],
+    [ "BtnVehicleCancel_Click", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a0fcfee4729ca7ef1e6e603bfcc8018e3", null ],
+    [ "BtnVehicleCreate_Click", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#ad18a2e1f54a7dea649ec24354dc5299a", null ],
+    [ "BtnVehicleList_Click", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a6c57d850ae053129802c600f3b6bd49f", null ],
+    [ "Dispose", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a39a402d0049e2dcbd691fe954b419d53", null ],
+    [ "InitializeComponent", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#af3bf1fbc15e6b22dfa4638705ce4fd69", null ],
+    [ "BtnVehicleCancel", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a149845fecbb95bae39912259c40b505a", null ],
+    [ "BtnVehicleCreate", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a46bece044e6a54acd8f6b78f8eff175c", null ],
+    [ "BtnVehicleDelete", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a10da1df0b66721d819a49a117cf97ba3", null ],
+    [ "BtnVehicleList", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#ac53940ef923bcddf16b02a90b5812d82", null ],
+    [ "components", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a963b396b8edabe23a9df67bd710a601c", null ],
+    [ "GbVehicle", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a3d2851741c75c731e31fef9a3ad034ce", null ],
+    [ "MtbVehiclePassCap", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#acfdbbf43724fe9018fbc22b1841cecef", null ],
+    [ "repo", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#ad7fd7d8db78cae691efdd766084995ad", null ],
+    [ "TbVehicleDescription", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a641bb58c2010395548b89b825494da16", null ],
+    [ "TbVehicleImage", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a98c84b9870a8913b5329df4265258515", null ],
+    [ "TbVehicleName", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a24a1c42b059d233faf232b9d889a4493", null ],
+    [ "TbVehicleVeTy", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#ad1f3744b79d299a34dbd0f7522e327d3", null ],
+    [ "TxtVechicleDescription", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a041c73b55ad64b8ca59521a18a7d4f91", null ],
+    [ "TxtVehicleImage", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a4c2aeb9ed9c58072895727ce0b70902b", null ],
+    [ "TxtVehicleName", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#a65f8645d843dbcaec087b7a5d7c20e1a", null ],
+    [ "TxtVehiclePassCap", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#aa728bd1940a1849825f234446238f1a4", null ],
+    [ "TxtVehicleVeTy", "class_b_r_s_1_1_desktop_u_i_1_1_vehicle_features_1_1_edit_vehicle_view.html#ade37802a4dd7dc0a6379e3c4d25a8560", null ]
+];

@@ -9,15 +9,30 @@ using BRS.Core.Repositories;
 
 namespace BRS.Data.SqlRepositories
 {
+  /// <summary>
+  /// Clase representativa de un repositorio de Clientes que hereda la funcionabilidad de IRepository.
+  /// Dicho repositorio extrae la data desde una base de datos ms sql.
+  /// </summary>
     public class CustomerSqlRepository : IRepository<Customer>
     {
+      /// <summary>
+      /// El contexto que maneja la base datos.
+      /// </summary>
         private Context _context;
 
+        /// <summary>
+        /// Crea una instancia que contiene un contexto dado
+        /// </summary>
+        /// <param name="context">Contexto de data</param>
         public CustomerSqlRepository(Context context)
         {
             _context = context;
         }
 
+      /// <summary>
+      /// Agrega una entidad al contexto
+      /// </summary>
+      /// <param name="entity"></param>
         public void Create(Customer entity)
         {
             entity.CreatedDate = DateTime.Now;
@@ -26,6 +41,10 @@ namespace BRS.Data.SqlRepositories
             _context.SaveChanges();
         }
 
+      /// <summary>
+      /// Elimina una entidad del contexto
+      /// </summary>
+      /// <param name="id"> El indice</param>
         public void Delete(int id)
         {
             Customer customer = Read(id);
@@ -35,7 +54,7 @@ namespace BRS.Data.SqlRepositories
 
         public Customer Read(int id)
         {
-            return _context.Customers.Where(x => x.Deleted == false && x.ID == id).First();
+            return _context.Customers.FirstOrDefault(x => x.Deleted == false && x.ID == id);
         }
 
         public void Read(int id, IResponse<Customer> reponse)
@@ -43,6 +62,10 @@ namespace BRS.Data.SqlRepositories
             throw new NotImplementedException();
         }
 
+      /// <summary>
+      /// Retorna todos las entidades que no esten borradas del contexto
+      /// </summary>
+      /// <returns></returns>
         public IEnumerable<Customer> ReadAll()
         {
             return _context.Customers.Where(x => x.Deleted == false);
@@ -52,7 +75,10 @@ namespace BRS.Data.SqlRepositories
         {
             throw new NotImplementedException();
         }
-
+      /// <summary>
+      /// Actualiza una entidad existente
+      /// </summary>
+      /// <param name="entity">la entidad que se desea actualizar</param>
         public void Update(Customer entity)
         {
             Customer customer = Read(entity.ID);

@@ -1,0 +1,16 @@
+<map id="BRS.Core.Repositories.IRepository.ReadAll" name="BRS.Core.Repositories.IRepository.ReadAll">
+<area shape="rect" id="node2" href="$class_b_r_s_1_1_desktop_u_i_1_1_destination_list_view.html#a6c90b5412c4f51e64c955d64dadaf528" title="Constructor de la clase. " alt="" coords="311,5,501,47"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_desktop_u_i_1_1_edit_route_view.html#a22482eadc77f32ee271656d76ed3ee77" title="Constructor de la clase. " alt="" coords="303,71,509,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a46b0434ebf566825c25ae36fcc320abb" title="Constructor de la clase. " alt="" coords="301,136,511,177"/>
+<area shape="rect" id="node5" href="$class_b_r_s_1_1_logical_1_1_account_1_1_user_session_manager.html#a86f0dedfda1da3c01768766903b7fcc0" title="Metodo para obtener la instancia de un role " alt="" coords="317,201,495,243"/>
+<area shape="rect" id="node7" href="$class_b_r_s_1_1_logical_1_1_account_1_1_user_session_manager.html#a33128b15596508b4601ba8c03529ee25" title="Atentica el usuario " alt="" coords="315,267,497,308"/>
+<area shape="rect" id="node9" href="$class_b_r_s_1_1_desktop_u_i_1_1_reservation_list_view.html#a7b381a0436c6aa3b44d6453a420a69d6" title="Constructor de la clase. " alt="" coords="311,332,501,373"/>
+<area shape="rect" id="node10" href="$class_b_r_s_1_1_desktop_u_i_1_1_route_list_view.html#af0c0d0e59b3b42653cb10c164fb138c8" title="Constructor de la clase. " alt="" coords="304,397,508,439"/>
+<area shape="rect" id="node11" href="$class_b_r_s_1_1_desktop_u_i_1_1_search_view.html#a2c535089462e1f67b15cc18e2f41ff9b" title="Constructor de la clase. " alt="" coords="311,463,501,504"/>
+<area shape="rect" id="node12" href="$class_b_r_s_1_1_desktop_u_i_1_1_trip_list_view.html#a0142f0ee95275349775e9bd686f87926" title="Constructor de la clase. " alt="" coords="311,528,501,569"/>
+<area shape="rect" id="node13" href="$class_b_r_s_1_1_desktop_u_i_1_1_user_list_view.html#ad3d878da4b6f55caf91b645e87b8cb32" title="Constructor de la clase. " alt="" coords="307,593,505,635"/>
+<area shape="rect" id="node14" href="$class_b_r_s_1_1_logical_1_1_account_1_1_user_session_manager.html#a7b02a9738d8daf2c274efad984ada141" title="Crea una instancia y y asigna por defecto el usuario visitante " alt="" coords="283,659,529,700"/>
+<area shape="rect" id="node15" href="$class_b_r_s_1_1_desktop_u_i_1_1_vehicle_list_view.html#abcaec1ad0aca609df619ecbbec0582d6" title="Constructor de la clase. " alt="" coords="315,724,497,765"/>
+<area shape="rect" id="node6" href="$class_b_r_s_1_1_desktop_u_i_1_1_registration_form.html#ac72683abfd4fe4a6fdb1fb8747c7666d" title="Handler del boton para crear un registracion. " alt="" coords="577,201,796,243"/>
+<area shape="rect" id="node8" href="$class_b_r_s_1_1_desktop_u_i_1_1_login_view.html#ab97c8407316d4e304fecde2a239bdb12" title="Handler del boton para hacer login. " alt="" coords="597,267,777,308"/>
+</map>

@@ -1,0 +1,25 @@
+var class_b_r_s_1_1_desktop_u_i_1_1_form_front_view =
+[
+    [ "FormFrontView", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a46b0434ebf566825c25ae36fcc320abb", null ],
+    [ "BtnLogin_Click", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#ae1dc220131ce319ea1206c751a6cbb00", null ],
+    [ "BtnRegister_Click", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a4033fb10e1c67ea270f065c5cb00630d", null ],
+    [ "destinationReportsToolStripMenuItem_Click", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#abaf2bf1e8f992c537988eeab0e21ccce", null ],
+    [ "Dispose", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#ad0bf2c3b10fe90e6d35616553da7fe2f", null ],
+    [ "InitializeComponent", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a41a80339a21c01360b71f89261da63ae", null ],
+    [ "pictureBox1_Click", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#ac5d7ebe68197d071e438ab1b966acbd0", null ],
+    [ "userReportsToolStripMenuItem_Click", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#af94f74dc13be6bace58c5b885717b0f6", null ],
+    [ "BtnLogin", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a50bd5d61e567c0d9d200c1ee973146ba", null ],
+    [ "BtnRegister", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#addeb052ec83ad8f02e9579479e9b8e35", null ],
+    [ "components", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a943568ef23350de493f49e8990994137", null ],
+    [ "destinationReportsToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a0732066ac7b95316752a34cce038f154", null ],
+    [ "DGVFrontTrips", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a1671ce1b4a90f3423e734cfe0c9acf4b", null ],
+    [ "editToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#af48a5ded78d50e30a2b50afd7633ce31", null ],
+    [ "fileToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#ad09cf8996579f05830aa21d9a562c2d1", null ],
+    [ "helpToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#aaae19c5deeaa2c569ad020fef63c2758", null ],
+    [ "imageList1", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a5e1b4c03a04f7ebeb498c74e5f18a565", null ],
+    [ "menuStrip1", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#af212f97f2b1fd2698a9a4d878840cecf", null ],
+    [ "reportsToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a4c5b1e787f5d057e8f63550d7970cfa5", null ],
+    [ "TxtFrontTrips", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a62dc8bece84c08ef888ed50b85c24bcc", null ],
+    [ "userReportsToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#a6bd5096a761421bfe69bd8285afd7ef7", null ],
+    [ "viewToolStripMenuItem", "class_b_r_s_1_1_desktop_u_i_1_1_form_front_view.html#ab83dca7d065a1f15cdef888a7726f90c", null ]
+];

@@ -22,6 +22,6 @@ namespace BRS.Core.Models
         /// <summary>
         /// Representa la tarjeta de credito del cliente.
         /// </summary>
-        public CreditCard CreditCard { get; set; } 
+        public virtual CreditCard CreditCard { get; set; } 
     }
 }

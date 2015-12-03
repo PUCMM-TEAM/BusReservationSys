@@ -64,7 +64,7 @@ namespace BRS.DesktopUI
                 user.Username = TbRegistrationUsername.Text;
                 user.Email = TbRegistrationEmail.Text;
                 user.Password = TbRegistrationPassword.Text;
-                user.Role = AccountManager.Instance.GetRole(AccountManager.Erole.Customer);
+                user.Role = UserSessionManager.Instance.GetRole(UserSessionManager.Erole.Customer);
                 Customer customer = new Customer();
                 customer.FirstName = TbRegistrationFirstName.Text;
                 customer.LastName = TbRegistrationLastName.Text;

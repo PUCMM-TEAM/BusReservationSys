@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BRS.Core.Models;
+using BRS.Logical.Account;
 using BRS.WebUI.Models;
 
 namespace BRS.WebUI.Controllers
@@ -13,19 +14,19 @@ namespace BRS.WebUI.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            return View(new LoginUserViewModel());
         }
 
         [HttpPost]
-        public ActionResult Index(string username, string password){
+        public ActionResult Index([Bind(Include = "username,password")] LoginUserViewModel vmModel) {
 
           if (ModelState.IsValid){
-            //if (AccountManager.Instance.LoginUser(username, password)) {
-            //  return RedirectToAction("Index", "Home");
-            //}
+            if (UserSessionManager.Instance.LoginUser(vmModel.Username, vmModel.Password)) {
+              return RedirectToAction("Admin", "Home");
+            }
           }
 
-          return View();
+          return View(vmModel);
         }
 
       public ActionResult Register(){

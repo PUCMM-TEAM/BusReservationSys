@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.Logical/Handlers/NavigationHandler.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_navigation_handler_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">NavigationHandler.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_navigation_handler_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Threading.Tasks;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_views.html">Views</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespace_b_r_s_1_1_logical_1_1_handlers.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.Logical.Handlers {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html">    9</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html">NavigationHandler</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#aedf1df5500c3cce0b8caa7f0189a5069">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#aedf1df5500c3cce0b8caa7f0189a5069">GoToHomeView</a>(<a class="code" href="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view.html">IHomeView</a> view){</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      view.<a class="code" href="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view.html#ae8a2f0dd4379dcb35a276ce9a7b1ae07">Show</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a8e6552d564618e7465979d0d786ac1cb">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a8e6552d564618e7465979d0d786ac1cb">GoToSearchView</a>(<a class="code" href="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view.html">ISearchView</a> view){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      view.<a class="code" href="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view.html#abe9ab2a43f9cc2af3744e1009b8fd362">Show</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a0871526125c91f2e927ccb9e3d54da1c">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a0871526125c91f2e927ccb9e3d54da1c">GoToBookingPreConfirmationView</a>(){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a13cbb6b6bbf9fe0770f180e468b3c815">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a13cbb6b6bbf9fe0770f180e468b3c815">GoToBookingConfirmationView</a>(){</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#afb14e917d8c15e9335c52ec1b3117731">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#afb14e917d8c15e9335c52ec1b3117731">GoToLoginView</a>(){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a112ea90f72cfba59e8ef504bf42ff0d6">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a112ea90f72cfba59e8ef504bf42ff0d6">GoToRegistrationView</a>(){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view.html">BRS.Core.Views.IHomeView</a></div><div class="ttdoc">Interface del Homeview. </div><div class="ttdef"><b>Definition:</b> <a href="_i_home_view_8cs_source.html#l00011">IHomeView.cs:11</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core.html">BRS.Core</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_afb14e917d8c15e9335c52ec1b3117731"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#afb14e917d8c15e9335c52ec1b3117731">BRS.Logical.Handlers.NavigationHandler.GoToLoginView</a></div><div class="ttdeci">static void GoToLoginView()</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00027">NavigationHandler.cs:27</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_a0871526125c91f2e927ccb9e3d54da1c"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a0871526125c91f2e927ccb9e3d54da1c">BRS.Logical.Handlers.NavigationHandler.GoToBookingPreConfirmationView</a></div><div class="ttdeci">static void GoToBookingPreConfirmationView()</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00019">NavigationHandler.cs:19</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_a112ea90f72cfba59e8ef504bf42ff0d6"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a112ea90f72cfba59e8ef504bf42ff0d6">BRS.Logical.Handlers.NavigationHandler.GoToRegistrationView</a></div><div class="ttdeci">static void GoToRegistrationView()</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00031">NavigationHandler.cs:31</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_a8e6552d564618e7465979d0d786ac1cb"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a8e6552d564618e7465979d0d786ac1cb">BRS.Logical.Handlers.NavigationHandler.GoToSearchView</a></div><div class="ttdeci">static void GoToSearchView(ISearchView view)</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00015">NavigationHandler.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_aedf1df5500c3cce0b8caa7f0189a5069"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#aedf1df5500c3cce0b8caa7f0189a5069">BRS.Logical.Handlers.NavigationHandler.GoToHomeView</a></div><div class="ttdeci">static void GoToHomeView(IHomeView view)</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00011">NavigationHandler.cs:11</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_views_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_views.html">BRS.Core.Views</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_home_view_8cs_source.html#l00007">IHomeView.cs:7</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view_html_ae8a2f0dd4379dcb35a276ce9a7b1ae07"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_views_1_1_i_home_view.html#ae8a2f0dd4379dcb35a276ce9a7b1ae07">BRS.Core.Views.IHomeView.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdoc">Muestra un homeview. </div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html">BRS.Logical.Handlers.NavigationHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00009">NavigationHandler.cs:9</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view_html_abe9ab2a43f9cc2af3744e1009b8fd362"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view.html#abe9ab2a43f9cc2af3744e1009b8fd362">BRS.Core.Views.ISearchView.Show</a></div><div class="ttdeci">void Show()</div><div class="ttdoc">Muestra el searchview. </div></div>
+<div class="ttc" id="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler_html_a13cbb6b6bbf9fe0770f180e468b3c815"><div class="ttname"><a href="class_b_r_s_1_1_logical_1_1_handlers_1_1_navigation_handler.html#a13cbb6b6bbf9fe0770f180e468b3c815">BRS.Logical.Handlers.NavigationHandler.GoToBookingConfirmationView</a></div><div class="ttdeci">static void GoToBookingConfirmationView()</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_handler_8cs_source.html#l00023">NavigationHandler.cs:23</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_views_1_1_i_search_view.html">BRS.Core.Views.ISearchView</a></div><div class="ttdoc">Interface del searchview. </div><div class="ttdef"><b>Definition:</b> <a href="_i_search_view_8cs_source.html#l00011">ISearchView.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_86e5f2c43548fdcbd84269eda3415974.html">BRS.Logical</a></li><li class="navelem"><a class="el" href="dir_d41eafbf6b44cf7462ece8fbd3a3dc13.html">Handlers</a></li><li class="navelem"><a class="el" href="_navigation_handler_8cs.html">NavigationHandler.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:27 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

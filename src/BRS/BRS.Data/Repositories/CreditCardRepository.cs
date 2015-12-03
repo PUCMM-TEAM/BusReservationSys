@@ -6,6 +6,9 @@ using BRS.Core.Models;
 using BRS.Core.Repositories;
 
 namespace BRS.Data.Repositories {
+  /// <summary>
+  /// Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IRepositorys
+  /// </summary>
   public class CreditCardRepository : IRepository<CreditCard>{
     private List<CreditCard> _creditCards;
 

@@ -1,0 +1,5 @@
+<map id="BRS.DesktopUI.PaymentView.button1_Click" name="BRS.DesktopUI.PaymentView.button1_Click">
+<area shape="rect" id="node2" href="$interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html#a7c3f6d56aceeec43c2545b53566be802" title="Crea una entidad " alt="" coords="297,5,527,47"/>
+<area shape="rect" id="node3" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b" title="Metodo para accesar a la instancia " alt="" coords="315,71,509,112"/>
+<area shape="rect" id="node4" href="$class_b_r_s_1_1_data_1_1_repository_factory.html#a4ab03c77c7f38c8506025f98c337d11c" title="BRS.Data.RepositoryFactory.\lReservationRepository" alt="" coords="315,136,509,177"/>
+</map>

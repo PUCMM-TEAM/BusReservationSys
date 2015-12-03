@@ -1,0 +1,36 @@
+﻿@model BRS.Core.Models.Reservation
+
+@{
+  ViewBag.Title = "title";
+
+}
+
+<h2>Your Ticket Confirmation</h2>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Reservation Ticket # @Model.ID</h3>
+  </div>
+
+  <div class="panel-body">
+    
+    <dl class="dl-horizontal">
+      <dt>Origin: </dt>
+      <dd>@Model.Trip.Route.Pickup.Name</dd>
+      <dt>Destination: </dt>
+      <dd>@Model.Trip.Route.DropOff.Name</dd>
+      <dt>Date: </dt>
+      <dd>@Model.ReservationDate</dd>
+      <dt>Departure Time: </dt>
+      <dd>@Model.Trip.DepartureTime</dd>
+      <dt>Arrival Time: </dt>
+      <dd>@Model.Trip.ArrivalTime</dd>
+      <dt>Number of Passengers: </dt>
+      <dd>@Model.NumPassenger</dd>
+      <dt>Price: </dt>
+      <dd>@Model.Trip.Price</dd>
+      <dt><span class="label label-info">Total Price: </span></dt>
+      <dd>@(Model.Trip.Price * Model.NumPassenger)</dd>
+    </dl>
+  </div>
+</div>

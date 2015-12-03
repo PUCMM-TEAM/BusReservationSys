@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Bus Reservation System: Fichero Fuente BRS.Data/RepositoryFactory.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bus Reservation System
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">Sistema de reservación de ticket de bus</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_repository_factory_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">RepositoryFactory.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_repository_factory_8cs.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_models.html">Models</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_core.html">Core</a>.<a class="code" href="namespace_b_r_s_1_1_core_1_1_repositories.html">Repositories</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_b_r_s.html">BRS</a>.<a class="code" href="namespace_b_r_s_1_1_data.html">Data</a>.<a class="code" href="namespace_b_r_s_1_1_data_1_1_sql_repositories.html">SqlRepositories</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_b_r_s.html">BRS</a>.Data</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  /// Clase representativa que contiene la instance de todos los repositorios</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  /// Este es un singleton</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html">   11</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html">RepositoryFactory</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afe0d8a2e332174a0454e2d52dc44e0a2">   12</a></span>&#160;      <span class="keyword">private</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afe0d8a2e332174a0454e2d52dc44e0a2">_context</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4dd73c87803fbd43467191cf4fd005bb">   13</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html">RepositoryFactory</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4dd73c87803fbd43467191cf4fd005bb">_instance</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a403ddc6ca05a2f6af5eda6ec456f53b9">   14</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Destination&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a403ddc6ca05a2f6af5eda6ec456f53b9">_destinationRepository</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a89b216c6189cebfe25047855c307ab0a">   15</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Route&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a89b216c6189cebfe25047855c307ab0a">_routeRepository</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4508be640f8c4bea5f396b402cf90358">   16</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Trip&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4508be640f8c4bea5f396b402cf90358">_tripRepository</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab140d8aa38cf4465632ad2937ba97c33">   17</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Customer&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab140d8aa38cf4465632ad2937ba97c33">_customerRepository</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ae0bb6c82e67804fc2b908fa25776fd97">   18</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;CreditCard&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ae0bb6c82e67804fc2b908fa25776fd97">_creditcardRepository</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afc00bc11b74326c671e635ac098e25dd">   19</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;User&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afc00bc11b74326c671e635ac098e25dd">_userRepository</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#abd3e8ed3aeb56c191c285c72b9927a0e">   20</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Vehicle&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#abd3e8ed3aeb56c191c285c72b9927a0e">_vehicleRepository</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb489196c4ff635b3629329d3350fa5b">   21</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Reservation&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb489196c4ff635b3629329d3350fa5b">_reservationRepository</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afb85093783901a24c02f1d9ec30ecb6c">   22</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Role&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#afb85093783901a24c02f1d9ec30ecb6c">_roleRepository</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a0d0540ef85ecadeea307d9c4dcce8d39">   23</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a0d0540ef85ecadeea307d9c4dcce8d39">RepositoryFactory</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            _context = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_context.html">Context</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            _destinationRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_destination_sql_repository.html">DestinationSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            _routeRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html">RouteSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            _tripRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_trip_sql_repository.html">TripSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            _customerRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_customer_sql_repository.html">CustomerSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            _creditcardRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_credit_card_sql_repository.html">CreditCardSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            _userRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_user_sql_repository.html">UserSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            _vehicleRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_vehicle_sql_repository.html">VehicleSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            _reservationRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html">ReservationSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            _roleRepository = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_role_sql_repository.html">RoleSqlRepository</a>(_context);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">      /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">      /// Metodo para accesar a la instancia</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">      /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">      /// &lt;returns&gt;La instancia&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b">   41</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html">RepositoryFactory</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b">Instance</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (_instance == null)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                _instance = <span class="keyword">new</span> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html">RepositoryFactory</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> _instance;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa6bdcd8bb56153bf2068eb6e14fa72ca">   49</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Destination&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa6bdcd8bb56153bf2068eb6e14fa72ca">DestinationRepository</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> _destinationRepository;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a62e8a7c1d803562c3beeb337408b1889">   54</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Route&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a62e8a7c1d803562c3beeb337408b1889">RouteRepository</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> _routeRepository;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#af2c9a740fa1a2f8d298e35cb46331bc9">   59</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Trip&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#af2c9a740fa1a2f8d298e35cb46331bc9">TripRepository</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> _tripRepository;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab91cc7ed05dbf4d58bdd1b2d84c31a2b">   64</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Customer&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab91cc7ed05dbf4d58bdd1b2d84c31a2b">CustomerRepository</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> _customerRepository;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a2a47026d86f0410af135316b253a1c3c">   69</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;CreditCard&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a2a47026d86f0410af135316b253a1c3c">CreditCardRepository</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> _creditcardRepository;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ad362d1592ca602daeab8e4f57d8217f4">   73</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;User&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#ad362d1592ca602daeab8e4f57d8217f4">UserRepository</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> _userRepository;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a51e669bf48acaf489cb65a216abf4de3">   77</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Vehicle&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a51e669bf48acaf489cb65a216abf4de3">VehicleRepository</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> _vehicleRepository;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4ab03c77c7f38c8506025f98c337d11c">   82</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Reservation&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4ab03c77c7f38c8506025f98c337d11c">ReservationRepository</a>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> _reservationRepository;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa72b1007604105f79e98dab09be6a465">   87</a></span>&#160;      <span class="keyword">public</span> <a class="code" href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">IRepository&lt;Role&gt;</a> <a class="code" href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa72b1007604105f79e98dab09be6a465">RoleRepository</a>(){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> _roleRepository;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      } </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_aa72b1007604105f79e98dab09be6a465"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa72b1007604105f79e98dab09be6a465">BRS.Data.RepositoryFactory.RoleRepository</a></div><div class="ttdeci">IRepository&lt; Role &gt; RoleRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00087">RepositoryFactory.cs:87</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a0d0540ef85ecadeea307d9c4dcce8d39"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a0d0540ef85ecadeea307d9c4dcce8d39">BRS.Data.RepositoryFactory.RepositoryFactory</a></div><div class="ttdeci">RepositoryFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00023">RepositoryFactory.cs:23</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a4508be640f8c4bea5f396b402cf90358"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4508be640f8c4bea5f396b402cf90358">BRS.Data.RepositoryFactory._tripRepository</a></div><div class="ttdeci">IRepository&lt; Trip &gt; _tripRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00016">RepositoryFactory.cs:16</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core.html">BRS.Core</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_acb489196c4ff635b3629329d3350fa5b"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb489196c4ff635b3629329d3350fa5b">BRS.Data.RepositoryFactory._reservationRepository</a></div><div class="ttdeci">IRepository&lt; Reservation &gt; _reservationRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00021">RepositoryFactory.cs:21</a></div></div>
+<div class="ttc" id="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository_html"><div class="ttname"><a href="interface_b_r_s_1_1_core_1_1_repositories_1_1_i_repository.html">BRS.Core.Repositories.IRepository&lt; Destination &gt;</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_credit_card_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_credit_card_sql_repository.html">BRS.Data.SqlRepositories.CreditCardSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IReposi...</div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_sql_repository_8cs_source.html#l00015">CreditCardSqlRepository.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_af2c9a740fa1a2f8d298e35cb46331bc9"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#af2c9a740fa1a2f8d298e35cb46331bc9">BRS.Data.RepositoryFactory.TripRepository</a></div><div class="ttdeci">IRepository&lt; Trip &gt; TripRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00059">RepositoryFactory.cs:59</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a403ddc6ca05a2f6af5eda6ec456f53b9"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a403ddc6ca05a2f6af5eda6ec456f53b9">BRS.Data.RepositoryFactory._destinationRepository</a></div><div class="ttdeci">IRepository&lt; Destination &gt; _destinationRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00014">RepositoryFactory.cs:14</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html">BRS.Data.RepositoryFactory</a></div><div class="ttdoc">Clase representativa que contiene la instance de todos los repositorios Este es un singleton ...</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00011">RepositoryFactory.cs:11</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_role_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_role_sql_repository.html">BRS.Data.SqlRepositories.RoleSqlRepository</a></div><div class="ttdef"><b>Definition:</b> <a href="_role_sql_repository_8cs_source.html#l00012">RoleSqlRepository.cs:12</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a51e669bf48acaf489cb65a216abf4de3"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a51e669bf48acaf489cb65a216abf4de3">BRS.Data.RepositoryFactory.VehicleRepository</a></div><div class="ttdeci">IRepository&lt; Vehicle &gt; VehicleRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00077">RepositoryFactory.cs:77</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a89b216c6189cebfe25047855c307ab0a"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a89b216c6189cebfe25047855c307ab0a">BRS.Data.RepositoryFactory._routeRepository</a></div><div class="ttdeci">IRepository&lt; Route &gt; _routeRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00015">RepositoryFactory.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_route_sql_repository.html">BRS.Data.SqlRepositories.RouteSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IReposi...</div><div class="ttdef"><b>Definition:</b> <a href="_route_sql_repository_8cs_source.html#l00016">RouteSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a4ab03c77c7f38c8506025f98c337d11c"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4ab03c77c7f38c8506025f98c337d11c">BRS.Data.RepositoryFactory.ReservationRepository</a></div><div class="ttdeci">IRepository&lt; Reservation &gt; ReservationRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00082">RepositoryFactory.cs:82</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_afc00bc11b74326c671e635ac098e25dd"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#afc00bc11b74326c671e635ac098e25dd">BRS.Data.RepositoryFactory._userRepository</a></div><div class="ttdeci">IRepository&lt; User &gt; _userRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00019">RepositoryFactory.cs:19</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_repositories_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_repositories.html">BRS.Core.Repositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00005">IRepository.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_ab91cc7ed05dbf4d58bdd1b2d84c31a2b"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab91cc7ed05dbf4d58bdd1b2d84c31a2b">BRS.Data.RepositoryFactory.CustomerRepository</a></div><div class="ttdeci">IRepository&lt; Customer &gt; CustomerRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00064">RepositoryFactory.cs:64</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a2a47026d86f0410af135316b253a1c3c"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a2a47026d86f0410af135316b253a1c3c">BRS.Data.RepositoryFactory.CreditCardRepository</a></div><div class="ttdeci">IRepository&lt; CreditCard &gt; CreditCardRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00069">RepositoryFactory.cs:69</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_trip_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_trip_sql_repository.html">BRS.Data.SqlRepositories.TripSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de tarjeta de credito que hereda la funcionabilidad de IReposi...</div><div class="ttdef"><b>Definition:</b> <a href="_trip_sql_repository_8cs_source.html#l00016">TripSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_user_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_user_sql_repository.html">BRS.Data.SqlRepositories.UserSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de usuario que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_user_sql_repository_8cs_source.html#l00015">UserSqlRepository.cs:15</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_afe0d8a2e332174a0454e2d52dc44e0a2"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#afe0d8a2e332174a0454e2d52dc44e0a2">BRS.Data.RepositoryFactory._context</a></div><div class="ttdeci">Context _context</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00012">RepositoryFactory.cs:12</a></div></div>
+<div class="ttc" id="namespace_b_r_s_html"><div class="ttname"><a href="namespace_b_r_s.html">BRS</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_data_1_1_sql_repositories_html"><div class="ttname"><a href="namespace_b_r_s_1_1_data_1_1_sql_repositories.html">BRS.Data.SqlRepositories</a></div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_sql_repository_8cs_source.html#l00010">CreditCardSqlRepository.cs:10</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a62e8a7c1d803562c3beeb337408b1889"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a62e8a7c1d803562c3beeb337408b1889">BRS.Data.RepositoryFactory.RouteRepository</a></div><div class="ttdeci">IRepository&lt; Route &gt; RouteRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00054">RepositoryFactory.cs:54</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_a4dd73c87803fbd43467191cf4fd005bb"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#a4dd73c87803fbd43467191cf4fd005bb">BRS.Data.RepositoryFactory._instance</a></div><div class="ttdeci">static RepositoryFactory _instance</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00013">RepositoryFactory.cs:13</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_context_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_context.html">BRS.Data.Context</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00006">Context.cs:6</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_core_1_1_models_html"><div class="ttname"><a href="namespace_b_r_s_1_1_core_1_1_models.html">BRS.Core.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_credit_card_8cs_source.html#l00001">CreditCard.cs:1</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_ab140d8aa38cf4465632ad2937ba97c33"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#ab140d8aa38cf4465632ad2937ba97c33">BRS.Data.RepositoryFactory._customerRepository</a></div><div class="ttdeci">IRepository&lt; Customer &gt; _customerRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00017">RepositoryFactory.cs:17</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_reservation_sql_repository.html">BRS.Data.SqlRepositories.ReservationSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de reservaciones que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_reservation_sql_repository_8cs_source.html#l00016">ReservationSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_customer_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_customer_sql_repository.html">BRS.Data.SqlRepositories.CustomerSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de Clientes que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_customer_sql_repository_8cs_source.html#l00016">CustomerSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_acb93fb1002829290b7426da1e986990b"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#acb93fb1002829290b7426da1e986990b">BRS.Data.RepositoryFactory.Instance</a></div><div class="ttdeci">static RepositoryFactory Instance()</div><div class="ttdoc">Metodo para accesar a la instancia </div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00041">RepositoryFactory.cs:41</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_vehicle_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_vehicle_sql_repository.html">BRS.Data.SqlRepositories.VehicleSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de vehiculos que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_vehicle_sql_repository_8cs_source.html#l00016">VehicleSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="namespace_b_r_s_1_1_data_html"><div class="ttname"><a href="namespace_b_r_s_1_1_data.html">BRS.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_context_8cs_source.html#l00005">Context.cs:5</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_destination_sql_repository_html"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_sql_repositories_1_1_destination_sql_repository.html">BRS.Data.SqlRepositories.DestinationSqlRepository</a></div><div class="ttdoc">Clase representativa de un repositorio de destinos que hereda la funcionabilidad de IRepository...</div><div class="ttdef"><b>Definition:</b> <a href="_destination_sql_repository_8cs_source.html#l00016">DestinationSqlRepository.cs:16</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_afb85093783901a24c02f1d9ec30ecb6c"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#afb85093783901a24c02f1d9ec30ecb6c">BRS.Data.RepositoryFactory._roleRepository</a></div><div class="ttdeci">IRepository&lt; Role &gt; _roleRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00022">RepositoryFactory.cs:22</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_aa6bdcd8bb56153bf2068eb6e14fa72ca"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#aa6bdcd8bb56153bf2068eb6e14fa72ca">BRS.Data.RepositoryFactory.DestinationRepository</a></div><div class="ttdeci">IRepository&lt; Destination &gt; DestinationRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00049">RepositoryFactory.cs:49</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_ae0bb6c82e67804fc2b908fa25776fd97"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#ae0bb6c82e67804fc2b908fa25776fd97">BRS.Data.RepositoryFactory._creditcardRepository</a></div><div class="ttdeci">IRepository&lt; CreditCard &gt; _creditcardRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00018">RepositoryFactory.cs:18</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_ad362d1592ca602daeab8e4f57d8217f4"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#ad362d1592ca602daeab8e4f57d8217f4">BRS.Data.RepositoryFactory.UserRepository</a></div><div class="ttdeci">IRepository&lt; User &gt; UserRepository()</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00073">RepositoryFactory.cs:73</a></div></div>
+<div class="ttc" id="class_b_r_s_1_1_data_1_1_repository_factory_html_abd3e8ed3aeb56c191c285c72b9927a0e"><div class="ttname"><a href="class_b_r_s_1_1_data_1_1_repository_factory.html#abd3e8ed3aeb56c191c285c72b9927a0e">BRS.Data.RepositoryFactory._vehicleRepository</a></div><div class="ttdeci">IRepository&lt; Vehicle &gt; _vehicleRepository</div><div class="ttdef"><b>Definition:</b> <a href="_repository_factory_8cs_source.html#l00020">RepositoryFactory.cs:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6ad3a3fa78e5e2081a271f090f9eb812.html">BRS.Data</a></li><li class="navelem"><a class="el" href="_repository_factory_8cs.html">RepositoryFactory.cs</a></li>
+    <li class="footer">Generado el Jueves, 3 de Diciembre de 2015 09:58:26 para Bus Reservation System por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>
