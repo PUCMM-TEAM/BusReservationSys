@@ -50,7 +50,8 @@ namespace BRS.Logical.Account {
 
     public Erole UserRole {
       get {
-        switch (_currentUser.Role.Name) {
+        var role = _currentUser.Role;
+        switch (role.Name) {
           case "Administrator":
             return Erole.Administrator;
           case "Operator":

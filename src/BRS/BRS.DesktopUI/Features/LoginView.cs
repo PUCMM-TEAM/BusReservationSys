@@ -1,5 +1,6 @@
 ﻿using BRS.Core.Models;
 using BRS.Data;
+using BRS.Logical.Account;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,8 +13,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario del login.
+    /// </summary>
     public partial class LoginView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public LoginView()
         {
             InitializeComponent();
@@ -29,18 +36,44 @@ namespace BRS.DesktopUI
 
         }
 
+
+        /// <summary>
+        /// Handler del boton del salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handler del boton para hacer login.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
-            
-               SearchView searchview = new SearchView();
-               searchview.Show();
-            
-          
+           if(AccountManager.Instance.LoginUser(TbUsername.Text, TbPassword.Text))
+            {
+
+                if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
+                {
+                    SearchView searchview = new SearchView();
+                    searchview.Show();
+                }
+                else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                {
+                    AdminEditView adminview = new AdminEditView();
+                    adminview.Show();
+                }
+            }
+         else
+            {
+                MessageBox.Show("Not a user");
+            }
+        
+              
         }
     }
 }

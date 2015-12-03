@@ -13,15 +13,28 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de edicion de destino.
+    /// </summary>
     public partial class EditDestinationView : Form 
     {
-        //private Context db = new Context();
+        /// <summary>
+        /// Repositorio de destino.
+        /// </summary>
         DestinationRepository repo = new DestinationRepository();
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public EditDestinationView()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handler de texto de destino.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void TbDestinationID_TextChanged(object sender, EventArgs e)
         {
             

@@ -2,6 +2,7 @@
 using BRS.Core.Repositories;
 using BRS.Data;
 using BRS.Data.SqlRepositories;
+using BRS.Logical.Account;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,14 @@ using System.Windows.Forms;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de registracion.
+    /// </summary>
     public partial class RegistrationForm : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public RegistrationForm()
         {
             InitializeComponent();
@@ -31,14 +38,24 @@ namespace BRS.DesktopUI
 
         }
 
+        /// <summary>
+        /// Handler del boton de salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRegistrationCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handler del boton para crear un registracion.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)
         {
-            //UserSqlRepository userRepo = new UserSqlRepository();
+            
 
 
             User user = new User();
@@ -47,25 +64,23 @@ namespace BRS.DesktopUI
                 user.Username = TbRegistrationUsername.Text;
                 user.Email = TbRegistrationEmail.Text;
                 user.Password = TbRegistrationPassword.Text;
-              //user.Role = userRepo.GetRoleInstance(Erole.Customer);
-
+                user.Role = AccountManager.Instance.GetRole(AccountManager.Erole.Customer);
                 Customer customer = new Customer();
-
                 customer.FirstName = TbRegistrationFirstName.Text;
                 customer.LastName = TbRegistrationLastName.Text;
                 customer.Birthday = DTPRegistrationBirthday.Value;
+                customer.CreatedDate = customer.ModifiedDate = DateTime.Now;
 
                 CreditCard creditcard = new CreditCard();
-
                 creditcard.CardHolder = TbRegistrationCardHolder.Text;
                 creditcard.CardNumber = MtbRegistrationCardNumber.Text;
                 creditcard.CVC = MtbRegistrationCVC.Text;
                 creditcard.ExpirationDate = DTPRegistrationExpirationDate.Value.Millisecond;
+                creditcard.CreatedDate = creditcard.ModifiedDate = DateTime.Now;
+                customer.CreditCard = creditcard;
+                user.Customer = customer;
 
                 RepositoryFactory.Instance().UserRepository().Create(user);
-                RepositoryFactory.Instance().CustomerRepository().Create(customer);
-                RepositoryFactory.Instance().CreditCardRepository().Create(creditcard);
-
                 MessageBox.Show("Succesfully Added!");
             }
             else

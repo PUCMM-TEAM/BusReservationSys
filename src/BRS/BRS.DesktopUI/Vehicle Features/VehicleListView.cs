@@ -15,8 +15,14 @@ using BRS.Data;
 
 namespace BRS.DesktopUI
 {
+    /// <summary>
+    /// Clase representativa del formulario de la lista de vehiculos.
+    /// </summary>
     public partial class VehicleListView : Form
     {
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public VehicleListView()
         {
             InitializeComponent();

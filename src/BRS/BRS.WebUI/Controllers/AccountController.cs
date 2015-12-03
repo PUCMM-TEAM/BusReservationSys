@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BRS.Core.Models;
-using BRS.Logical.Account;
 using BRS.WebUI.Models;
 
 namespace BRS.WebUI.Controllers
@@ -21,9 +20,9 @@ namespace BRS.WebUI.Controllers
         public ActionResult Index(string username, string password){
 
           if (ModelState.IsValid){
-            if (AccountManager.Instance.LoginUser(username, password)) {
-              return RedirectToAction("Index", "Home");
-            }
+            //if (AccountManager.Instance.LoginUser(username, password)) {
+            //  return RedirectToAction("Index", "Home");
+            //}
           }
 
           return View();

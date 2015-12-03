@@ -91,10 +91,10 @@
     <Compile Include="Features\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReservationListView.cs">
+    <Compile Include="Reservation Features\ReservationListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservationListView.Designer.cs">
+    <Compile Include="Reservation Features\ReservationListView.Designer.cs">
       <DependentUpon>ReservationListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Route Features\EditRouteView.cs">
@@ -183,7 +183,7 @@
     <EmbeddedResource Include="Features\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservationListView.resx">
+    <EmbeddedResource Include="Reservation Features\ReservationListView.resx">
       <DependentUpon>ReservationListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route Features\EditRouteView.resx">
@@ -263,18 +263,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Core\BRS.Core.csproj">
+    <ProjectReference Include="..\BRS.Core\BRS.Core.csproj">
       <Project>{fe9b1e30-99f7-45f0-93c3-e2f2df49ba9d}</Project>
       <Name>BRS.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Max\Documents\GIT-REPOS\PUCMM\BusReservationSys\src\BRS\BRS.Data\BRS.Data.csproj">
+    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
       <Project>{f4e9c87c-9c7b-41e3-aeb2-4b626043d379}</Project>
       <Name>BRS.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BRS.Logical\BRS.Logic.csproj">
+      <Project>{7ee76b8a-17fd-47ef-8230-cbf58c729880}</Project>
+      <Name>BRS.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reservation Features\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,16 +10,39 @@ using System.Windows.Forms;
 using BRS.Core.Models;
 using BRS.Data;
 using BRS.Core.Repositories;
+using BRS.Logical.Account;
 
 namespace BRS.DesktopUI {
+  /// <summary>
+  /// Clase representativa del formulario de pago.
+  /// </summary>
   public partial class PaymentView : Form {
-
+        /// <summary>
+        /// Representa un viaje.
+        /// </summary>
         Trip trip;
+        /// <summary>
+        /// Representa el numero de pasajeros.
+        /// </summary>
         int noPassengers;
+
+        /// <summary>
+        /// representa una fecha.
+        /// </summary>
         DateTime value;
+        /// <summary>
+        /// Representa un cliente.
+        /// </summary>
         Customer customer;
+
+        /// <summary>
+        /// Representa una tarjerta de credito.
+        /// </summary>
         CreditCard credit;
 
+        /// <summary>
+        /// Constructor de la clase.
+        /// </summary>
         public PaymentView()
         {
       InitializeComponent();
@@ -31,12 +54,23 @@ namespace BRS.DesktopUI {
     private void label10_Click(object sender, EventArgs e) {
 
     }
-
+        /// <summary>
+        /// Handler del buton de salir del formulario.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento</param>
+        /// <param name="e">Data del evento</param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// Set de un modelo.
+        /// </summary>
+        /// <param name="trip">Representa un viaje</param>
+        /// <param name="noPassengers">Representa el numero de pasajeros.</param>
+        /// <param name="value">Representa una fecha</param>
         public void setModel(Trip trip, int noPassengers, DateTime value)
         {
             
@@ -47,6 +81,9 @@ namespace BRS.DesktopUI {
 
         }
 
+        /// <summary>
+        /// Set para establer valores desde las componentes del formularios.
+        /// </summary>
         public void setValuesto()
         {
             
@@ -58,6 +95,11 @@ namespace BRS.DesktopUI {
 
         }
 
+        /// <summary>
+        /// Handler del botn para hacer la reservacion.
+        /// </summary>
+        /// <param name="sender">Control que dispara el evento.</param>
+        /// <param name="e">Data del evento</param>
         private void button1_Click(object sender, EventArgs e)
         {
             if(ChPaymentAgree.Checked)
@@ -80,13 +122,13 @@ namespace BRS.DesktopUI {
                 credit.ModifiedDate = DateTime.Now;
                 credit.Deleted = false;
 
+               
+
                 Reservation reservation = new Reservation();
                 reservation.ID = 0;
                 reservation.Trip = trip;
-                reservation.Customer = customer;
-                reservation.CreditCard = credit;
-                //reservation.Customer = RepositoryFactory.Instance().CustomerRepository().Read(2);
-                //reservation.CreditCard = RepositoryFactory.Instance().CreditCardRepository().Read(1);
+                reservation.Customer = AccountManager.Instance.CurrentUser.Customer;
+                //reservation.CreditCard = AccountManager.Instance.CurrentUser.Customer.CreditCards.FirstOrDefault();
                 reservation.ReservationDate = value;
                 reservation.NumPassenger = noPassengers;
                 reservation.CreatedDate = DateTime.Now;
