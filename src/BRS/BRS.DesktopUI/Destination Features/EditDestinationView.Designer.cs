@@ -30,9 +30,7 @@
         {
             this.GbDestination = new System.Windows.Forms.GroupBox();
             this.TbDestinationName = new System.Windows.Forms.TextBox();
-            this.TbDestinationID = new System.Windows.Forms.TextBox();
             this.TxtDestinationName = new System.Windows.Forms.Label();
-            this.TxtDestinationID = new System.Windows.Forms.Label();
             this.BtnDestinationCreate = new System.Windows.Forms.Button();
             this.BtnDestinationDelete = new System.Windows.Forms.Button();
             this.BtnDestinationCancel = new System.Windows.Forms.Button();
@@ -43,9 +41,7 @@
             // GbDestination
             // 
             this.GbDestination.Controls.Add(this.TbDestinationName);
-            this.GbDestination.Controls.Add(this.TbDestinationID);
             this.GbDestination.Controls.Add(this.TxtDestinationName);
-            this.GbDestination.Controls.Add(this.TxtDestinationID);
             this.GbDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbDestination.Location = new System.Drawing.Point(12, 12);
             this.GbDestination.Name = "GbDestination";
@@ -56,38 +52,20 @@
             // 
             // TbDestinationName
             // 
-            this.TbDestinationName.Location = new System.Drawing.Point(61, 75);
+            this.TbDestinationName.Location = new System.Drawing.Point(61, 41);
             this.TbDestinationName.Name = "TbDestinationName";
             this.TbDestinationName.Size = new System.Drawing.Size(100, 26);
             this.TbDestinationName.TabIndex = 3;
-            // 
-            // TbDestinationID
-            // 
-            this.TbDestinationID.Location = new System.Drawing.Point(36, 36);
-            this.TbDestinationID.Name = "TbDestinationID";
-            this.TbDestinationID.Size = new System.Drawing.Size(100, 26);
-            this.TbDestinationID.TabIndex = 2;
-            this.TbDestinationID.TextChanged += new System.EventHandler(this.TbDestinationID_TextChanged);
             // 
             // TxtDestinationName
             // 
             this.TxtDestinationName.AutoSize = true;
             this.TxtDestinationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDestinationName.Location = new System.Drawing.Point(6, 75);
+            this.TxtDestinationName.Location = new System.Drawing.Point(6, 41);
             this.TxtDestinationName.Name = "TxtDestinationName";
             this.TxtDestinationName.Size = new System.Drawing.Size(49, 16);
             this.TxtDestinationName.TabIndex = 1;
             this.TxtDestinationName.Text = "Name";
-            // 
-            // TxtDestinationID
-            // 
-            this.TxtDestinationID.AutoSize = true;
-            this.TxtDestinationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDestinationID.Location = new System.Drawing.Point(6, 36);
-            this.TxtDestinationID.Name = "TxtDestinationID";
-            this.TxtDestinationID.Size = new System.Drawing.Size(23, 16);
-            this.TxtDestinationID.TabIndex = 0;
-            this.TxtDestinationID.Text = "ID";
             // 
             // BtnDestinationCreate
             // 
@@ -149,9 +127,7 @@
 
         private System.Windows.Forms.GroupBox GbDestination;
         private System.Windows.Forms.TextBox TbDestinationName;
-        private System.Windows.Forms.TextBox TbDestinationID;
         private System.Windows.Forms.Label TxtDestinationName;
-        private System.Windows.Forms.Label TxtDestinationID;
         private System.Windows.Forms.Button BtnDestinationCreate;
         private System.Windows.Forms.Button BtnDestinationDelete;
         private System.Windows.Forms.Button BtnDestinationCancel;

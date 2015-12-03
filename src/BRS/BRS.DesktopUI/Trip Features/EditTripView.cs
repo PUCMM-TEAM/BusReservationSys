@@ -36,7 +36,7 @@ namespace BRS.DesktopUI
 
             var vehiclelist = RepositoryFactory.Instance().VehicleRepository().ReadAll().ToList();
             var bindinglistv = new BindingList<Vehicle>(vehiclelist);
-            var vehiclesource = new BindingSource(bindingList, null);
+            var vehiclesource = new BindingSource(bindinglistv, null);
 
 
             CbTripRoute.DisplayMember = "RouteName";
@@ -85,16 +85,17 @@ namespace BRS.DesktopUI
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             Trip trip = new Trip();
-            //trip.Route = CbTripRoute.SelectedValue.GetType()
-            //trip.DateAvailable =
-            //trip.DepartureTime =
-            //trip.ArrivalTime =
-            //trip.Vehicle =
-            //trip.Price = float.Parse(MtbTripPrice.Text.ToString());
+            trip.Route = (Route)CbTripRoute.SelectedItem;
+            trip.DateAvailable = 128;
+            trip.DepartureTime = 800;
+            trip.ArrivalTime = 1000;
+            trip.Vehicle = (Vehicle)CbTripVehicle.SelectedItem;
+            trip.Price = float.Parse(MtbTripPrice.Text.ToString());
             trip.CreatedDate = DateTime.Now;
             trip.ModifiedDate = DateTime.Now;
 
             RepositoryFactory.Instance().TripRepository().Create(trip);
+            MessageBox.Show("Trip succesfully added");
         
         }
 
@@ -107,6 +108,11 @@ namespace BRS.DesktopUI
         {
             TripListView tripview = new TripListView();
             tripview.Show();
+        }
+
+        private void BtnCancel3_Click(object sender, EventArgs e)
+        {
+            this.Show();
         }
     }
 }

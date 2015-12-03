@@ -64,10 +64,10 @@ namespace BRS.DesktopUI
         private void BtnRouteCreate_Click(object sender, EventArgs e)
         {
             Route route= new Route();
-            //route.Pickup = 
-            //route.DropOff = CbRouteDropoff;
-           // RepositoryFactory.Instance().RouteRepository().Create(route);
-       
+            route.Pickup = (Destination)CbRoutePickup.SelectedItem;
+            route.DropOff = (Destination)CbRouteDropoff.SelectedItem;
+            // RepositoryFactory.Instance().RouteRepository().Create(route);
+
         }
 
         private void CbRoutePickup_SelectedIndexChanged(object sender, EventArgs e)
