@@ -10,7 +10,8 @@ namespace BRS.Logical.Account {
 
     private AccountManager() {
       Role role = GetRole(Erole.Guest);
-      _currentUser = RepositoryFactory.Instance().UserRepository().ReadAll().First(x => x.Role == role);
+      var list = RepositoryFactory.Instance().UserRepository().ReadAll().Where(x => x.Role == role);
+      _currentUser = list.FirstOrDefault();
     }
 
     public static AccountManager Instance {
@@ -21,14 +22,12 @@ namespace BRS.Logical.Account {
     }
 
     public bool LoginUser(string username, string password) {
-      User user = RepositoryFactory.Instance().UserRepository().ReadAll().First(x => x.Username.ToLower().Contains(username.ToLower()) && x.Password.ToLower().Contains(password.ToLower()));
+      var list = RepositoryFactory.Instance().UserRepository().ReadAll().Where(x => x.Username.ToLower().Contains(username.ToLower()) && x.Password.ToLower().Contains(password.ToLower())).ToList();
 
-      if (user != null) {
-        _currentUser = user;
-        return true;
-      }
+      if (list.Count == 0) return false;
 
-      return false;
+      _currentUser = list.First();
+      return true;
     }
 
     public User CurrentUser {
@@ -51,9 +50,8 @@ namespace BRS.Logical.Account {
 
     public Erole UserRole {
       get {
-        var role = _currentUser.Role;
-        switch (role.Name) {
-          case "Administrador":
+        switch (_currentUser.Role.Name) {
+          case "Administrator":
             return Erole.Administrator;
           case "Operator":
             return Erole.Operator;

@@ -37,15 +37,18 @@ namespace BRS.WebUI.Controllers
       [HttpPost]
       public ActionResult Register(NewUserViewModel vmModel){
 
-        User user = new User{
-          ID = 0,
-          CreatedDate = DateTime.Now,
-          ModifiedDate = DateTime.Now,
-          Deleted = false,
-          Username = vmModel.Username,
-          Password =  vmModel.Password,
-          Email = vmModel.Email,
-        };
+        if (ModelState.IsValid) {
+          User user = new User {
+            ID = 0,
+            CreatedDate = DateTime.Now,
+            ModifiedDate = DateTime.Now,
+            Deleted = false,
+            Username = vmModel.Username,
+            Password = vmModel.Password,
+            Email = vmModel.Email
+          };
+
+        }
 
         return View(vmModel);
       }
