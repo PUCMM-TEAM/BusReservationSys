@@ -27,18 +27,20 @@
             this.TbUserUsername = new System.Windows.Forms.TextBox();
             this.TbUserPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TbUserPasswordAgain = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.BtnUserCreate = new System.Windows.Forms.Button();
             this.BtnUserDelete = new System.Windows.Forms.Button();
             this.BtnUserCancel = new System.Windows.Forms.Button();
             this.BtnUserList = new System.Windows.Forms.Button();
+            this.TxtUserEmail = new System.Windows.Forms.Label();
+            this.TbUserEmail = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 48);
+            this.label1.Location = new System.Drawing.Point(18, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
@@ -47,7 +49,7 @@
             // 
             // TbUserUsername
             // 
-            this.TbUserUsername.Location = new System.Drawing.Point(116, 46);
+            this.TbUserUsername.Location = new System.Drawing.Point(80, 28);
             this.TbUserUsername.Margin = new System.Windows.Forms.Padding(2);
             this.TbUserUsername.Name = "TbUserUsername";
             this.TbUserUsername.Size = new System.Drawing.Size(152, 20);
@@ -55,7 +57,7 @@
             // 
             // TbUserPassword
             // 
-            this.TbUserPassword.Location = new System.Drawing.Point(116, 68);
+            this.TbUserPassword.Location = new System.Drawing.Point(78, 102);
             this.TbUserPassword.Margin = new System.Windows.Forms.Padding(2);
             this.TbUserPassword.Name = "TbUserPassword";
             this.TbUserPassword.Size = new System.Drawing.Size(152, 20);
@@ -64,30 +66,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 71);
+            this.label2.Location = new System.Drawing.Point(18, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
-            // 
-            // TbUserPasswordAgain
-            // 
-            this.TbUserPasswordAgain.Location = new System.Drawing.Point(116, 91);
-            this.TbUserPasswordAgain.Margin = new System.Windows.Forms.Padding(2);
-            this.TbUserPasswordAgain.Name = "TbUserPasswordAgain";
-            this.TbUserPasswordAgain.Size = new System.Drawing.Size(152, 20);
-            this.TbUserPasswordAgain.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 93);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password Again:";
             // 
             // BtnUserCreate
             // 
@@ -132,26 +116,56 @@
             this.BtnUserList.UseVisualStyleBackColor = true;
             this.BtnUserList.Click += new System.EventHandler(this.BtnUserList_Click);
             // 
+            // TxtUserEmail
+            // 
+            this.TxtUserEmail.AutoSize = true;
+            this.TxtUserEmail.Location = new System.Drawing.Point(18, 63);
+            this.TxtUserEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TxtUserEmail.Name = "TxtUserEmail";
+            this.TxtUserEmail.Size = new System.Drawing.Size(35, 13);
+            this.TxtUserEmail.TabIndex = 10;
+            this.TxtUserEmail.Text = "Email:";
+            // 
+            // TbUserEmail
+            // 
+            this.TbUserEmail.Location = new System.Drawing.Point(57, 63);
+            this.TbUserEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.TbUserEmail.Name = "TbUserEmail";
+            this.TbUserEmail.Size = new System.Drawing.Size(152, 20);
+            this.TbUserEmail.TabIndex = 11;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.TbUserEmail);
+            this.groupBox1.Controls.Add(this.TbUserUsername);
+            this.groupBox1.Controls.Add(this.TxtUserEmail);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.TbUserPassword);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(445, 224);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // EditUserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(466, 352);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnUserList);
             this.Controls.Add(this.BtnUserCancel);
             this.Controls.Add(this.BtnUserDelete);
             this.Controls.Add(this.BtnUserCreate);
-            this.Controls.Add(this.TbUserPasswordAgain);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.TbUserPassword);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.TbUserUsername);
-            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditUserView";
             this.Text = "EditUserView";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
     }
 
@@ -161,11 +175,12 @@
     private System.Windows.Forms.TextBox TbUserUsername;
     private System.Windows.Forms.TextBox TbUserPassword;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox TbUserPasswordAgain;
-    private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Button BtnUserCreate;
     private System.Windows.Forms.Button BtnUserDelete;
     private System.Windows.Forms.Button BtnUserCancel;
         private System.Windows.Forms.Button BtnUserList;
+        private System.Windows.Forms.Label TxtUserEmail;
+        private System.Windows.Forms.TextBox TbUserEmail;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

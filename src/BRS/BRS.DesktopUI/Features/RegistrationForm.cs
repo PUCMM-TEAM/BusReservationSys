@@ -55,11 +55,9 @@ namespace BRS.DesktopUI
         /// <param name="e">Data del evento</param>
         private void BtnRegistrationCreate_Click(object sender, EventArgs e)
         {
-            
 
 
-            User user = new User();
-            if (TbRegistrationPassword.Text == TbRegistrationPA.Text)
+            if (TbRegistrationUsername.Text != "" && TbRegistrationEmail.Text != "" && TbRegistrationPassword.Text != "" && TbRegistrationFirstName.Text != "" && TbRegistrationLastName.Text != "" && TbRegistrationCardHolder.Text != "" && MtbRegistrationCardNumber.Text != "" && MtbRegistrationCVC.Text!="")
             {
                 user.Username = TbRegistrationUsername.Text;
                 user.Email = TbRegistrationEmail.Text;
@@ -71,23 +69,28 @@ namespace BRS.DesktopUI
                 customer.Birthday = DTPRegistrationBirthday.Value;
                 customer.CreatedDate = customer.ModifiedDate = DateTime.Now;
 
-                CreditCard creditcard = new CreditCard();
-                creditcard.CardHolder = TbRegistrationCardHolder.Text;
-                creditcard.CardNumber = MtbRegistrationCardNumber.Text;
-                creditcard.CVC = MtbRegistrationCVC.Text;
-                creditcard.ExpirationDate = DTPRegistrationExpirationDate.Value.Millisecond;
-                creditcard.CreatedDate = creditcard.ModifiedDate = DateTime.Now;
-                customer.CreditCard = creditcard;
-                user.Customer = customer;
+                    CreditCard creditcard = new CreditCard();
+                    creditcard.CardHolder = TbRegistrationCardHolder.Text;
+                    creditcard.CardNumber = MtbRegistrationCardNumber.Text;
+                    creditcard.CVC = MtbRegistrationCVC.Text;
+                    creditcard.ExpirationDate = DTPRegistrationExpirationDate.Value.Millisecond;
+                    creditcard.CreatedDate = creditcard.ModifiedDate = DateTime.Now;
+                    customer.CreditCard = creditcard;
+                    user.Customer = customer;
 
-                RepositoryFactory.Instance().UserRepository().Create(user);
-                MessageBox.Show("Succesfully Added!");
+                    RepositoryFactory.Instance().UserRepository().Create(user);
+                    MessageBox.Show("Succesfully Added!");
+                }
+                else
+                {
+                    MessageBox.Show("Passwords don't match");
+                }
+
             }
             else
             {
-                MessageBox.Show("Passwords don't match");
+                MessageBox.Show("One or more fields are empty");
             }
-
         }
     }
 }

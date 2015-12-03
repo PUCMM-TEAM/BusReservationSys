@@ -1,4 +1,6 @@
 ﻿using BRS.Core.Models;
+using BRS.Core.Repositories;
+using BRS.Data;
 using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -27,6 +29,26 @@ namespace BRS.DesktopUI
         public EditTripView()
         {
             InitializeComponent();
+
+            var list = RepositoryFactory.Instance().RouteRepository().ReadAll().ToList();
+            var bindingList = new BindingList<Route>(list);
+            var source = new BindingSource(bindingList, null);
+
+            var vehiclelist = RepositoryFactory.Instance().VehicleRepository().ReadAll().ToList();
+            var bindinglistv = new BindingList<Vehicle>(vehiclelist);
+            var vehiclesource = new BindingSource(bindinglistv, null);
+
+
+            CbTripRoute.DisplayMember = "RouteName";
+            CbTripRoute.ValueMember = "ID";
+
+            CbTripVehicle.DisplayMember = "Name";
+            CbTripVehicle.ValueMember = "ID";
+
+            CbTripRoute.DataSource = source;
+            CbTripVehicle.DataSource = vehiclesource;
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,15 +85,18 @@ namespace BRS.DesktopUI
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             Trip trip = new Trip();
-            //trip.Route =
-            //trip.DateAvailable =
-            //trip.DepartureTime =
-            //trip.ArrivalTime =
-            //trip.Vehicle =
+            trip.Route = (Route)CbTripRoute.SelectedItem;
+            trip.DateAvailable = 128;
+            trip.DepartureTime = 800;
+            trip.ArrivalTime = 1000;
+            trip.Vehicle = (Vehicle)CbTripVehicle.SelectedItem;
             trip.Price = float.Parse(MtbTripPrice.Text.ToString());
-            //db.Destinations.Add(destination);
-            //db.SaveChanges();
-            repo.Create(trip);
+            trip.CreatedDate = DateTime.Now;
+            trip.ModifiedDate = DateTime.Now;
+
+            RepositoryFactory.Instance().TripRepository().Create(trip);
+            MessageBox.Show("Trip succesfully added");
+        
         }
 
         /// <summary>
@@ -83,6 +108,11 @@ namespace BRS.DesktopUI
         {
             TripListView tripview = new TripListView();
             tripview.Show();
+        }
+
+        private void BtnCancel3_Click(object sender, EventArgs e)
+        {
+            this.Show();
         }
     }
 }

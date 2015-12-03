@@ -31,6 +31,12 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TbPaymentPrice = new System.Windows.Forms.TextBox();
+            this.TxtPaymentPrice = new System.Windows.Forms.Label();
+            this.TbPaymentaArrivalTime = new System.Windows.Forms.TextBox();
+            this.TbPaymentDepartureTime = new System.Windows.Forms.TextBox();
+            this.TxtPaymentArrivalTime = new System.Windows.Forms.Label();
+            this.TxtPaymentDepartureTime = new System.Windows.Forms.Label();
             this.MtbPaymentNumPass = new System.Windows.Forms.MaskedTextBox();
             this.TbPaymentDepartureDate = new System.Windows.Forms.TextBox();
             this.TbPaymentDestination = new System.Windows.Forms.TextBox();
@@ -39,25 +45,13 @@
             this.TxtPaymentNumPass = new System.Windows.Forms.Label();
             this.TxtPaymentDestination = new System.Windows.Forms.Label();
             this.TxtPaymentOrigin = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.BtnPaymentCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TbPaymentVehicle = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +118,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TbPaymentVehicle);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.TbPaymentPrice);
+            this.groupBox1.Controls.Add(this.TxtPaymentPrice);
+            this.groupBox1.Controls.Add(this.TbPaymentaArrivalTime);
+            this.groupBox1.Controls.Add(this.TbPaymentDepartureTime);
+            this.groupBox1.Controls.Add(this.TxtPaymentArrivalTime);
+            this.groupBox1.Controls.Add(this.TxtPaymentDepartureTime);
             this.groupBox1.Controls.Add(this.MtbPaymentNumPass);
             this.groupBox1.Controls.Add(this.TbPaymentDepartureDate);
             this.groupBox1.Controls.Add(this.TbPaymentDestination);
@@ -136,16 +138,68 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(441, 122);
+            this.groupBox1.Size = new System.Drawing.Size(441, 229);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Trip Info";
+            this.groupBox1.Text = "Confirmation:";
+            // 
+            // TbPaymentPrice
+            // 
+            this.TbPaymentPrice.Location = new System.Drawing.Point(45, 194);
+            this.TbPaymentPrice.Name = "TbPaymentPrice";
+            this.TbPaymentPrice.ReadOnly = true;
+            this.TbPaymentPrice.Size = new System.Drawing.Size(100, 20);
+            this.TbPaymentPrice.TabIndex = 13;
+            // 
+            // TxtPaymentPrice
+            // 
+            this.TxtPaymentPrice.AutoSize = true;
+            this.TxtPaymentPrice.Location = new System.Drawing.Point(5, 194);
+            this.TxtPaymentPrice.Name = "TxtPaymentPrice";
+            this.TxtPaymentPrice.Size = new System.Drawing.Size(34, 13);
+            this.TxtPaymentPrice.TabIndex = 12;
+            this.TxtPaymentPrice.Text = "Price:";
+            // 
+            // TbPaymentaArrivalTime
+            // 
+            this.TbPaymentaArrivalTime.Location = new System.Drawing.Point(76, 127);
+            this.TbPaymentaArrivalTime.Name = "TbPaymentaArrivalTime";
+            this.TbPaymentaArrivalTime.ReadOnly = true;
+            this.TbPaymentaArrivalTime.Size = new System.Drawing.Size(100, 20);
+            this.TbPaymentaArrivalTime.TabIndex = 11;
+            // 
+            // TbPaymentDepartureTime
+            // 
+            this.TbPaymentDepartureTime.Location = new System.Drawing.Point(95, 101);
+            this.TbPaymentDepartureTime.Name = "TbPaymentDepartureTime";
+            this.TbPaymentDepartureTime.ReadOnly = true;
+            this.TbPaymentDepartureTime.Size = new System.Drawing.Size(100, 20);
+            this.TbPaymentDepartureTime.TabIndex = 10;
+            // 
+            // TxtPaymentArrivalTime
+            // 
+            this.TxtPaymentArrivalTime.AutoSize = true;
+            this.TxtPaymentArrivalTime.Location = new System.Drawing.Point(5, 127);
+            this.TxtPaymentArrivalTime.Name = "TxtPaymentArrivalTime";
+            this.TxtPaymentArrivalTime.Size = new System.Drawing.Size(65, 13);
+            this.TxtPaymentArrivalTime.TabIndex = 9;
+            this.TxtPaymentArrivalTime.Text = "Arrival Time:";
+            // 
+            // TxtPaymentDepartureTime
+            // 
+            this.TxtPaymentDepartureTime.AutoSize = true;
+            this.TxtPaymentDepartureTime.Location = new System.Drawing.Point(5, 101);
+            this.TxtPaymentDepartureTime.Name = "TxtPaymentDepartureTime";
+            this.TxtPaymentDepartureTime.Size = new System.Drawing.Size(83, 13);
+            this.TxtPaymentDepartureTime.TabIndex = 8;
+            this.TxtPaymentDepartureTime.Text = "Departure Time:";
             // 
             // MtbPaymentNumPass
             // 
-            this.MtbPaymentNumPass.Location = new System.Drawing.Point(129, 96);
+            this.MtbPaymentNumPass.Location = new System.Drawing.Point(128, 160);
             this.MtbPaymentNumPass.Mask = "00";
             this.MtbPaymentNumPass.Name = "MtbPaymentNumPass";
+            this.MtbPaymentNumPass.ReadOnly = true;
             this.MtbPaymentNumPass.Size = new System.Drawing.Size(20, 20);
             this.MtbPaymentNumPass.TabIndex = 7;
             // 
@@ -153,6 +207,7 @@
             // 
             this.TbPaymentDepartureDate.Location = new System.Drawing.Point(94, 74);
             this.TbPaymentDepartureDate.Name = "TbPaymentDepartureDate";
+            this.TbPaymentDepartureDate.ReadOnly = true;
             this.TbPaymentDepartureDate.Size = new System.Drawing.Size(100, 20);
             this.TbPaymentDepartureDate.TabIndex = 6;
             // 
@@ -160,6 +215,7 @@
             // 
             this.TbPaymentDestination.Location = new System.Drawing.Point(74, 49);
             this.TbPaymentDestination.Name = "TbPaymentDestination";
+            this.TbPaymentDestination.ReadOnly = true;
             this.TbPaymentDestination.Size = new System.Drawing.Size(100, 20);
             this.TbPaymentDestination.TabIndex = 5;
             // 
@@ -167,6 +223,7 @@
             // 
             this.TbPaymentOrigin.Location = new System.Drawing.Point(49, 25);
             this.TbPaymentOrigin.Name = "TbPaymentOrigin";
+            this.TbPaymentOrigin.ReadOnly = true;
             this.TbPaymentOrigin.Size = new System.Drawing.Size(100, 20);
             this.TbPaymentOrigin.TabIndex = 4;
             // 
@@ -182,7 +239,7 @@
             // TxtPaymentNumPass
             // 
             this.TxtPaymentNumPass.AutoSize = true;
-            this.TxtPaymentNumPass.Location = new System.Drawing.Point(5, 96);
+            this.TxtPaymentNumPass.Location = new System.Drawing.Point(5, 160);
             this.TxtPaymentNumPass.Name = "TxtPaymentNumPass";
             this.TxtPaymentNumPass.Size = new System.Drawing.Size(117, 13);
             this.TxtPaymentNumPass.TabIndex = 2;
@@ -206,145 +263,14 @@
             this.TxtPaymentOrigin.TabIndex = 0;
             this.TxtPaymentOrigin.Text = "Origin:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(9, 152);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(448, 110);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Payment";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(199, 87);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Expiration Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(284, 83);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(149, 20);
-            this.dateTimePicker1.TabIndex = 21;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(284, 59);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 20);
-            this.textBox5.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(199, 62);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "CVC";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(284, 37);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 20);
-            this.textBox4.TabIndex = 18;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(284, 14);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(46, 39);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(46, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(199, 39);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Card Number";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(199, 16);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Card Holder";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 41);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Email:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 16);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 13);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Name:";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Location = new System.Drawing.Point(9, 267);
+            this.groupBox3.Location = new System.Drawing.Point(9, 259);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(448, 55);
+            this.groupBox3.Size = new System.Drawing.Size(448, 63);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contract";
@@ -370,6 +296,23 @@
             this.BtnPaymentCancel.UseVisualStyleBackColor = true;
             this.BtnPaymentCancel.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(221, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Vehicle:";
+            // 
+            // TbPaymentVehicle
+            // 
+            this.TbPaymentVehicle.Location = new System.Drawing.Point(273, 25);
+            this.TbPaymentVehicle.Name = "TbPaymentVehicle";
+            this.TbPaymentVehicle.ReadOnly = true;
+            this.TbPaymentVehicle.Size = new System.Drawing.Size(100, 20);
+            this.TbPaymentVehicle.TabIndex = 15;
+            // 
             // PaymentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,7 +320,6 @@
             this.ClientSize = new System.Drawing.Size(466, 352);
             this.Controls.Add(this.BtnPaymentCancel);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnPaymentPay);
             this.Controls.Add(this.ChPaymentAgree);
@@ -390,8 +332,6 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -409,19 +349,6 @@
     private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.GroupBox groupBox2;
-    private System.Windows.Forms.Label label14;
-    private System.Windows.Forms.DateTimePicker dateTimePicker1;
-    private System.Windows.Forms.TextBox textBox5;
-    private System.Windows.Forms.Label label12;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.Label label11;
-    private System.Windows.Forms.Label label13;
-    private System.Windows.Forms.Label label17;
-    private System.Windows.Forms.Label label19;
     private System.Windows.Forms.GroupBox groupBox3;
     private System.Windows.Forms.Label label22;
     private System.Windows.Forms.Button BtnPaymentCancel;
@@ -433,5 +360,13 @@
         private System.Windows.Forms.TextBox TbPaymentDepartureDate;
         private System.Windows.Forms.TextBox TbPaymentDestination;
         private System.Windows.Forms.TextBox TbPaymentOrigin;
+        private System.Windows.Forms.TextBox TbPaymentaArrivalTime;
+        private System.Windows.Forms.TextBox TbPaymentDepartureTime;
+        private System.Windows.Forms.Label TxtPaymentArrivalTime;
+        private System.Windows.Forms.Label TxtPaymentDepartureTime;
+        private System.Windows.Forms.TextBox TbPaymentPrice;
+        private System.Windows.Forms.Label TxtPaymentPrice;
+        private System.Windows.Forms.TextBox TbPaymentVehicle;
+        private System.Windows.Forms.Label label1;
     }
 }

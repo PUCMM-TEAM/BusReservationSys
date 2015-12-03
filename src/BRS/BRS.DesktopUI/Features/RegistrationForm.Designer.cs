@@ -45,6 +45,8 @@
             this.TbRegistrationFirstName = new System.Windows.Forms.TextBox();
             this.TxtRegistrationFirstName = new System.Windows.Forms.Label();
             this.GbRegistrationPaymentOption = new System.Windows.Forms.GroupBox();
+            this.MtbRegistrationCardNumber = new System.Windows.Forms.MaskedTextBox();
+            this.MtbRegistrationCVC = new System.Windows.Forms.MaskedTextBox();
             this.DTPRegistrationExpirationDate = new System.Windows.Forms.DateTimePicker();
             this.TxtRegistrationExpirationDate = new System.Windows.Forms.Label();
             this.TxtRegistrationCVC = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.TxtRegistrationCardHolder = new System.Windows.Forms.Label();
             this.BtnRegistrationCreate = new System.Windows.Forms.Button();
             this.BtnRegistrationCancel = new System.Windows.Forms.Button();
-            this.MtbRegistrationCVC = new System.Windows.Forms.MaskedTextBox();
-            this.MtbRegistrationCardNumber = new System.Windows.Forms.MaskedTextBox();
             this.GbRegistrationUserInfo.SuspendLayout();
             this.GbRegistrationpPersonalInfo.SuspendLayout();
             this.GbRegistrationPaymentOption.SuspendLayout();
@@ -225,6 +225,22 @@
             this.GbRegistrationPaymentOption.TabStop = false;
             this.GbRegistrationPaymentOption.Text = "Payment Option";
             // 
+            // MtbRegistrationCardNumber
+            // 
+            this.MtbRegistrationCardNumber.Location = new System.Drawing.Point(93, 70);
+            this.MtbRegistrationCardNumber.Mask = "0000000000000000";
+            this.MtbRegistrationCardNumber.Name = "MtbRegistrationCardNumber";
+            this.MtbRegistrationCardNumber.Size = new System.Drawing.Size(115, 20);
+            this.MtbRegistrationCardNumber.TabIndex = 15;
+            // 
+            // MtbRegistrationCVC
+            // 
+            this.MtbRegistrationCVC.Location = new System.Drawing.Point(52, 105);
+            this.MtbRegistrationCVC.Mask = "000";
+            this.MtbRegistrationCVC.Name = "MtbRegistrationCVC";
+            this.MtbRegistrationCVC.Size = new System.Drawing.Size(26, 20);
+            this.MtbRegistrationCVC.TabIndex = 14;
+            // 
             // DTPRegistrationExpirationDate
             // 
             this.DTPRegistrationExpirationDate.Location = new System.Drawing.Point(104, 142);
@@ -294,22 +310,6 @@
             this.BtnRegistrationCancel.Text = "Cancel";
             this.BtnRegistrationCancel.UseVisualStyleBackColor = true;
             this.BtnRegistrationCancel.Click += new System.EventHandler(this.BtnRegistrationCancel_Click);
-            // 
-            // MtbRegistrationCVC
-            // 
-            this.MtbRegistrationCVC.Location = new System.Drawing.Point(52, 105);
-            this.MtbRegistrationCVC.Mask = "000";
-            this.MtbRegistrationCVC.Name = "MtbRegistrationCVC";
-            this.MtbRegistrationCVC.Size = new System.Drawing.Size(26, 20);
-            this.MtbRegistrationCVC.TabIndex = 14;
-            // 
-            // MtbRegistrationCardNumber
-            // 
-            this.MtbRegistrationCardNumber.Location = new System.Drawing.Point(93, 70);
-            this.MtbRegistrationCardNumber.Mask = "0000-0000-0000-0000";
-            this.MtbRegistrationCardNumber.Name = "MtbRegistrationCardNumber";
-            this.MtbRegistrationCardNumber.Size = new System.Drawing.Size(115, 20);
-            this.MtbRegistrationCardNumber.TabIndex = 15;
             // 
             // RegistrationForm
             // 

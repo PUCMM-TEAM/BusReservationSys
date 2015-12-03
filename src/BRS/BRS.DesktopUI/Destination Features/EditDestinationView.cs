@@ -46,9 +46,9 @@ namespace BRS.DesktopUI
             destination.Name = TbDestinationName.Text.ToString();
             destination.CreatedDate = DateTime.Now;
             destination.ModifiedDate = DateTime.Now;
-            //db.Destinations.Add(destination);
-            //db.SaveChanges();
-            repo.Create(destination);
+            RepositoryFactory.Instance().DestinationRepository().Create(destination);
+  
+            
         }
 
         private void BtnDestinationList_Click(object sender, EventArgs e)

@@ -91,6 +91,10 @@ namespace BRS.DesktopUI {
             TbPaymentDestination.Text = trip.Route.DropOff.Name.ToString();
             TbPaymentDepartureDate.Text = value.ToString();
             MtbPaymentNumPass.Text = noPassengers.ToString();
+            TbPaymentDepartureTime.Text = trip.DepartureTime.ToString();
+            TbPaymentaArrivalTime.Text = trip.ArrivalTime.ToString();
+            TbPaymentPrice.Text = trip.Price.ToString();
+            TbPaymentVehicle.Text = trip.Vehicle.Name.ToString();
            
 
         }

@@ -271,6 +271,7 @@
             this.BtnCancel3.TabIndex = 3;
             this.BtnCancel3.Text = "Cancel";
             this.BtnCancel3.UseVisualStyleBackColor = true;
+            this.BtnCancel3.Click += new System.EventHandler(this.BtnCancel3_Click);
             // 
             // BtnDelete
             // 

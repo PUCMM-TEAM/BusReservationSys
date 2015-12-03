@@ -59,20 +59,30 @@ namespace BRS.DesktopUI
 
                 if (UserSessionManager.Instance.UserRole == UserSessionManager.Erole.Customer)
                 {
-                    SearchView searchview = new SearchView();
-                    searchview.Show();
+
+                    if (AccountManager.Instance.UserRole == AccountManager.Erole.Customer)
+                    {
+                        SearchView searchview = new SearchView();
+                        searchview.Show();
+                        this.Close();
+                    }
+                    else if (AccountManager.Instance.UserRole == AccountManager.Erole.Administrator)
+                    {
+                        AdminEditView adminview = new AdminEditView();
+                        adminview.Show();
+                        this.Close();
+                    }
                 }
                 else if (UserSessionManager.Instance.UserRole == UserSessionManager.Erole.Administrator)
                 {
-                    AdminEditView adminview = new AdminEditView();
-                    adminview.Show();
+                    MessageBox.Show("Not a user");
                 }
+
             }
-         else
+            else
             {
-                MessageBox.Show("Not a user");
+                MessageBox.Show("No Username or password provided");
             }
-        
               
         }
     }

@@ -1,4 +1,5 @@
 ﻿using BRS.Core.Models;
+using BRS.Data;
 using BRS.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -52,10 +53,10 @@ namespace BRS.DesktopUI.VehicleFeatures
             vehicle.Name = TbVehicleName.Text.ToString();
             vehicle.PassengerCapacity = Int32.Parse(MtbVehiclePassCap.Text.ToString());
             vehicle.VehicleType = TbVehicleVeTy.Text.ToString();
-            vehicle.Image = TbVehicleImage.Text.ToString();
-            //db.Destinations.Add(destination);
-            //db.SaveChanges();
-            repo.Create(vehicle);
+            // vehicle.Image = TbVehicleImage.Text.ToString();
+            RepositoryFactory.Instance().VehicleRepository().Create(vehicle);
+            MessageBox.Show("Vehicle succcesfully created"); 
+            
         }
 
         /// <summary>

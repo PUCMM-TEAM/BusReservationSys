@@ -29,8 +29,8 @@ namespace BRS.DesktopUI
             InitializeComponent();
            
             var list = RepositoryFactory.Instance().RouteRepository().ReadAll().ToList();
-            var bindingList = new BindingList<Route>(list);//Create a new list to show data from database
-            var source = new BindingSource(bindingList, null);//fill with data
+            var bindingList = new BindingList<Route>(list);
+            var source = new BindingSource(bindingList, null);
 
          
 
@@ -64,11 +64,10 @@ namespace BRS.DesktopUI
         private void BtnRouteCreate_Click(object sender, EventArgs e)
         {
             Route route= new Route();
-            //route.Pickup = CbRoutePickup.
-            //route.DropOff = CbRouteDropoff;
-            //db.Destinations.Add(destination);
-            //db.SaveChanges();
-            repo.Create(route);
+            route.Pickup = (Destination)CbRoutePickup.SelectedItem;
+            route.DropOff = (Destination)CbRouteDropoff.SelectedItem;
+            // RepositoryFactory.Instance().RouteRepository().Create(route);
+
         }
 
         private void CbRoutePickup_SelectedIndexChanged(object sender, EventArgs e)
